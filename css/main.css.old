@@ -1,0 +1,5218 @@
+/*---------------------------------------------------------------*/
+/* Document Styles */
+/*---------------------------------------------------------------*/
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #000;
+}
+
+h1 {
+}
+
+.h1-hide {
+    display: block;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    position: absolute;
+    text-indent: -9999rem;
+    top: -9999rem;
+    left: -9999rem;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+h2 {
+    font-weight: 400;
+    color: #8dc63f;
+    letter-spacing: .03em;
+    line-height: 1;
+    font-size: 3.125em;
+    margin-bottom: .3em;
+    margin-top: 0;
+}
+
+h3 {
+    font-weight: 200;
+    color: #ffffff;
+    letter-spacing: .03em;
+    line-height: 1.2;
+    font-size: 1.875em;
+    margin-bottom: .6em;
+}
+
+    h3 > .subheader {
+        font-weight: 200;
+        color: #808080;
+        letter-spacing: normal;
+        line-height: 1.2;
+        font-size: 1em;
+        margin-bottom: .6em;
+    }
+
+h4 {
+}
+
+h5 {
+}
+
+h6 {
+}
+
+.link-anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
+
+sup {
+    float: none !important;
+}
+
+.clearing-blackout {
+    z-index: 999999999 !important;
+}
+
+p {
+    letter-spacing: .03em;
+    font-weight: 200;
+}
+
+.browser-frame {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000000;
+    z-index: 1000000000000;
+}
+
+    .browser-frame > section {
+        width: 100%;
+        padding: 2rem;
+        position: relative;
+        top: 50%;
+        border-top: 2px solid #8dc63f;
+        border-bottom: 2px solid #8dc63f;
+        margin-top: -105px;
+    }
+
+        .browser-frame > section > h2 {
+            font-size: 1.8em;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 100;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .browser-frame > section > p {
+            font-size: 1.2em;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+            .browser-frame > section > p:last-child {
+                margin-bottom: 0;
+            }
+
+            .browser-frame > section > p > .button {
+                margin-bottom: 0;
+                text-transform: uppercase;
+                letter-spacing: .1em;
+            }
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+.no-margin-right {
+    margin-right: 0 !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.no-margin-left {
+    margin-left: 0 !important;
+}
+
+.button-group .button.tiny {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.button-group > li:first-child {
+    margin-left: 0;
+}
+
+.button-group > li > button, .button-group > li .button {
+    border-left: 3px solid #000000;
+    border-left: 3px solid #000000;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    min-height: 35px;
+    font-weight: 400;
+}
+
+    .button-group > li > button > span, .button-group > li .button > span {
+        color: rgba(255,255,255,.7);
+    }
+
+.button {
+    font-weight: 400;
+}
+
+.button {
+    color: #000000;
+}
+
+    .button > span {
+        color: rgba(0,0,0,.5) !important;
+    }
+
+    .button.secondary {
+        color: #ffffff !important;
+        font-weight: 100 !important;
+        letter-spacing: .1rem !important;
+    }
+
+        .button.secondary > span {
+            color: rgba(255,255,255,.5) !important;
+        }
+
+    .button.radius, .button.radius {
+        border-radius: 5px;
+    }
+
+    .button.button-warn {
+        background-color: #FFEB3B !important;
+        border-color: #FBC02D !important;
+    }
+
+        .button.button-warn:hover, .button.button-warn:focus {
+            background-color: #FBC02D !important;
+        }
+
+.outer-wrapper {
+    min-height: 100%;
+}
+
+.inner-wrapper {
+    overflow: auto;
+    padding-bottom: 150px;
+}
+
+.footer-wrapper {
+    position: relative;
+    margin-top: -150px; /* negative value of footer height */
+    height: 150px;
+    clear: both;
+}
+
+.header-wrapper.headroom--top {
+    background-color: transparent;
+}
+
+.header-wrapper.headroom--not-top {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.headroom {
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+.headroom--pinned {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.headroom--unpinned {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    margin-top: -2em;
+}
+
+.header--fixed {
+    position: fixed;
+    z-index: 10000;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.header#header {
+    padding: 1em 0;
+    background: url(../images/bkgd-header-map.png) no-repeat top right transparent;
+}
+
+.top-row {
+    font-size: 0.750em;
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+    .top-row li {
+        line-height: 1;
+    }
+
+        .top-row li > a {
+            color: #cccccc;
+        }
+
+            .top-row li > a:hover {
+                color: #ffffff;
+            }
+
+.bottom-row {
+    margin-top: -4em;
+}
+
+.red-text {
+    color: #C00;
+}
+
+.logo div {
+    line-height: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.logo img {
+    position: relative;
+    z-index: 100000;
+}
+
+.logo div > a {
+    position: relative;
+}
+/*.logo div > a:after {content: "\00AE"; position: absolute; top: 0; font-size: .8rem; margin: 0; padding: 0; color: #ffffff !important; top: -30px; right: 10px;}*/
+
+.social-nav {
+    float: left;
+}
+
+    .social-nav > ul {
+        margin: 0;
+    }
+
+        .social-nav > ul > li {
+            margin: 0 1em 0 0;
+            font-size: 1.1em;
+        }
+
+.sec-nav {
+    float: right;
+    bottom: -.2em;
+    position: relative;
+    padding-right: .15em;
+    margin-right: -.625em;
+}
+
+    .sec-nav > ul {
+        margin: 0;
+    }
+
+        .sec-nav > ul > li {
+            margin: 0;
+            font-size: .75em;
+        }
+
+            .sec-nav > ul > li:nth-child(1) {
+                margin-left: 0;
+            }
+
+            .sec-nav > ul > li:last-child, .sec-nav > ul > .six, .sec-nav > ul > .seven {
+                margin-right: 0;
+            }
+
+            .sec-nav > ul > li > a {
+                border-left: 1px solid transparent;
+                border-right: 1px solid #cccccc;
+                padding: 0 .5em;
+            }
+
+            .sec-nav > ul > li:last-child > a, .sec-nav > ul > .six > a, .sec-nav > ul > .seven > a {
+                border-right-color: transparent;
+            }
+
+        .sec-nav > ul > .seven {
+            padding-left: .5em;
+        }
+
+            .sec-nav > ul > .seven > a {
+                padding: 0;
+            }
+
+    .sec-nav .seven * {
+        display: inline;
+    }
+
+.flag-nav {
+    margin: 10px 0 -34px 0;
+    padding: 0 0 0 0;
+    float: right;
+    clear: both;
+}
+
+    .flag-nav > ul {
+        margin: 0;
+        padding: 0 0 0 0;
+    }
+
+        .flag-nav > ul:hover img {
+            opacity: .4;
+        }
+
+        .flag-nav > ul > li {
+        }
+
+            .flag-nav > ul > li > a {
+            }
+
+                .flag-nav > ul > li > a:hover img {
+                    opacity: 1;
+                }
+
+.main-nav {
+}
+
+    .main-nav > ul {
+        margin: 0;
+    }
+
+        .main-nav > ul:nth-child(1) {
+            float: left;
+            margin-left: -.5em;
+        }
+
+        .main-nav > ul:nth-child(2) {
+            float: right;
+            margin-right: -.5em;
+        }
+
+        .main-nav > ul:nth-child(1) > li {
+            margin-left: 0;
+            margin-right: .5em;
+        }
+
+            .main-nav > ul:nth-child(1) > li:nth-child(4) {
+                margin-left: 0;
+                margin-right: 0em;
+            }
+
+        .main-nav > ul:nth-child(2) > li {
+            margin-right: 0;
+            margin-left: .5em;
+        }
+
+            .main-nav > ul:nth-child(2) > li:nth-child(1) {
+                margin-right: 0;
+                margin-left: 0em;
+            }
+
+        .main-nav > ul > li {
+        }
+
+            .main-nav > ul > li:hover {
+                color: #000000 !important;
+                background-color: #ffffff;
+            }
+
+                .main-nav > ul > li:hover > a {
+                    color: #000000;
+                }
+
+            .main-nav > ul > li > a {
+                color: #ffffff;
+                padding: 0 .625em;
+                font-size: .9rem;
+            }
+
+                .main-nav > ul > li > a:hover {
+                    color: #000000;
+                    background-color: #ffffff;
+                }
+
+                    .main-nav > ul > li:hover > .sub-drop, .main-nav > ul > li > a:hover + .sub-drop, .main-nav > ul > li:hover > .sub-drop:hover, .main-nav > ul > li > a:hover + .sub-drop:hover {
+                        display: block !important;
+                    }
+
+            .main-nav > ul > li.eight > .sub-drop {
+                right: 0.1rem;
+            }
+
+                .main-nav > ul > li.eight > .sub-drop > li > a {
+                    text-align: right;
+                }
+
+.sub-drop {
+    display: none !important;
+    position: absolute;
+    margin: 0;
+    list-style-type: none;
+    background-color: #ffffff;
+    width: 200px;
+    z-index: 6000;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+}
+
+    .sub-drop > li {
+        overflow: auto;
+    }
+
+        .sub-drop > li > a {
+            float: left;
+            width: 100%;
+            padding: .3em .5em;
+            color: #000000;
+            background-color: #ffffff;
+            font-weight: 300;
+            letter-spacing: .05em;
+            font-size: .9rem;
+        }
+
+            .sub-drop > li > a:hover, .sub-drop > li > a:focus {
+                background-color: #747474;
+                color: #ffffff;
+            }
+
+            .sub-drop > li > a > span {
+                font-weight: 400;
+                color: #8dc63f;
+                font-style: italic;
+            }
+
+            .sub-drop > li > a:hover > span {
+                color: rgba(255,255,255,.7);
+            }
+
+.content-wrapper {
+    padding-top: 9em;
+    min-height: 700px;
+    padding-bottom: 5em;
+    background: url(../images/bkgd-gradient.png) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.small-login {
+    display: block;
+}
+
+.dealer-login .small-login {
+    display: none;
+}
+
+.dealer-only {
+    display: none;
+}
+
+.dealer-login .dealer-only {
+    display: block !important;
+}
+
+.centered-content {
+    clear: both;
+}
+
+    .centered-content > div {
+        margin-bottom: 4em;
+    }
+
+        .centered-content > div:last-child {
+            margin-bottom: 0em;
+        }
+
+.twitter-timeline {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.footer-top {
+    background-color: rgba(255,255,255,.2);
+    padding: 1em 0;
+}
+
+    .footer-top section:nth-child(1) {
+        border-right: 1px solid rgba(0, 0, 0, .3);
+    }
+
+    .footer-top section:nth-child(2) > div {
+        text-align: center;
+        position: relative;
+        top: 50%;
+        margin-top: -11rem;
+    }
+
+        .footer-top section:nth-child(2) > div > p:last-child {
+            margin-bottom: 0;
+        }
+
+    .footer-top section > div > ul {
+        list-style-type: none;
+        margin: 0 0 1em 0;
+        padding: 0;
+        color: #ffffff;
+        font-size: .8em;
+        letter-spacing: .1em;
+    }
+
+        .footer-top section > div > ul:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer-top section > div > ul > li {
+            color: #ffffff;
+        }
+
+            .footer-top section > div > ul > li > a {
+                color: #ffffff;
+            }
+
+                .footer-top section > div > ul > li > a:hover {
+                    color: rgba(255,255,255,.5);
+                }
+
+    .footer-top .lead-link {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+
+        .footer-top .lead-link + .subheader {
+            margin-top: 0;
+        }
+
+    .footer-top .social-media i {
+        text-align: center;
+        width: 15px;
+    }
+
+    .footer-top .subheader {
+        font-size: 1.1em;
+        text-transform: uppercase;
+        margin: .5em 0 0 0;
+        color: rgba(255,255,255,.3) !important;
+        letter-spacing: .2em;
+    }
+
+        .footer-top .subheader > a {
+            color: rgba(255,255,255,.3) !important;
+        }
+
+            .footer-top .subheader > a:hover {
+                opacity: .5;
+            }
+
+.logo-nwt-full {
+    height: 3em;
+    overflow: hidden;
+}
+
+    .logo-nwt-full .icon-logo-nwt-full {
+        font-size: 15em;
+        position: relative;
+        vertical-align: text-bottom;
+        line-height: 0;
+    }
+
+.logo-pusam .icon-logo-pusam-flag {
+    font-size: 1.3em;
+    bottom: -.2em;
+    position: relative;
+}
+
+.logo-gsa {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+    .logo-gsa .icon-logo-gsa {
+        font-size: 2em;
+        vertical-align: sub;
+    }
+
+.logo-njpa {
+    margin-top: 1.8rem;
+}
+.logo-hgacbuy img {
+	max-width: 200px;
+}
+.footer-bottom {
+    background-color: #000000;
+    padding: 1em 0;
+}
+
+    .footer-bottom p {
+        margin-bottom: 0;
+        font-size: .7em !important;
+        letter-spacing: .07em;
+        text-align: center;
+    }
+
+        .footer-bottom p > a {
+            color: #ffffff;
+        }
+
+            .footer-bottom p > a:hover {
+                opacity: .5;
+            }
+
+.reveal-modal {
+    position: fixed;
+    top: 10% !important;
+    bottom: inherit;
+    z-index: 100000000;
+    background: url(http://refusetrucks.scrantonmfg.com/images/bkgd-gradient.png) no-repeat center center #000000 !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    border: none;
+}
+
+.reveal-modal-bg {
+    z-index: 10000000;
+    background-color: rgba(0,0,0,0.9) !important;
+}
+
+.close-reveal-modal {
+    font-size: 1rem !important;
+    top: .6875rem !important;
+}
+
+    .close-reveal-modal > span {
+        font-size: 1rem;
+        color: rgba(255,255,255,1);
+    }
+
+.h1Reg {
+    top: -1.3em;
+    left: .25em;
+    font-size: .35em;
+}
+
+/*---------------------------------------------------------------*/
+/* Home Page Styles */
+/*---------------------------------------------------------------*/
+.slider-wrapper {
+    margin-bottom: 4em;
+    float: left;
+    width: 100%;
+}
+
+.two-column-wrapper {
+    float: left;
+    width: 100%;
+}
+
+    .two-column-wrapper .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .two-column-wrapper .left-col {
+        padding-right: 3em;
+    }
+
+    .two-column-wrapper .right-col {
+        padding-left: 3em;
+    }
+
+    .two-column-wrapper > div > section {
+        margin-bottom: 2em;
+    }
+
+        .two-column-wrapper > div > section:last-child {
+            margin-bottom: 0em;
+        }
+
+.home-callout-wrapper {
+    float: left;
+    width: 100%;
+}
+
+.callout {
+    border-radius: 10px;
+    min-height: 355px;
+    max-height: 355px;
+    background-color: #404041 !important;
+}
+
+    .callout:hover {
+        box-shadow: 0 0 20px rgba(141, 198, 63, 1);
+        cursor: pointer;
+    }
+
+    .callout > h4 {
+        padding-top: 1em;
+        margin: 0;
+        line-height: normal;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "futura-pt-condensed",sans-serif !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+    }
+
+        .callout > h4 > span {
+            line-height: 0;
+            position: relative;
+            letter-spacing: .02em;
+            font-family: "futura-pt-condensed",sans-serif !important;
+            font-style: normal !important;
+            font-weight: 500 !important;
+        }
+
+/* --- Callout 1 --- */
+.home-callout-wrapper > section:nth-child(1) > .callout {
+    background: url(../images/callouts/co-rear-loaders.jpg) no-repeat top center;
+}
+
+/* Rear Loaders */
+.callout#rearLoaders > h4 > span:nth-child(1) {
+    color: #ffffff;
+    font-size: 1.7em;
+    top: 4px;
+}
+
+.callout#rearLoaders > h4 > span:nth-child(3) {
+    color: #8dc63f;
+    font-size: 2.8em;
+    top: 24px;
+}
+
+/* --- Callout 2 --- */
+.home-callout-wrapper > section:nth-child(2) > .callout {
+    background: url(../images/callouts/co-rotopac.jpg) no-repeat top center;
+}
+
+/* ROTOPAC */
+.callout#rotopac > h4 > span:nth-child(1) {
+    color: #ffffff;
+    font-size: 2.5em;
+    top: 16px;
+}
+
+.callout#rotopac > h4 > span:nth-child(3) {
+    color: #8dc63f;
+    font-size: 2.59em;
+    top: 33px;
+}
+
+.callout#rotopac > h4 > span:nth-child(5) {
+    color: #ffffff;
+    font-size: 1.1em;
+    top: 28px;
+}
+
+/* --- Callout 3 --- */
+.home-callout-wrapper > section:nth-child(3) > .callout {
+    background: url(../images/callouts/co-nwt-dealer.jpg) no-repeat top center;
+}
+
+/* New Way Dealers */
+.callout#nwtDealer > h4 > span:nth-child(1) {
+    color: #ffffff;
+    font-size: 1.4em;
+    top: 0px;
+}
+
+.callout#nwtDealer > h4 > span:nth-child(3) {
+    color: #8dc63f;
+    font-size: 2.3em;
+    top: 12px;
+}
+
+.table-wrapper {
+    position: relative;
+}
+
+    .table-wrapper table {
+        border: none;
+        border-radius: 10px 10px 10px 10px;
+        background-color: rgba(255,255,255,.2);
+        font-weight: 200;
+        margin-bottom: 0;
+    }
+
+        .table-wrapper table tr.even, .table-wrapper table tr.alt, table tr:nth-of-type(even) {
+            background-color: rgba(0,0,0,.3);
+        }
+
+    .table-wrapper th {
+        background-color: rgba(0,0,0,.6);
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: .8em;
+        letter-spacing: .2em;
+        font-weight: 200;
+    }
+
+    .table-wrapper tr:first-child {
+        -webkit-border-radius: 10px 10px 0 0;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .table-wrapper tr > th:first-child {
+        -webkit-border-radius: 10px 0 0 0;
+        border-radius: 10px 0 0 0;
+    }
+
+    .table-wrapper tr > th:last-child {
+        -webkit-border-radius: 0 10px 0 0;
+        border-radius: 0 10px 0 0;
+    }
+
+    .table-wrapper tr:last-child > td:first-child {
+        -webkit-border-radius: 0 0 0 10px;
+        border-radius: 0 0 0 10px;
+    }
+
+    .table-wrapper tr:last-child > td:last-child {
+        -webkit-border-radius: 0 0 0 10px;
+        border-radius: 0 0 10px 0;
+    }
+
+    .table-wrapper td {
+        color: #ffffff;
+        font-size: .8em;
+        letter-spacing: .05em;
+    }
+
+        .table-wrapper td > a {
+            color: #ffffff;
+        }
+
+            .table-wrapper td > a:hover {
+                color: #ffffff;
+            }
+
+            .table-wrapper td > a > span {
+                color: #8dc63f;
+                font-weight: 400;
+            }
+
+            .table-wrapper td > a:hover > span {
+                color: #8dc63f;
+                text-decoration: underline;
+            }
+
+    .table-wrapper > p {
+        float: left;
+        width: 100%;
+        clear: both;
+    }
+
+        .table-wrapper > p > .button {
+            border-radius: 0 0 10px 10px;
+            -webkit-border-radius: 0 0 10px 10px;
+            width: 100%;
+        }
+
+.authorized-dealer .media-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* --- Bottom Callouts --- */
+.bottom-callouts {
+    clear: both;
+}
+
+    .bottom-callouts .callout {
+        min-height: 86px;
+        border: 6px solid #000000;
+        box-shadow: 0 0 0 3px #8dc63f;
+        border-radius: 10px;
+    }
+
+        .bottom-callouts .callout:hover {
+            box-shadow: 0 0 0 3px #ffffff, 0 0 20px 3px rgba(255,255,255,.5);
+        }
+
+        .bottom-callouts .callout h5 {
+            color: #ffffff;
+            text-transform: uppercase;
+            margin: 0;
+            text-align: left;
+            float: right;
+            letter-spacing: .1em;
+            font-size: 1.4em;
+            line-height: 1.2;
+            padding: 11px 1em;
+        }
+
+        .bottom-callouts .callout#refuseTrucks {
+            background-color: #000000 !important;
+            /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+            background-image: linear-gradient(to left, #000000, #000000 32%, transparent 56%), url(../images/callouts/bc-refuse-trucks.jpg);
+            /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+            background-image: -webkit-gradient(linear, left top, right top, from(#000000), from(#000000 32%), to(transparent 56%)), url(../images/callouts/bc-refuse-trucks.jpg);
+            /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+            background-image: -webkit-linear-gradient(right, black 19%, transparent 61%), url(../images/callouts/bc-refuse-trucks.jpg);
+            /* Firefox 3.6 - 15 */
+            background-image: -moz-linear-gradient(right, #000000, #000000 32%, transparent 56%), url(../images/callouts/bc-refuse-trucks.jpg);
+            /* Opera 11.1 - 12 */
+            background-image: -o-linear-gradient(right, #000000, #000000 32%, transparent 56%), url(../images/callouts/bc-refuse-trucks.jpg);
+            background-position: center center;
+            background-size: 100% auto;
+        }
+
+        .bottom-callouts .callout#dealerLocator {
+            background-color: #000000 !important;
+            /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+            background-image: linear-gradient(to left, #000000, #000000 32%, transparent 56%), url(../images/callouts/bc-dealer-locator.jpg);
+            /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+            background-image: -webkit-gradient(linear, left top, right top, from(#000000), from(#000000 32%), to(transparent 56%)), url(../images/callouts/bc-dealer-locator.jpg);
+            /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+            background-image: -webkit-linear-gradient(right, black 19%, transparent 61%), url(../images/callouts/bc-dealer-locator.jpg);
+            /* Firefox 3.6 - 15 */
+            background-image: -moz-linear-gradient(right, #000000, #000000 32%, transparent 56%), url(../images/callouts/bc-dealer-locator.jpg);
+            /* Opera 11.1 - 12 */
+            background-image: -o-linear-gradient(right, #000000, #000000 32%, transparent 56%), url(../images/callouts/bc-dealer-locator.jpg);
+            background-position: center center;
+            background-size: 100% auto;
+        }
+
+        .bottom-callouts .callout#partsService {
+            background-color: #000000 !important;
+            /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+            background-image: linear-gradient(to left, #000000, #000000 32%, transparent 56%), url(../images/callouts/bc-parts-service.jpg);
+            /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+            background-image: -webkit-gradient(linear, left top, right top, from(#000000), from(#000000 32%), to(transparent 56%)), url(../images/callouts/bc-parts-service.jpg);
+            /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+            background-image: -webkit-linear-gradient(right, black 19%, transparent 61%), url(../images/callouts/bc-parts-service.jpg);
+            /* Firefox 3.6 - 15 */
+            background-image: -moz-linear-gradient(right, #000000, #000000 32%, transparent 56%), url(../images/callouts/bc-parts-service.jpg);
+            /* Opera 11.1 - 12 */
+            background-image: -o-linear-gradient(right, #000000, #000000 32%, transparent 56%), url(../images/callouts/bc-parts-service.jpg);
+            background-position: center center;
+            background-size: 100% auto;
+        }
+
+/*---------------------------------------------------------------*/
+/* Sec/Tert Page Styles */
+/*---------------------------------------------------------------*/
+.front-loader .main-nav > ul > li.one,
+.rear-loader .main-nav > ul > li.two,
+.automated-side-loader .main-nav > ul > li.three,
+.satellite-bodies .main-nav > ul > li.four,
+.cng-loader .main-nav > ul > li.five,
+.eshowroom .main-nav > ul > li.six,
+.kpac-compactors .main-nav > ul > li.seven,
+.parts-services .main-nav > ul > li.eight,
+.front-loader .main-nav > ul > li.one > a,
+.rear-loader .main-nav > ul > li.two > a,
+.automated-side-loader .main-nav > ul > li.three > a,
+.satellite-bodies .main-nav > ul > li.four > a,
+.cng-loader .main-nav > ul > li.five > a,
+.eshowroom .main-nav > ul > li.six > a,
+.kpac-compactors .main-nav > ul > li.seven > a,
+.parts-services .main-nav > ul > li.eight > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .front-loader .main-nav > ul > li.one:hover,
+    .rear-loader .main-nav > ul > li.two:hover,
+    .automated-side-loader .main-nav > ul > li.three:hover,
+    .satellite-bodies .main-nav > ul > li.four:hover,
+    .cng-loader .main-nav > ul > li.five:hover,
+    .eshowroom .main-nav > ul > li.six:hover,
+    .kpac-compactors .main-nav > ul > li.seven:hover,
+    .parts-services .main-nav > ul > li.eight:hover,
+    .front-loader .main-nav > ul > li.one:hover > a,
+    .rear-loader .main-nav > ul > li.two:hover > a,
+    .automated-side-loader .main-nav > ul > li.three:hover > a,
+    .satellite-bodies .main-nav > ul > li.four:hover > a,
+    .cng-loader .main-nav > ul > li.five:hover > a,
+    .eshowroom .main-nav > ul > li.six:hover > a,
+    .kpac-compactors .main-nav > ul > li.seven:hover > a,
+    .parts-services .main-nav > ul > li.eight:hover > a,
+    .front-loader .main-nav > ul > li.one:hover > a:hover,
+    .rear-loader .main-nav > ul > li.two:hover > a:hover,
+    .automated-side-loader .main-nav > ul > li.three:hover > a:hover,
+    .satellite-bodies .main-nav > ul > li.four:hover > a:hover,
+    .cng-loader .main-nav > ul > li.five:hover > a:hover,
+    .eshowroom .main-nav > ul > li.six:hover > a:hover,
+    .kpac-compactors .main-nav > ul > li.seven:hover > a:hover,
+    .parts-services .main-nav > ul > li.eight:hover > a:hover {
+        background-color: #ffffff !important;
+    }
+
+.sec .content-wrapper ul li, .tert .content-wrapper ul li {
+    letter-spacing: .03em;
+    font-weight: 200;
+}
+
+.sec .content-wrapper .two-column-wrapper, .tert .content-wrapper .two-column-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.sec .intro-pane, .tert .intro-pane {
+    width: 100%;
+    float: left;
+    clear: both;
+    position: relative;
+}
+
+    .sec .intro-pane h1, .tert .intro-pane h1 {
+        font-size: 2.25rem;
+        font-weight: 400;
+        margin: 0 0 1rem 0;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding: 0;
+        line-height: 1;
+        position: relative;
+    }
+
+        .sec .intro-pane h1 > .trademark, .tert .intro-pane h1 > .trademark {
+            position: relative;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-style: normal;
+            vertical-align: super;
+            margin-left: .4rem;
+        }
+
+    .sec .intro-pane h2, .tert .intro-pane h2 {
+        font-size: 1.8em;
+        color: #ffffff;
+        font-weight: 300;
+        margin: 0 0 1rem 0;
+        text-transform: uppercase;
+        padding: 0;
+        position: relative;
+    }
+
+    .sec .intro-pane ul label, .tert .intro-pane ul label {
+        margin-top: 1rem;
+        margin-left: -1.1rem;
+        font-size: 1rem;
+        color: #ffffff;
+        font-weight: 300;
+        letter-spacing: .1rem;
+    }
+
+.sec .right-col > div, .tert .right-col > div {
+    float: left;
+    width: 100%;
+    clear: both;
+    padding: 0;
+}
+
+.aside-nav, .aside-nav * {
+    float: left;
+    width: 100%;
+}
+
+.aside-nav {
+    margin-bottom: 2rem;
+}
+
+    .aside-nav > h3 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: .1rem;
+        margin: 0 0 1rem 0;
+        border-bottom: 1px solid rgba(255,255,255,.4);
+        padding: 0 0 1rem 0;
+    }
+
+        .aside-nav > h3 > a {
+            padding: 0 .5rem;
+        }
+
+            .aside-nav > h3 > a:hover {
+                background-color: #ffffff;
+                color: #000000;
+            }
+
+    .aside-nav > ul {
+        margin: 0;
+        list-style-type: none;
+    }
+
+        .aside-nav > ul > li {
+            margin-bottom: 3px;
+        }
+
+            .aside-nav > ul > li > a {
+                padding: 0 .5rem;
+                font-size: 1.1rem;
+            }
+
+                .aside-nav > ul > li > a:hover {
+                    background-color: #ffffff;
+                    color: #000000;
+                }
+
+        .aside-nav > ul > .zero > a {
+            font-size: .9rem;
+            line-height: 1;
+            color: rgba(255, 255, 255, .6);
+        }
+
+            .aside-nav > ul > .zero > a:hover {
+                color: rgba(255, 255, 255, .6);
+            }
+
+        .aside-nav > ul > .extended > label {
+            float: left;
+            width: 100%;
+            clear: both;
+            padding: 0 .5rem;
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #8dc63f;
+        }
+
+            .aside-nav > ul > .extended > label:hover {
+                cursor: default;
+            }
+
+        .aside-nav > ul > .extended > ul {
+            margin: 0;
+            padding: 0 0 0 .5rem;
+            float: left;
+            width: 100%;
+            clear: both;
+            list-style-type: none;
+        }
+
+            .aside-nav > ul > .extended > ul > li > a {
+                color: rgba(141,198,63,.6);
+                padding: 0 .5rem;
+            }
+
+                .aside-nav > ul > .extended > ul > li > a:before {
+                    content: "\21B3 " !important;
+                    margin-right: .2rem;
+                }
+
+                .aside-nav > ul > .extended > ul > li > a:hover {
+                    background-color: rgba(255,255,255,.6);
+                    color: #000000;
+                }
+
+                    .aside-nav > ul > .extended > ul > li > a:hover:before {
+                        color: #000000;
+                    }
+
+.sn-callouts > section {
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+    .sn-callouts > section:last-child {
+        margin-bottom: 0;
+    }
+
+.sn-callouts .callout#rotopac {
+    background: url(../images/callouts/co-rotopac.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.sn-callouts .contact-nwt-callout, .sn-callouts .contact-nwt-callout * {
+    float: left;
+    width: 100%;
+}
+
+.sn-callouts .contact-nwt-callout {
+    background-color: rgba(0,0,0,.4);
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+    .sn-callouts .contact-nwt-callout h5 {
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+    }
+
+    .sn-callouts .contact-nwt-callout h6 {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: .05rem;
+        font-style: italic;
+    }
+
+    .sn-callouts .contact-nwt-callout ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        .sn-callouts .contact-nwt-callout ul a {
+            float: none;
+            width: auto;
+        }
+
+.form-wrapper {
+    width: 100%;
+    clear: both;
+}
+
+    .form-wrapper table {
+        border: none;
+        border-radius: 10px;
+        background-color: rgba(255,255,255,.2);
+        font-weight: 300;
+        letter-spacing: .05rem;
+    }
+
+        .form-wrapper table tr.even, .form-wrapper table tr.alt, .form-wrapper table tr:nth-of-type(even) {
+            background-color: rgba(0,0,0,.3);
+        }
+
+    .form-wrapper th {
+        background-color: rgba(0,0,0,.6);
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 1.25em;
+        letter-spacing: .2em;
+        font-weight: 200;
+    }
+
+    .form-wrapper tbody:first-child {
+        border-bottom: 1px solid #000000;
+    }
+
+    .form-wrapper tbody:last-child {
+        border-bottom: none !important;
+    }
+
+        .form-wrapper tbody:last-child > tr:first-child {
+            -webkit-border-radius: 10px 10px 0 0;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .form-wrapper tbody:last-child > tr:last-child > td:first-child {
+            border-radius: 0 0 0px 10px;
+        }
+
+        .form-wrapper tbody:last-child > tr:last-child > td:last-child {
+            border-radius: 0 0 10px 0;
+        }
+
+    .form-wrapper tbody:first-child > tr > th:first-child {
+        border-radius: 10px 0 0 0;
+    }
+
+    .form-wrapper tbody:first-child > tr > th:last-child {
+        border-radius: 0 10px 0 0;
+    }
+
+    .form-wrapper tr > td:first-child {
+        width: 30%;
+    }
+
+    .form-wrapper tr > td:last-child {
+        width: 70%;
+    }
+
+    .form-wrapper td {
+        color: #ffffff;
+        font-size: 1rem;
+        letter-spacing: .05em;
+    }
+
+    .form-wrapper input, .form-wrapper select, .form-wrapper textarea, .form-wrapper .submit {
+        margin-bottom: 0 !important;
+        font-weight: 400;
+        letter-spacing: .05rem;
+        font-size: 1rem;
+    }
+
+    .form-wrapper label {
+        font-weight: 300;
+        font-size: 1rem;
+        color: #ffffff;
+    }
+
+        .form-wrapper label.required:before {
+            content: "*";
+            color: #ff0000;
+            font-size: 1rem;
+        }
+
+        .form-wrapper label.left {
+            float: left;
+            margin-right: 1rem;
+        }
+
+    .form-wrapper input {
+        max-width: 100% !important;
+    }
+
+    .form-wrapper select {
+    }
+
+    .form-wrapper textarea {
+    }
+
+    .form-wrapper .submit {
+    }
+
+    .form-wrapper #apparrelSignup {
+        float: left;
+        width: 14px;
+        height: 14px;
+        line-height: 1.4;
+        margin-top: 3px;
+    }
+
+        .form-wrapper #apparrelSignup + label {
+            float: left;
+            width: 80%;
+            margin-right: 0;
+            color: #ffffff;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+.sec.eshowroom .form-wrapper tr > td:first-child {
+    width: 100%;
+}
+
+.sec.eshowroom .form-wrapper tr > td:last-child {
+    width: 100%;
+}
+/* --- Contact Us Pages --- */
+/* Overview */
+.contact-us.overview .sn-contact-us > h3 > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .contact-us.overview .sn-contact-us > h3 > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .contact-us.overview .sn-contact-us > h3 > a:hover:before {
+            color: #000000;
+        }
+
+.contact-us .form-wrapper tr > td:first-child {
+    text-align: right;
+}
+
+.contact-form > tbody > tr > td {
+    position: relative;
+}
+
+    .contact-form > tbody > tr > td:nth-child(1) {
+        width: 30%;
+    }
+
+    .contact-form > tbody > tr > td:nth-child(2) {
+        width: 70%;
+    }
+
+.contact-form > tbody > tr > td {
+    padding: 1rem;
+}
+
+.form-wrapper form .contact-form:last-of-type input {
+    margin: 0 !important;
+}
+/*
+.contact-form label {font-size: 1rem; color: #ffffff;}
+.contact-form label.required:before {content: "*"; color: #ff0000; font-size: 1rem;}
+.contact-form input {max-width: 100% !important;}
+*/
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+    outline: none !important;
+}
+
+.contact-form td.error input.required[aria-invalid*="true"], .contact-form td.error select.required[aria-invalid*="true"], .contact-form td.error textarea.required[aria-invalid*="true"] {
+    border-color: #c60f13;
+}
+
+    .contact-form td.error input.required[aria-invalid*="true"]:focus, .contact-form td.error select.required[aria-invalid*="true"]:focus, .contact-form td.error textarea.required[aria-invalid*="true"]:focus {
+        box-shadow: 0 0 10px #c60f13;
+    }
+
+        .contact-form td.error input.required[aria-invalid*="true"]:focus + small.error, .contact-form td.error select.required[aria-invalid*="true"]:focus + small.error, .contact-form td.error textarea.required[aria-invalid*="true"]:focus + small.error {
+            opacity: .2 !important;
+        }
+
+.contact-form td input.required[aria-invalid*="false"], .contact-form td select.required[aria-invalid*="false"], .contact-form td textarea.required[aria-invalid*="false"] {
+    border-color: #8dc63f;
+}
+
+.contact-form textarea {
+    max-width: 100%;
+}
+
+.contact-form .switch {
+    position: absolute;
+    max-width: 4rem;
+    max-height: 2rem;
+}
+
+    .contact-form .switch > input {
+        position: relative;
+        float: none !important;
+        top: 0;
+    }
+
+    .contact-form .switch > label {
+        width: 4rem !important;
+        position: relative;
+        left: 0;
+        top: 0;
+        float: none !important;
+    }
+
+    .contact-form .switch + label {
+        margin-left: 5rem;
+    }
+
+.contact-form small.error {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 900;
+    height: auto;
+    max-height: 2.3rem;
+    line-height: 1;
+    margin: .25rem 1.5rem 0 0 !important;
+    padding: .5rem 1rem !important;
+    background-color: #c60f13 !important;
+    color: #ffffff !important;
+}
+
+/* Sales Reps */
+.sales .sn-contact-us > ul > li.one > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .sales .sn-contact-us > ul > li.one > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .sales .sn-contact-us > ul > li.one > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .sales .sn-contact-us > ul > li.one > a:hover:before {
+            color: #000000;
+        }
+
+/* Company Directory */
+.company-directory .sn-contact-us > ul > li.two > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .company-directory .sn-contact-us > ul > li.two > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .company-directory .sn-contact-us > ul > li.two > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .company-directory .sn-contact-us > ul > li.two > a:hover:before {
+            color: #000000;
+        }
+
+/* --- About Us Pages --- */
+/* Overview/History */
+.about-us.overview.history .sn-about-us > h3 > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .about-us.overview.history .sn-about-us > h3 > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .about-us.overview.history .sn-about-us > h3 > a:hover:before {
+            color: #000000;
+        }
+
+.about-us .truck-lineup, .about-us .truck-lineup > img {
+    border-radius: 20px;
+}
+
+.about-us .truck-lineup {
+    margin: 2rem 0 2rem 2rem;
+    float: right;
+    max-width: 360px;
+}
+
+.about-us .cad-drawing, .about-us .cad-drawing > img {
+    border-radius: 0px;
+}
+
+.about-us .cad-drawing {
+    margin: 0 1rem 2rem 0;
+    float: left;
+    max-width: 360px;
+}
+
+.about-us .truck-inspection, .about-us .truck-inspection > img {
+    border-radius: 0px;
+}
+
+.about-us .truck-inspection {
+    margin: 0 0 2rem 1rem;
+    float: right;
+    max-width: 360px;
+}
+
+/* Customer Testimonials */
+.customer-testimonials .sn-about-us > ul > li.one > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .customer-testimonials .sn-about-us > ul > li.one > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .customer-testimonials .sn-about-us > ul > li.one > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .customer-testimonials .sn-about-us > ul > li.one > a:hover:before {
+            color: #000000;
+        }
+
+.testimonial-pane, .full-width-quote {
+    width: 100%;
+    float: left;
+    clear: both;
+    position: relative;
+}
+
+    .testimonial-pane figure {
+        margin: 0 0 0 0;
+        padding-left: 0;
+        padding-right: 3rem;
+    }
+
+        .testimonial-pane figure > figcaption, .testimonial-pane .testimonial-image {
+            float: left;
+            width: 100%;
+        }
+
+        .testimonial-pane figure > figcaption {
+            text-align: center;
+            font-style: italic;
+        }
+
+            .testimonial-pane figure > figcaption > p {
+                margin: .5rem 0 0 0;
+            }
+
+            .testimonial-pane figure > figcaption .testimonial-name {
+                color: #8dc63f;
+                font-weight: 400;
+                font-size: 1rem;
+            }
+
+            .testimonial-pane figure > figcaption .testimonial-location {
+                font-size: .8rem;
+            }
+
+    .testimonial-pane > div {
+        padding-right: 0;
+        padding-left: 1rem;
+    }
+
+        .testimonial-pane > div > p:first-child {
+            margin-top: -1rem;
+        }
+
+        .testimonial-pane > div > p:last-child {
+            margin-bottom: 0;
+        }
+
+        .testimonial-pane > div > p > .icon-left-quote {
+            font-size: 6em;
+            line-height: 0;
+            position: relative;
+            bottom: -3rem;
+            margin-right: .3rem;
+            margin-left: -3.1rem;
+            font-family: "futura-pt",sans-serif;
+        }
+
+.full-width-quote {
+    background-color: #646464;
+    padding: 2rem;
+}
+
+    .full-width-quote p {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 400;
+        font-style: italic;
+        line-height: normal;
+        margin-top: -.75rem;
+    }
+
+        .full-width-quote p:last-child {
+            margin-bottom: 0;
+        }
+
+        .full-width-quote p > .icon-left-quote {
+            font-size: 3em;
+            font-style: italic;
+            line-height: 0;
+            bottom: -32px;
+            position: relative;
+            margin: 0 1rem 0 0;
+        }
+
+        .full-width-quote p > span:last-child {
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+.customer-testimonials .sn-callouts .submit-testimonial-callout, .submit-testimonial .sn-callouts .submit-testimonial-callout {
+    display: block;
+}
+
+.sn-callouts .submit-testimonial-callout {
+    display: none;
+}
+
+.sn-callouts .callout#submitTestimonial {
+    background-color: #000000 !important;
+    min-height: inherit;
+    float: left;
+    max-height: inherit;
+    border: 3px solid #8dc63f;
+    padding: 6px;
+    width: 100%;
+}
+
+    .sn-callouts .callout#submitTestimonial:hover {
+        border-color: #ffffff;
+        box-shadow: 0 0 0 0px #ffffff, 0 0 20px 3px rgba(255,255,255,.3);
+    }
+
+    .sn-callouts .callout#submitTestimonial > div {
+        float: left;
+        width: 50%;
+        padding-right: 3rem;
+        position: relative;
+        text-align: right;
+    }
+
+    .sn-callouts .callout#submitTestimonial .icon-testimonial-bubble {
+        font-size: 4rem;
+        color: rgba(255,255,255,.4);
+    }
+
+    .sn-callouts .callout#submitTestimonial:hover .icon-testimonial-bubble {
+        color: rgba(255,255,255,1);
+    }
+
+    .sn-callouts .callout#submitTestimonial > h5 {
+        float: left;
+        width: 50%;
+        position: relative;
+        left: -2rem;
+        font-size: 1.4rem;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        text-align: left;
+        margin: 0;
+        padding: .2rem 0;
+    }
+
+/* Scranton Mfg. Products */
+.scranton-mfg-products .sn-about-us > ul > li.two > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .scranton-mfg-products .sn-about-us > ul > li.two > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .scranton-mfg-products .sn-about-us > ul > li.two > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .scranton-mfg-products .sn-about-us > ul > li.two > a:hover:before {
+            color: #000000;
+        }
+
+.scranton-mfg-products .product-table {
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,1);
+    font-weight: 200;
+}
+
+    .scranton-mfg-products .product-table tr.even, .scranton-mfg-products .product-table tr.alt, .scranton-mfg-products .product-table tr:nth-of-type(even) {
+        background-color: rgba(0,0,0,.3);
+    }
+
+    .scranton-mfg-products .product-table td {
+        padding: 2rem;
+    }
+
+        .scranton-mfg-products .product-table td:first-child {
+            text-align: center;
+        }
+
+        .scranton-mfg-products .product-table td:last-child > p {
+            margin-bottom: 0;
+        }
+
+    .scranton-mfg-products .product-table [class*="logo-"] > img {
+        height: 75px;
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-attachment: inherit;
+    }
+
+    .scranton-mfg-products .product-table [class*="logo-"]:hover > img {
+        background-position: bottom left;
+    }
+
+.scranton-mfg-products .logo-smc > img {
+    background-image: url(../images/logo-mlfc.png);
+    background-size: 159px auto;
+}
+
+.scranton-mfg-products .logo-smc:hover > img {
+}
+
+.scranton-mfg-products .logo-new-way > img {
+    background-image: url(../images/logo-nwt.png);
+    background-size: 207px auto;
+}
+
+.scranton-mfg-products .logo-new-way:hover > img {
+}
+
+.scranton-mfg-products .logo-fastlane-auto-care > img {
+    background-image: url(../images/logo-fsca.png);
+    background-size: 207px auto;
+}
+
+.scranton-mfg-products .logo-fastlane-auto-care:hover > img {
+}
+
+.scranton-mfg-products .logo-mli > img {
+    background-image: url(../images/logo-fsca.png);
+    background-size: 116px auto;
+}
+
+.scranton-mfg-products .logo-mli:hover > img {
+}
+
+.scranton-mfg-products .logo-bow > img {
+    background-image: url(../images/logo-bow.png);
+    background-size: 158px auto;
+}
+
+.scranton-mfg-products .logo-bow:hover > img {
+}
+
+.scranton-mfg-products .logo-pvt > img {
+    background-image: url(../images/logo-pvt.png);
+    background-size: 153px auto;
+}
+
+.scranton-mfg-products .logo-pvt:hover > img {
+}
+
+.scranton-mfg-products .logo-kpc > img {
+    background-image: url(../images/logo-kpc.png);
+    background-size: 139px auto;
+    background-position: 0px -10px !important;
+}
+
+.scranton-mfg-products .logo-kpc:hover > img {
+    background-position: 0px -140px !important;
+}
+
+.scranton-mfg-products .logo-hms > img {
+    background-image: url(../images/logo-hms.png);
+    background-size: 200px auto;
+}
+
+.scranton-mfg-products .logo-hms:hover > img {
+}
+
+.scranton-mfg-products .logo-cfc > img {
+    background-image: url(../images/logo-cfc.png);
+    background-size: 200px auto;
+}
+
+.scranton-mfg-products .logo-cfc:hover > img {
+}
+
+.scranton-mfg-products .logo-nwf > img {
+	background-image: url(../images/logo-nwf.png);
+	background-size: 200px auto;
+	
+}
+
+.scranton-mfg-products .logo-nwf:hover > img {
+}
+
+.scranton-mfg-products .logo-nwa > img {
+	background-image: url(../images/logo-nwa.png);
+	background-size: 200px auto;
+}
+
+.scranton-mfg-products .logo-nwa:hover > img {
+}
+
+.scranton-mfg-products .logo-flf > img {
+	background-image: url(../images/logo-flf.png);
+	background-size: 200px auto;
+	width: 220px;
+}
+
+.scranton-mfg-products .logo-flf:hover > img {
+}
+
+.scranton-mfg-products .logo-flm > img {
+	background-image: url(../images/logo-flm.png);
+	background-size: 200px auto;
+}
+
+.scranton-mfg-products .logo-flm:hover > img {
+}
+/* Privacy Policy */
+.privacy-policy .sn-about-us > ul > li.three > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .privacy-policy .sn-about-us > ul > li.three > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .privacy-policy .sn-about-us > ul > li.three > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .privacy-policy .sn-about-us > ul > li.three > a:hover:before {
+            color: #000000;
+        }
+
+/* Terms of Use */
+.terms-of-use .sn-about-us > ul > li.four > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .terms-of-use .sn-about-us > ul > li.four > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .terms-of-use .sn-about-us > ul > li.four > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .terms-of-use .sn-about-us > ul > li.four > a:hover:before {
+            color: #000000;
+        }
+
+/* --- Careers Pages --- */
+.careers.job-posting .intro-pane ol {
+    padding-left: 1rem;
+    margin-top: -.5rem;
+}
+
+    .careers.job-posting .intro-pane ol li {
+        font-weight: 300;
+        letter-spacing: .05rem;
+    }
+
+/* Overview */
+.careers.overview .sn-careers > h3 > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .careers.overview .sn-careers > h3 > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .careers.overview .sn-careers > h3 > a:hover:before {
+            color: #000000;
+        }
+
+.careers.overview .intro-pane p, .careers.overview .intro-pane ul, .careers.overview .intro-pane ol {
+    font-size: 1.1rem;
+}
+
+.careers.overview .intro-pane li {
+    margin-top: 0.8rem;
+}
+/* No Openings */
+.sn-careers > ul > li.zero > a {
+    background-color: transparent;
+    color: #000000;
+    opacity: .7;
+}
+
+    .sn-careers > ul > li.zero > a:before {
+        content: "";
+        color: #000000;
+    }
+
+    .sn-careers > ul > li.zero > a:hover {
+        background-color: transparent;
+        color: transparent;
+    }
+
+        .sn-careers > ul > li.zero > a:hover:before {
+            color: transparent;
+        }
+
+/* General Labor Assembler */
+.general-labor-assembler .sn-careers > ul > li.one > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .general-labor-assembler .sn-careers > ul > li.one > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .general-labor-assembler .sn-careers > ul > li.one > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .general-labor-assembler .sn-careers > ul > li.one > a:hover:before {
+            color: #000000;
+        }
+
+/* Industrial Painter */
+.industrial-painter .sn-careers > ul > li.two > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .industrial-painter .sn-careers > ul > li.two > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .industrial-painter .sn-careers > ul > li.two > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .industrial-painter .sn-careers > ul > li.two > a:hover:before {
+            color: #000000;
+        }
+
+/* Machine Operator */
+.machine-operator .sn-careers > ul > li.three > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .machine-operator .sn-careers > ul > li.three > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .machine-operator .sn-careers > ul > li.three > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .machine-operator .sn-careers > ul > li.three > a:hover:before {
+            color: #000000;
+        }
+
+/* Break Press Operator */
+.break-press-operator .sn-careers > ul .four > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .break-press-operator .sn-careers > ul .four > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .break-press-operator .sn-careers > ul .four > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .break-press-operator .sn-careers > ul .four > a:hover:before {
+            color: #000000;
+        }
+
+/* Cut Off Saw Operator */
+.cut-off-saw-operator .sn-careers > ul .five > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .cut-off-saw-operator .sn-careers > ul .five > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .cut-off-saw-operator .sn-careers > ul .five > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .cut-off-saw-operator .sn-careers > ul .five > a:hover:before {
+            color: #000000;
+        }
+
+/* Drill Press Operator */
+.drill-press-operator .sn-careers > ul .six > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .drill-press-operator .sn-careers > ul .six > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .drill-press-operator .sn-careers > ul .six > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .drill-press-operator .sn-careers > ul .six > a:hover:before {
+            color: #000000;
+        }
+
+/* Fabrication/CNC Lathe Operator */
+.fabrication-cnc-lathe-operator .sn-careers > ul .seven > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .fabrication-cnc-lathe-operator .sn-careers > ul .seven > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .fabrication-cnc-lathe-operator .sn-careers > ul .seven > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .fabrication-cnc-lathe-operator .sn-careers > ul .seven > a:hover:before {
+            color: #000000;
+        }
+
+/* Fabrication/CNC Plasma Operator */
+.fabrication-cnc-plasma-operator .sn-careers > ul .eight > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .fabrication-cnc-plasma-operator .sn-careers > ul .eight > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .fabrication-cnc-plasma-operator .sn-careers > ul .eight > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .fabrication-cnc-plasma-operator .sn-careers > ul .eight > a:hover:before {
+            color: #000000;
+        }
+
+/* Fabrication Plasma Cutter Operator */
+.fabrication-plasma-cutter-operator .sn-careers > ul .nine > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .fabrication-plasma-cutter-operator .sn-careers > ul .nine > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .fabrication-plasma-cutter-operator .sn-careers > ul .nine > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .fabrication-plasma-cutter-operator .sn-careers > ul .nine > a:hover:before {
+            color: #000000;
+        }
+
+/* MIG/Pulse Welder */
+.mig-pulse-welder .sn-careers > ul > li.ten > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .mig-pulse-welder .sn-careers > ul > li.ten > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .mig-pulse-welder .sn-careers > ul > li.ten > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .mig-pulse-welder .sn-careers > ul > li.ten > a:hover:before {
+            color: #000000;
+        }
+
+/* MIG/Wire Welder */
+.mig-wire-welder .sn-careers > ul > li.eleven > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .mig-wire-welder .sn-careers > ul > li.eleven > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .mig-wire-welder .sn-careers > ul > li.eleven > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .mig-wire-welder .sn-careers > ul > li.eleven > a:hover:before {
+            color: #000000;
+        }
+
+/* Mounting Final Assembly Technician */
+.mounting-final-assembly-technician .sn-careers > ul > li.twelve > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .mounting-final-assembly-technician .sn-careers > ul > li.twelve > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .mounting-final-assembly-technician .sn-careers > ul > li.twelve > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .mounting-final-assembly-technician .sn-careers > ul > li.twelve > a:hover:before {
+            color: #000000;
+        }
+
+/* Purchasing Agent */
+.purchasing-agent .sn-careers > ul > li.thriteen > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .purchasing-agent .sn-careers > ul > li.thriteen > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .purchasing-agent .sn-careers > ul > li.thriteen > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .purchasing-agent .sn-careers > ul > li.thriteen > a:hover:before {
+            color: #000000;
+        }
+
+/* Sales Assistant */
+.sales-assistant .sn-careers > ul > li.fourteen > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .sales-assistant .sn-careers > ul > li.fourteen > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .sales-assistant .sn-careers > ul > li.fourteen > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .sales-assistant .sn-careers > ul > li.fourteen > a:hover:before {
+            color: #000000;
+        }
+
+/* Wiring Technician */
+.wiring-technician .sn-careers > ul > li.fifteen > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .wiring-technician .sn-careers > ul > li.fifteen > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .wiring-technician .sn-careers > ul > li.fifteen > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .wiring-technician .sn-careers > ul > li.fifteen > a:hover:before {
+            color: #000000;
+        }
+
+/* CNC Plasma Programmer */
+.cnc-plasma-programmer .sn-careers > ul > li.sixteen > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .cnc-plasma-programmer .sn-careers > ul > li.sixteen > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .cnc-plasma-programmer .sn-careers > ul > li.sixteen > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .cnc-plasma-programmer .sn-careers > ul > li.sixteen > a:hover:before {
+            color: #000000;
+        }
+/* maintenance-technician */
+.maintenance-technician .sn-careers > ul > li.seventeen > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .maintenance-technician .sn-careers > ul > li.seventeen > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .maintenance-technician .sn-careers > ul > li.seventeen > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .maintenance-technician .sn-careers > ul > li.seventeen > a:hover:before {
+            color: #000000;
+        }
+/* shipping-receiving-clerk */
+.shipping-receiving-clerk .sn-careers > ul > li.nineteen > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .shipping-receiving-clerk .sn-careers > ul > li.nineteen > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .shipping-receiving-clerk .sn-careers > ul > li.nineteen > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .shipping-receiving-clerk .sn-careers > ul > li.nineteen > a:hover:before {
+            color: #000000;
+        }
+
+/* Warranty Admin */
+.warranty-admin .sn-careers > ul > li.twenty > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .warranty-admin .sn-careers > ul > li.twenty > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .warranty-admin .sn-careers > ul > li.twenty > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .warranty-admin .sn-careers > ul > li.twenty > a:hover:before {
+            color: #000000;
+        }
+/* Drill Operator */
+.drill-operator .sn-careers > ul > li.twenty-one > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .drill-operator .sn-careers > ul > li.twenty-one > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .drill-operator .sn-careers > ul > li.twenty-one > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .drill-operator .sn-careers > ul > li.twenty-one > a:hover:before {
+            color: #000000;
+        }
+/* CNC Plasma Programmer */
+.cnc-programmer .sn-careers > ul > li.twenty-two > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .cnc-programmer .sn-careers > ul > li.twenty-two > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .cnc-programmer .sn-careers > ul > li.twenty-two > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .cnc-programmer .sn-careers > ul > li.twenty-two > a:hover:before {
+            color: #000000;
+        }
+/* CNC Plasma Programmer */
+.general-labor .sn-careers > ul > li.twenty-three > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .general-labor .sn-careers > ul > li.twenty-three > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .general-labor .sn-careers > ul > li.twenty-three > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .general-labor .sn-careers > ul > li.twenty-three > a:hover:before {
+            color: #000000;
+        }
+
+/* Sales Assistant */
+.sales-support-assistant .sn-careers > ul > li.twenty-four > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .sales-support-assistant .sn-careers > ul > li.twenty-four > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .sales-support-assistant .sn-careers > ul > li.twenty-four > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .sales-support-assistant .sn-careers > ul > li.twenty-four > a:hover:before {
+            color: #000000;
+        }
+/* Hydraulics Technician */
+.hydraulics-technician .sn-careers > ul > li.twenty-five > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .hydraulics-technician .sn-careers > ul > li.twenty-five > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .hydraulics-technician .sn-careers > ul > li.twenty-five > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .hydraulics-technician .sn-careers > ul > li.twenty-five > a:hover:before {
+            color: #000000;
+        }
+/* Receptionist */
+.receptionist .sn-careers > ul > li.twenty-six > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .receptionist .sn-careers > ul > li.twenty-six > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .receptionist .sn-careers > ul > li.twenty-six > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .receptionist .sn-careers > ul > li.twenty-six > a:hover:before {
+            color: #000000;
+        }
+
+/* CNG Tech Apprentice */
+.cng-tech-apprentice .sn-careers > ul > li.twenty-seven > a {
+	background-color: #8dc63f;
+	color: #000000;
+}
+
+	.cng-tech-apprentice .sn-careers > ul > li.twenty-seven > a:before {
+		content: "\2190  ";
+		color: #000000;
+	}
+
+	.cng-tech-apprentice .sn-careers > ul > li.twenty-seven > a:hover {
+		background-color: #ffffff;
+		color: #000000;
+	}
+
+		.cng-tech-apprentice .sn-careers > ul > li.twenty-seven > a:hover:before {
+			color: #000000;
+		}
+/* Project/Industrial Designer */
+.project-industrial-designer .sn-careers > ul > li.twenty-eight > a {
+	background-color: #8dc63f;
+	color: #000000;
+}
+
+	.project-industrial-designer .sn-careers > ul > li.twenty-eight > a:before {
+		content: "\2190  ";
+		color: #000000;
+	}
+
+	.project-industrial-designer .sn-careers > ul > li.twenty-eight > a:hover {
+		background-color: #ffffff;
+		color: #000000;
+	}
+
+		.project-industrial-designer .sn-careers > ul > li.twenty-eight > a:hover:before {
+			color: #000000;
+		}
+/* Application */
+.online-application label {
+    color: #ffffff !important;
+}
+
+.online-application .submit-wrapper {
+    margin-top: -1.25rem;
+}
+
+    .online-application .submit-wrapper input {
+        border-radius: 0 0 10px 10px;
+        -webkit-border-radius: 0 0 10px 10px;
+    }
+
+.online-application .form-wrapper tbody > tr > th {
+    border-radius: 10px 10px 0 0 !important;
+    -webkit-border-radius: 10px 10px 0 0 !important;
+}
+
+.form-wrapper form table:last-of-type {
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+}
+
+    .form-wrapper form table:last-of-type input {
+        margin-bottom: .5rem !important;
+    }
+
+    .form-wrapper form table:last-of-type tr p:last-of-type {
+        margin-bottom: 0 !important;
+    }
+
+    .form-wrapper form table:last-of-type tr:last-child td:first-child, .form-wrapper form table:last-of-type tr:last-child td:last-child {
+        border-radius: 0 !important;
+        -webkit-border-radius: 0 !important;
+    }
+
+.form-wrapper form table h4 {
+    color: rgba(255,255,255,.6);
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    width: 100%;
+    padding-bottom: .5rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    border-bottom: 1px solid rgba(255,255,255,.6);
+}
+
+.form-wrapper form table input {
+    max-width: 50%;
+    margin-bottom: .5rem !important;
+}
+
+.education-info input, .professional-references input {
+    max-width: 100% !important;
+}
+
+.employment-history > tbody > tr > td {
+    padding: 0 !important;
+}
+
+.online-application .form-wrapper .previous-employer {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+
+.previous-employer textarea {
+    max-width: 100%;
+    min-height: 12rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: .1rem;
+    margin-bottom: .5rem !important;
+}
+
+.online-application .form-wrapper .previous-employer th {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.online-application .form-wrapper .employment-history > tbody > tr:last-child > td > table {
+    margin-bottom: 0;
+    border-radius: 0 0 10px 10px !important;
+    -webkit-border-radius: 0 0 10px 10px !important;
+}
+
+/* --- News/Resources Pages --- */
+.new-deliveries-callout {
+    display: none;
+}
+
+.news-resources .new-deliveries-callout {
+    display: block;
+}
+
+.news-resources .new-deliveries-callout {
+    background-color: #000000;
+    border-radius: 10px;
+    padding: .625rem;
+}
+
+.news-resources .slick-dots {
+    position: relative !important;
+    bottom: inherit !important;
+    right: inherit !important;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+    text-align: left !important;
+}
+
+    .news-resources .slick-dots li {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+        .news-resources .slick-dots li button {
+            width: 10px !important;
+            height: 10px !important;
+        }
+
+.news-resources .slick-slide {
+    background-color: #000000;
+}
+
+    .news-resources .slick-slide > p {
+        margin-bottom: 0;
+    }
+
+/* News Overview/Current News */
+.current-news .sn-news-resources > ul > li.one > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .current-news .sn-news-resources > ul > li.one > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .current-news .sn-news-resources > ul > li.one > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .current-news .sn-news-resources > ul > li.one > a:hover:before {
+            color: #000000;
+        }
+
+.current-news .current-articles {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+.article-content {
+    float: left;
+    width: 100%;
+    margin-bottom: 2rem;
+    clear: both;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,.4);
+}
+
+    .article-content:last-child {
+        border: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .article-content > h3 {
+        margin: 0 0 .2rem 0;
+    }
+
+    .article-content > h4 {
+        color: rgba(255,255,255,.5);
+        font-weight: 300;
+        letter-spacing: .05rem;
+        margin: 0 0 1rem 0;
+        line-height: normal;
+    }
+
+    .article-content > .article-by {
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        letter-spacing: .1rem;
+        color: #ffffff;
+    }
+
+        .article-content > .article-by .subheader {
+            font-weight: 300;
+            text-transform: none;
+            letter-spacing: .05rem;
+            color: #ffffff;
+        }
+
+            .article-content > .article-by .subheader > a {
+                color: #ffffff;
+            }
+
+    .article-content > .date {
+        font-size: .8rem;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        font-style: italic;
+    }
+
+        .article-content > .date:before {
+            content: "Published: ";
+        }
+
+    .article-content > p:last-child {
+        margin: 0;
+    }
+
+    .article-content > p > a.button {
+        margin-bottom: 0;
+    }
+
+/* Archived News */
+.archived-news .sn-news-resources > ul > li.two > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .archived-news .sn-news-resources > ul > li.two > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .archived-news .sn-news-resources > ul > li.two > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .archived-news .sn-news-resources > ul > li.two > a:hover:before {
+            color: #000000;
+        }
+
+.archived-news .archived-articles thead th {
+    border-radius: 0;
+    background-color: rgba(0,0,0,.9);
+    color: #ffffff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.archived-news .archived-articles th:first-child {
+    width: 75% !important;
+}
+
+.archived-news .archived-articles th:last-child {
+    width: 25% !important;
+}
+
+.archived-news [class*="articles-"] tbody tr td:first-child {
+    width: 75% !important;
+}
+
+.archived-news [class*="articles-"] tbody tr td:last-child {
+    width: 25% !important;
+}
+
+.pomona-wrap {
+    width: 375px;
+    float: right;
+}
+
+.pomona-imgs {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 5px;
+}
+
+.pomona-imgs-mid {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 185px;
+    padding: 5px;
+}
+
+.recycling-img {
+    float: right;
+    width: 315px;
+}
+
+.honors-img {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 332px;
+    float: right;
+    margin: 0 0 0 10px;
+}
+
+    .honors-img > p {
+        font-size: .75em;
+    }
+
+.callout-quote {
+    margin: 20px 0 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.kpac-img {
+    float: right;
+    padding: 0 0 0 10px;
+}
+
+.flex-thumbs {
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* Events */
+.events .sn-news-resources > ul > li.three > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .events .sn-news-resources > ul > li.three > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .events .sn-news-resources > ul > li.three > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .events .sn-news-resources > ul > li.three > a:hover:before {
+            color: #000000;
+        }
+
+/* Media Kit */
+.media-kit .sn-news-resources > ul > li.four > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .media-kit .sn-news-resources > ul > li.four > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .media-kit .sn-news-resources > ul > li.four > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .media-kit .sn-news-resources > ul > li.four > a:hover:before {
+            color: #000000;
+        }
+
+/* Refuse Links */
+.refuse-links .sn-news-resources > ul > li.five > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .refuse-links .sn-news-resources > ul > li.five > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .refuse-links .sn-news-resources > ul > li.five > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .refuse-links .sn-news-resources > ul > li.five > a:hover:before {
+            color: #000000;
+        }
+
+/* Waste Industry Terminology */
+.waste-industry-terminology .sn-news-resources > ul > li.six > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .waste-industry-terminology .sn-news-resources > ul > li.six > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .waste-industry-terminology .sn-news-resources > ul > li.six > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .waste-industry-terminology .sn-news-resources > ul > li.six > a:hover:before {
+            color: #000000;
+        }
+
+.waste-industry-terminology [data-magellan-expedition-clone] {
+    display: none;
+}
+
+.waste-industry-terminology [data-magellan-expedition] {
+    background: transparent;
+    z-index: 1;
+    min-width: inherit;
+    padding: 0 .625rem 0 0;
+}
+
+    .waste-industry-terminology [data-magellan-expedition] ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0 1.25rem 0 0;
+        border-right: 1px solid rgba(255,255,255,.4);
+    }
+
+        .waste-industry-terminology [data-magellan-expedition] ul li {
+            text-align: right;
+        }
+
+.waste-industry-terminology .sn-letters-wrapper.fixed {
+    margin-top: 9.563rem !important;
+    width: 3.6%;
+}
+
+/* Waste Expo Event Page */
+.wasteexpo .sn-news-resources > ul > li.eight > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .wasteexpo .sn-news-resources > ul > li.eight > a:before {
+        content: "\2190  ";
+        color: #000000;
+    }
+
+    .wasteexpo .sn-news-resources > ul > li.eight > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .wasteexpo .sn-news-resources > ul > li.eight > a:hover:before {
+            color: #000000;
+        }
+
+.event-page .content-wrapper {
+    background: transparent;
+}
+
+.event-page .two-column-wrapper {
+    margin: 0 !important;
+    padding: 4rem 0;
+    position: relative;
+}
+
+    .event-page .two-column-wrapper:after {
+        content: "";
+        width: 100%;
+        max-width: 1000px;
+        height: 1px;
+        background-color: #ffffff;
+        margin: 0 0 0 -500px;
+        display: block;
+        float: none;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+
+    .event-page .two-column-wrapper.wasteexpo-twitter:after {
+        display: none;
+    }
+
+    .event-page .two-column-wrapper > :last-child {
+        margin-bottom: 0;
+    }
+
+.event-page .intro-pane, .event-page .article-content {
+    text-align: center;
+    max-width: 640px;
+    float: none;
+    margin: 0 auto 2rem auto;
+}
+
+    .event-page .intro-pane h2, .event-page .article-content h2 {
+        text-transform: uppercase;
+        color: #8dc63f;
+        font-weight: 500;
+        font-size: 1.8em;
+    }
+
+    .event-page .intro-pane > :last-child, .event-page .article-content > :last-child {
+        margin-bottom: 0;
+    }
+
+.event-page .slider-wrapper {
+    margin-bottom: 0rem !important;
+}
+
+    .event-page .slider-wrapper > .row {
+        background-color: transparent;
+        padding: 4rem 0;
+    }
+
+    .event-page .slider-wrapper .slick-dots {
+        max-width: 80px;
+        margin: -4rem auto 4rem auto;
+    }
+
+.event-page .image-slider {
+    margin-top: -21rem;
+    z-index: 600;
+}
+
+    .event-page .image-slider .truck-slide {
+        background-color: rgba(255,255,255,.1);
+        padding: 21rem 0 4rem 0;
+    }
+
+.truck-slide-image {
+    margin: 0 auto 0 auto;
+}
+
+.event-page .image-slider .truck-slide > div > :last-child, .event-page .image-slider .truck-slide > div > :last-child > :last-child {
+    margin-bottom: 0 !important;
+}
+
+.truck-slide h2, .truck-slide h2 > span {
+    text-transform: uppercase;
+    font-family: "serpentinebolditalic";
+    font-size: 2.3rem;
+    text-shadow: 0 0 10px black;
+}
+
+    .truck-slide h2 sup {
+        font-family: "futura-pt",sans-serif !important;
+        font-style: normal;
+        margin-left: .3rem;
+    }
+
+    .truck-slide h2 > span {
+        color: #ffffff;
+    }
+
+.event-page .image-slider .truck-slide.truck-mammoth {
+    background: url(../images/news/wasteexpo/bkgd-space-blue.jpg) no-repeat top center #000000;
+    background-size: 1800px auto;
+}
+
+.event-page .image-slider .truck-slide.truck-king-cobra, .event-page .image-slider .truck-slide.truck-sidewinder, .event-page .image-slider .truck-slide.truck-roto-pac {
+    background: url(../images/news/wasteexpo/bkgd-space-green.jpg) no-repeat top center #000000;
+    background-size: 1800px auto;
+}
+
+.event-page .image-slider .truck-slide .link-learn-more {
+    text-align: right;
+}
+
+.event-page.wasteexpo-2016 .image-slider .truck-slide {
+    background: url(../images/news/wasteexpo/slider/2016/slider-background.jpg) no-repeat top center #000000;
+    background-size: cover;
+}
+
+.event-page.wasteexpo-2017 .header-wrapper {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.32+0,0.65+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.32) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.32) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+
+.event-page.wasteexpo-2017 .image-slider .truck-slide.truck-mammoth {
+    background-image: url(../images/news/wasteexpo/slider/2017/WasteExpoLogo.png), url(../images/news/wasteexpo/slider/2017/slider-mammoth-background.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, top center;
+    background-color: #FFFFFF;
+    background-size: 250px 250px, cover;
+}
+
+.event-page.wasteexpo-2017 .image-slider .truck-slide.truck-diamondback {
+    background: url(../images/news/wasteexpo/slider/2017/WasteExpoLogo.png), url(../images/news/wasteexpo/slider/2017/slider-diamondback-background.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, top center;
+    background-color: #000000;
+    background-size: 250px 250px, cover;
+}
+
+.event-page.wasteexpo-2017 .image-slider .truck-slide.truck-rotopac {
+    background: url(../images/news/wasteexpo/slider/2017/WasteExpoLogo.png), url(../images/news/wasteexpo/slider/2017/slider-rotopac-background.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, top center;
+    background-color: #000000;
+    background-size: 250px 250px, cover;
+}
+
+.event-page.wasteexpo-2016 .slider-wrapper .slick-dots {
+    max-width: 80px;
+    margin: -3rem auto 4rem auto;
+}
+
+.event-page.wasteexpo-2016 .wrapper-expo-truck .clearing-feature {
+    display: flex;
+    justify-content: center;
+}
+
+.wasteexpo-header {
+    background-color: #000000;
+    border-radius: 100px;
+    padding: 1rem;
+    max-width: 60%;
+    margin: 0 auto;
+    height: 60px;
+    position: relative;
+    z-index: 700;
+    box-shadow: 0 0 40px rgba(0,0,0,.5);
+}
+
+    .wasteexpo-header > p {
+        margin: -1.5rem 0 0 0;
+        text-align: center;
+    }
+
+        .wasteexpo-header > p > span {
+            display: inline-block;
+        }
+        /*
+.wasteexpo-header > p > :nth-child(1) {text-transform: uppercase; text-align: right;}
+.wasteexpo-header > p > :nth-child(2) {margin: 0 1rem;}
+.wasteexpo-header > p > :nth-child(3) {line-height: 1; top: .4rem; position: relative; text-align: left;}
+*/
+        .wasteexpo-header > p > :nth-child(1) {
+            margin: 0 1rem;
+        }
+
+        .wasteexpo-header > p > :nth-child(2) {
+            line-height: 1;
+            top: .4rem;
+            position: relative;
+            text-align: left;
+        }
+
+.join-us, .wasteexpo-return-to-news {
+    padding: 2rem 0 !important;
+}
+
+    .join-us:before, .wasteexpo-return-to-news:before {
+        content: "";
+        width: 100%;
+        max-width: 1000px;
+        height: 1px;
+        background-color: #ffffff;
+        margin: 0 0 0 -500px;
+        display: block;
+        float: none;
+        position: absolute;
+        top: 0;
+        left: 50%;
+    }
+
+.event-page .join-us .intro-pane h2 {
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: .2rem;
+}
+
+.wasteexpo-return-to-news, .event-page .wasteexpo-return-to-news {
+    margin-bottom: 4rem !important;
+}
+
+    .wasteexpo-return-to-news h6 {
+        text-transform: uppercase;
+        letter-spacing: .03rem;
+        font-size: 300;
+    }
+
+.wrapper-twitter-left, .wrapper-twitter-center, .wrapper-twitter-right {
+    text-align: center;
+}
+
+.wasteexpo-news > article {
+    text-align: center;
+}
+
+.truck-content {
+    text-align: center;
+}
+
+    .truck-content figure {
+        position: relative;
+        margin: 0;
+    }
+
+    .truck-content .truck-link h3 {
+        margin: 0;
+        line-height: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+        .truck-content .truck-link h3 > span {
+            position: relative;
+        }
+
+    .truck-content .icon-text-mammoth {
+        font-size: 11rem;
+        top: -2.75rem;
+        position: relative;
+    }
+
+    .truck-content .icon-text-mammoth-ws {
+        font-size: 11rem;
+        top: -1.95rem;
+        position: relative;
+    }
+
+    .truck-content .icon-text-king-cobra {
+        font-size: 7rem;
+        top: -0.75rem;
+        position: relative;
+    }
+
+    .truck-content .icon-text-sidewinder-xtr {
+        font-size: 14.2rem;
+        top: -4.2rem;
+        position: relative;
+    }
+
+    .truck-content .icon-logo-roto-pac-full {
+        font-size: 13.3rem;
+        top: -3.6rem;
+        position: relative;
+    }
+
+    .truck-content .icon-text-diamondback {
+        font-size: 11rem;
+        top: -1.8rem;
+        position: relative;
+    }
+
+    .truck-content figure figcaption {
+        position: absolute;
+        height: 50px;
+        text-transform: uppercase;
+        width: 100%;
+        top: 50%;
+        margin-top: -25px;
+        background-color: rgba(0,0,0,.8);
+        opacity: 0;
+        transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        -ms-transition: all .2s ease-in-out;
+    }
+
+    .truck-content .truck-link:hover figcaption {
+        opacity: 1;
+    }
+
+    .truck-content figure figcaption p {
+        margin: 0;
+        line-height: 50px;
+    }
+
+.truck-gallery .clearing-featured-img {
+    max-width: 86px;
+    margin-bottom: 10px;
+}
+
+.truck-gallery p {
+    clear: both;
+    text-align: center;
+    line-height: normal;
+}
+
+.wrapper-wasteexpo-video > p {
+    margin: 1rem 0 0 0;
+}
+
+.wasteexpo-image-gallery .clearing-thumbs, .wasteexpo-image-gallery [data-clearing] {
+    margin-bottom: -10px;
+}
+
+.wasteexpo-image-gallery .clearing-featured-img {
+    margin-bottom: 10px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+}
+
+.wasteexpo-image-gallery:hover .clearing-featured-img {
+    opacity: .5;
+}
+
+    .wasteexpo-image-gallery:hover .clearing-featured-img:hover {
+        opacity: 1;
+    }
+
+.panel-dark {
+    background-color: rgba(255,255,255,.1);
+    border-color: #000000;
+    color: #ffffff;
+    margin-bottom: 3rem;
+}
+
+    .panel-dark h1, .panel-dark h2, .panel-dark h3, .panel-dark h4, .panel-dark h5, .panel-dark h6, .panel-dark p, .panel-dark li, .panel-dark dl {
+        color: #ffffff;
+    }
+
+/* --- eShowroom --- */
+/* General Styles */
+.eshowroom .main-image {
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.eshowroom .intro-pane h1 {
+    text-align: center;
+    text-transform: none;
+}
+
+    .eshowroom .intro-pane h1:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+.eshowroom .intro-pane h2 {
+    text-align: center;
+}
+
+.show-for-eshowroom {
+    display: none;
+}
+
+.eshowroom .show-for-eshowroom {
+    display: block;
+}
+
+.eshowroom #sort > h4:first-of-type {
+    text-transform: uppercase;
+    font-size: 2.3rem;
+}
+
+.eshowroom .eshowroom-advanced-filter {
+    display: none;
+}
+
+    .eshowroom .eshowroom-advanced-filter.shown {
+        display: block;
+    }
+
+.eshowroom .show-advanced-filters {
+    color: #FFF;
+    text-decoration: underline;
+    float: right;
+}
+
+.eshowroom .eshowroom-sn h5 {
+    font-size: 1.725rem;
+}
+
+.eshowroom .g-recaptcha :first-child {
+    margin: auto;
+}
+
+/* Sort Styles */
+/*.eshowroom #sort > div[class*="custom-"] {display: none;}
+.eshowroom.sec.overview #sort .custom-overview {display: block;}
+.eshowroom.tert #sort .custom-secondary {display: block;}*/
+.eshowroom #sort {
+    margin-bottom: .75rem;
+}
+
+    .eshowroom #sort form, .eshowroom #sort form > p > span, .eshowroom #sort form > p > select {
+        margin: 0;
+    }
+
+        .eshowroom #sort form > p {
+            margin: 0 0 1rem 0;
+        }
+
+            .eshowroom #sort form > p > span {
+                font-size: .8rem;
+                text-transform: uppercase;
+                letter-spacing: .05rem;
+            }
+
+            .eshowroom #sort form > p > select, .eshowroom #sort form > p > select > option {
+                font-size: .8rem;
+                font-weight: 400;
+                letter-spacing: .05rem;
+            }
+
+        .eshowroom #sort form .submit {
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: .1rem;
+            text-transform: uppercase;
+            margin-top: 1rem;
+        }
+
+/* Table Styles */
+.eshowroom .intro-pane table {
+    border: none;
+}
+
+/* Truck Details pages */
+.truck-details.product-page .two-column-wrapper {
+    margin: 2rem 0 4rem 0 !important;
+}
+
+.truck-details .spec-jump {
+    font-weight: 300;
+    color: #8dc63f;
+    padding: .5rem 0;
+    border-top: 1px solid #8dc63f;
+    border-bottom: 1px solid #8dc63f;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+    .truck-details .spec-jump:hover {
+        border-color: transparent !important;
+        background-color: #8dc63f;
+        color: #ffffff;
+        font-weight: 400;
+        padding: .5rem;
+    }
+
+/* --- Product Pages (Refuse Trucks) --- */
+/* Styles located in "product-pages.css" */
+
+/* --- Dealer Locator --- */
+.dealer-locator .table-wrapper table {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin-bottom: 1.25rem;
+}
+
+.dealer-locator .table-wrapper tr > th:last-child {
+    border-radius: 10px 10px 0 0 !important;
+    -webkit-border-radius: 10px 10px 0 0 !important;
+}
+
+.dealer-locator .table-wrapper table tr:last-child > td:first-child {
+    border-radius: 0px 0px 0px 10px !important;
+    -webkit-border-radius: 0px 0px 0px 10px !important;
+}
+
+.dealer-locator .table-wrapper table tr:last-child > td:last-child {
+    border-radius: 0px 0px 10px 0px !important;
+    -webkit-border-radius: 0px 0px 10px 0px !important;
+}
+
+.dealer-locator .table-wrapper table a {
+    color: #8dc63f;
+    font-weight: 400;
+}
+
+    .dealer-locator .table-wrapper table a:hover {
+        color: #8dc63f;
+        text-decoration: underline;
+    }
+
+.dealer-locator .table-wrapper table tr td:first-child {
+    vertical-align: top;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/*  Dealer Login Section  */
+/* ---------------------------------------------------------------------------------------- */
+
+/* General Styles ------------------------------ */
+.dealers.login label.inline {
+    color: #ffffff !important;
+}
+
+.authorized-dealer .content-wrapper {
+    background: url(../new-way-dealers/images/bkgd-world.jpg) no-repeat top center;
+    background-size: 1600px auto;
+    box-shadow: inset 0px 110px 110px rgba(0,0,0,.7);
+}
+
+.authorized-dealer-header {
+}
+
+.dealer-welcome, .dealer-welcome > span {
+    color: #ffffff;
+    display: block;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.dealer-welcome {
+    margin: 0;
+    text-align: center;
+    padding: 7rem 0 3rem 0;
+}
+
+.text-authorized {
+    font-size: 3rem;
+    letter-spacing: 1.5rem;
+}
+
+.text-dealer {
+    font-size: 7rem;
+    font-weight: 600;
+    letter-spacing: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.dealer-name {
+    font-size: 1rem;
+    letter-spacing: .5rem;
+    text-shadow: 0 0 10px #000;
+    position: relative;
+    padding: 1.5rem 0;
+    margin-bottom: 0;
+}
+
+    .dealer-name:before, .dealer-name:after {
+        width: 6rem;
+        height: 2px;
+        position: absolute;
+        background-color: #ffffff;
+        color: #ffffff;
+        content: " ";
+    }
+
+    .dealer-name:before {
+        left: 50%;
+        top: 0;
+        margin-left: -3rem;
+    }
+
+    .dealer-name:after {
+        right: 50%;
+        bottom: 0;
+        margin-right: -3rem;
+    }
+
+.tert.dealers.authorized-dealer .hgroup {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 1rem;
+}
+
+    .tert.dealers.authorized-dealer .hgroup > h1 {
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        font-size: 2rem;
+    }
+
+    .tert.dealers.authorized-dealer .hgroup + h2 {
+        color: #ffffff;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+/*
+.accordion .accordion-navigation > a, .accordion dd > a, .accordion, .accordion-navigation, .accordion-navigation.active, .accordion .accordion-navigation.active > a, .accordion dd.active > a, .accordion .accordion-navigation > a:hover, .accordion dd > a:hover, .accordion .accordion-navigation > .content.active, .accordion dd > .content.active {background-color: transparent !important;}
+.accordion .accordion-navigation > a, .accordion dd > a {padding: 1rem 0; font-weight: 200; color: #ffffff; letter-spacing: .03em; line-height: 1.2; font-size: 1.875em; font-family: "futura-pt",sans-serif; position: relative;}
+.accordion .accordion-navigation > a:after, .accordion dd > a:after {content: ""; display: inline; position: absolute; margin-left: 1rem; top: 50%; margin-top: -2px; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #ffffff; border-bottom: none;}
+.accordion .accordion-navigation.active > a:after, .accordion dd.active > a:after {border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 5px solid #ffffff; border-top: none;}
+.accordion .accordion-navigation > .content, .accordion dd > .content {padding: 0;}
+*/
+
+.archive-lists .date:before {
+    content: "Published: ";
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.authorized-dealer .panel {
+    border: none;
+    border-radius: 10px;
+    padding: 2rem;
+    color: #000000;
+    background-color: #8dc63f;
+}
+
+    .authorized-dealer .panel h2, .authorized-dealer .panel h3 {
+        color: #000000;
+    }
+
+    .authorized-dealer .panel p {
+        color: #000000;
+        margin-bottom: 1rem;
+    }
+
+        .authorized-dealer .panel p a {
+            color: #000000;
+            font-weight: 600;
+        }
+
+            .authorized-dealer .panel p a:hover {
+                text-decoration: underline;
+            }
+
+    .authorized-dealer .panel > :last-child {
+        margin-bottom: 0;
+    }
+
+/* Dealer Area Main Nav Styles ------------------------------ */
+.dealer-nav {
+    padding: 0;
+    width: 1010px;
+    margin: 0 auto 1rem auto;
+}
+
+    .dealer-nav > ul {
+        font-size: .9rem;
+        margin: 0;
+    }
+
+        .dealer-nav > ul > li {
+            margin: 0 .8rem;
+        }
+
+            .dealer-nav > ul > li.button-wrapper {
+                line-height: auto;
+                padding: 0;
+            }
+
+            .dealer-nav > ul > li:hover {
+                color: #000000 !important;
+                background-color: #ffffff;
+            }
+
+                .dealer-nav > ul > li:hover > a {
+                    color: #000000;
+                }
+
+            .dealer-nav > ul > li > a {
+                font-size: .9rem;
+                font-weight: 300;
+                padding: .2rem 1rem;
+                line-height: 22px;
+                color: #ffffff;
+            }
+
+                .dealer-nav > ul > li > a:hover {
+                    color: #000000 !important;
+                    background-color: #ffffff !important;
+                }
+
+                .dealer-nav > ul > li > a.button {
+                    margin-bottom: 0;
+                    padding: .2rem 1rem;
+                    font-size: .75rem;
+                    color: #000000;
+                    font-weight: 400;
+                    line-height: 22px;
+                    text-transform: uppercase;
+                }
+
+                    .dealer-nav > ul > li > a.button:hover {
+                        background-color: #71a130 !important;
+                        color: #ffffff !important;
+                    }
+
+                .dealer-nav > ul > li:hover > .sub-drop, .dealer-nav > ul > li > a:hover + .sub-drop, .dealer-nav > ul > li:hover > .sub-drop:hover, .dealer-nav > ul > li > a:hover + .sub-drop:hover {
+                    display: block !important;
+                }
+
+    .dealer-nav .sub-drop {
+        width: 220px;
+    }
+
+        .dealer-nav .sub-drop > li > a {
+            padding: .3rem 1rem;
+        }
+
+            .dealer-nav .sub-drop > li > a.disabled {
+                color: #aaaaaa;
+                cursor: default;
+            }
+
+                .dealer-nav .sub-drop > li > a.disabled:hover, .dealer-nav .sub-drop > li > a.disabled:focus {
+                    background-color: transparent;
+                    cursor: default;
+                }
+
+.dealer-home .dealer-nav > ul > .one > a,
+.eshowroom .dealer-nav > ul > .two > a,
+.available-demo-trucks .dealer-nav > ul > .three > a,
+.product-support .dealer-nav > ul > .four > a,
+.service-support .dealer-nav > ul > .five > a,
+.marketing-tools .dealer-nav > ul > .six > a,
+.dealer-news .dealer-nav > ul > .seven > a {
+    color: #000000;
+    background-color: #8dc63f;
+}
+
+/* Dealer Area Side Nav Styles ------------------------------ */
+.dealer-sn-wrapper {
+    display: none;
+}
+
+    .dealer-sn-wrapper .aside-nav, .dealer-sn-wrapper .aside-nav * {
+        text-align: right;
+    }
+
+    .dealer-sn-wrapper .aside-nav {
+        display: none;
+    }
+
+        .dealer-sn-wrapper .aside-nav > ul > li > a:before {
+            display: none;
+        }
+
+        .dealer-sn-wrapper .aside-nav > ul > li > a.disabled {
+            color: #aaaaaa;
+            cursor: default;
+        }
+
+            .dealer-sn-wrapper .aside-nav > ul > li > a.disabled:hover, .dealer-sn-wrapper .aside-nav > ul > li > a.disabled:focus {
+                background-color: transparent;
+                cursor: default;
+            }
+
+.dealer-home .dealer-sn-wrapper, .eshowroom .dealer-sn-wrapper, .product-support .dealer-sn-wrapper, .service-support .dealer-sn-wrapper, .marketing-tools .dealer-sn-wrapper, .dealer-news .dealer-sn-wrapper {
+    display: block;
+}
+
+.dealer-home .sn-dealer-web-admin,
+.eshowroom .sn-dealer-eshowroom,
+.available-demo-trucks .sn-dealer-available-demo-trucks,
+.product-support .sn-dealer-product-support,
+.service-support .sn-dealer-service-support,
+.marketing-tools .sn-dealer-marketing-tools,
+.dealer-news .sn-dealer-news {
+    display: block;
+}
+
+.manage-listing-photos .photo-uploader {
+    padding: 1rem;
+    background-color: #333;
+    margin: 0 0 1.5rem 0 !important;
+}
+
+    .manage-listing-photos .photo-uploader input[type=file] {
+        padding-bottom: 1rem;
+    }
+
+.register .form-wrapper td .text-danger {
+    color: red !important;
+    position: relative;
+    top: 0.4rem;
+    font-size: 1.1em;
+}
+
+.register .form-wrapper td .error {
+    display: block;
+}
+
+/* eShowroom Side Nav */
+.whats-this .aside-nav > ul > li.link-whats-this > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .whats-this .aside-nav > ul > li.link-whats-this > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .whats-this .aside-nav > ul > li.link-whats-this > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .whats-this .aside-nav > ul > li.link-whats-this > a:hover:after {
+            color: #000000;
+        }
+
+.view-manage-listings .aside-nav > ul > li.link-view-manage-listings > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .view-manage-listings .aside-nav > ul > li.link-view-manage-listings > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .view-manage-listings .aside-nav > ul > li.link-view-manage-listings > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .view-manage-listings .aside-nav > ul > li.link-view-manage-listings > a:hover:after {
+            color: #000000;
+        }
+
+.enter-listing .aside-nav > ul > li.link-enter-listing > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .enter-listing .aside-nav > ul > li.link-enter-listing > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .enter-listing .aside-nav > ul > li.link-enter-listing > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .enter-listing .aside-nav > ul > li.link-enter-listing > a:hover:after {
+            color: #000000;
+        }
+
+/* Product Support Side Nav */
+.bid-specifications .aside-nav > ul > li.link-bid-specs > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .bid-specifications .aside-nav > ul > li.link-bid-specs > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .bid-specifications .aside-nav > ul > li.link-bid-specs > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .bid-specifications .aside-nav > ul > li.link-bid-specs > a:hover:after {
+            color: #000000;
+        }
+
+.tcf-equipment-financing .aside-nav > ul > li.link-equipment-financing > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .tcf-equipment-financing .aside-nav > ul > li.link-equipment-financing > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .tcf-equipment-financing .aside-nav > ul > li.link-equipment-financing > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .tcf-equipment-financing .aside-nav > ul > li.link-equipment-financing > a:hover:after {
+            color: #000000;
+        }
+
+.warranty-documentation .aside-nav > ul > li.link-warranty-docs > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .warranty-documentation .aside-nav > ul > li.link-warranty-docs > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .warranty-documentation .aside-nav > ul > li.link-warranty-docs > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .warranty-documentation .aside-nav > ul > li.link-warranty-docs > a:hover:after {
+            color: #000000;
+        }
+
+.policy-documentation .aside-nav > ul > li.link-policy-docs > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .policy-documentation .aside-nav > ul > li.link-policy-docs > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .policy-documentation .aside-nav > ul > li.link-policy-docs > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .policy-documentation .aside-nav > ul > li.link-policy-docs > a:hover:after {
+            color: #000000;
+        }
+
+.pricing .aside-nav > ul > li.link-pricing > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .pricing .aside-nav > ul > li.link-pricing > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .pricing .aside-nav > ul > li.link-pricing > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .pricing .aside-nav > ul > li.link-pricing > a:hover:after {
+            color: #000000;
+        }
+/* Service Support Side Nav */
+.service-manuals .aside-nav > ul > li.link-service-manuals > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .service-manuals .aside-nav > ul > li.link-service-manuals > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .service-manuals .aside-nav > ul > li.link-service-manuals > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .service-manuals .aside-nav > ul > li.link-service-manuals > a:hover:after {
+            color: #000000;
+        }
+
+.service-videos .aside-nav > ul > li.link-service-videos > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .service-videos .aside-nav > ul > li.link-service-videos > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .service-videos .aside-nav > ul > li.link-service-videos > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .service-videos .aside-nav > ul > li.link-service-videos > a:hover:after {
+            color: #000000;
+        }
+
+/* Marketing Tools Side Nav */
+.media-kits .aside-nav > ul > li.link-media-kits > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .media-kits .aside-nav > ul > li.link-media-kits > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .media-kits .aside-nav > ul > li.link-media-kits > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .media-kits .aside-nav > ul > li.link-media-kits > a:hover:after {
+            color: #000000;
+        }
+
+.video-page .aside-nav > ul > li.link-video > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .video-page .aside-nav > ul > li.link-video > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .video-page .aside-nav > ul > li.link-video > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .video-page .aside-nav > ul > li.link-video > a:hover:after {
+            color: #000000;
+        }
+
+.order-collateral .aside-nav > ul > li.link-order-collateral > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .order-collateral .aside-nav > ul > li.link-order-collateral > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .order-collateral .aside-nav > ul > li.link-order-collateral > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .order-collateral .aside-nav > ul > li.link-order-collateral > a:hover:after {
+            color: #000000;
+        }
+
+/* Dealer News Side Nav */
+.enewsletter-archive .aside-nav > ul > li.link-enews-archive > a {
+    background-color: #8dc63f;
+    color: #000000;
+}
+
+    .enewsletter-archive .aside-nav > ul > li.link-enews-archive > a:after {
+        content: " \2192";
+        color: #000000;
+    }
+
+    .enewsletter-archive .aside-nav > ul > li.link-enews-archive > a:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+        .enewsletter-archive .aside-nav > ul > li.link-enews-archive > a:hover:after {
+            color: #000000;
+        }
+
+/* Dealer Area Side Bar Callout Styles ------------------------------ */
+.sn-dealer-web-admin strong {
+    display: inline !important;
+    text-align: inherit !important;
+    float: none;
+}
+
+.sn-dealer-web-admin .wrapper-web-admin a {
+    float: right;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    width: auto;
+}
+
+.dealer-sn-callouts {
+    text-align: right;
+}
+
+    .dealer-sn-callouts > section {
+        margin-bottom: 4rem;
+    }
+
+    .dealer-sn-callouts h3 {
+        font-weight: 300;
+        margin-bottom: 1rem;
+        margin-top: 0;
+    }
+
+    .dealer-sn-callouts hr {
+        border-color: rgba(255,255,255,.4);
+        margin: 2rem 0;
+    }
+
+.callout-enews-signup {
+    margin-top: 2rem;
+}
+
+    .callout-enews-signup .button-group .button {
+        padding: .5rem 1rem;
+        line-height: 22px;
+        margin-bottom: 0;
+    }
+
+    .callout-enews-signup .button-group > li:first-child {
+        margin-right: -3px;
+    }
+
+/* Dealer Area Page Styles ------------------------------ */
+
+/* Dealer Home */
+.parts-promotions {
+    background-color: #404040;
+    padding: .5rem;
+}
+
+.promo-current p {
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 0;
+    padding: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    font-style: italic;
+}
+
+.promo-current > :last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.promo-current p > small {
+    display: block;
+}
+
+.promo-main {
+    font-size: 2rem;
+}
+
+.promo-sec {
+    font-size: 1.6rem;
+}
+
+.promo-exclude {
+    margin-top: .3rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.promo-available-to {
+    margin-bottom: 0;
+    line-height: 44px;
+    background-color: #000000;
+    overflow: auto;
+}
+
+    .promo-available-to > span {
+        padding-left: 1rem;
+        float: left;
+    }
+
+    .promo-available-to a.button {
+        margin-bottom: 0;
+        float: right;
+        text-transform: uppercase;
+    }
+
+.dealer-home .right-col > section {
+    margin-bottom: 4rem;
+}
+
+.dealer-home .right-col > :last-child {
+    margin-bottom: 0;
+}
+
+[class*="section-callout-"] h2 {
+    padding: .5rem 1.5rem !important;
+    background-color: #404040 !important;
+    font-weight: 400 !important;
+    font-size: 1.5rem !important;
+}
+
+[class*="section-callout-"] > div {
+    padding: 0 1.5rem;
+}
+
+    [class*="section-callout-"] > div > :last-child {
+        margin-bottom: 0;
+    }
+
+[class*="section-callout-"] ul {
+    margin-left: 2rem;
+}
+
+[class*="section-callout-"] .button {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.tcf-equipment-financing .form-wrapper td {
+    padding: 1rem;
+}
+
+    .tcf-equipment-financing .form-wrapper td > p {
+        margin-bottom: 0;
+    }
+
+/* eNewsletter Archive */
+.archive-list-ramblings .form-wrapper table td > :last-child {
+    margin-bottom: 0;
+}
+
+.whats-this figure.right, .instructions-enter-listing > li > figure.right {
+    margin: 0 0 2rem 2rem;
+}
+
+.instructions-enter-listing > li {
+    clear: both;
+}
+
+/* View/Manage Listings */
+.tabs dd > a, .tabs .tab-title > a {
+    background-color: rgba(255,255,255,.1);
+    color: white;
+}
+
+    .tabs dd > a:hover, .tabs .tab-title > a:hover {
+        background-color: rgba(255,255,255,.2) !important;
+    }
+
+.tabs dd.active > a, .tabs .tab-title.active > a {
+    background-color: rgba(255,255,255,.2);
+    color: white;
+}
+
+    .tabs dd.active > a:hover, .tabs .tab-title.active > a:hover {
+        background-color: rgba(255,255,255,.4) !important;
+    }
+
+.tabs > :first-child > a {
+    border-radius: 10px 0 0 0;
+}
+
+.tabs > :last-child > a {
+    border-radius: 0 10px 0 0;
+}
+
+.tabs-content .content {
+    padding-top: 0;
+}
+
+/*---------------------------------------------------------------*/
+/* Media Queries */
+/*---------------------------------------------------------------*/
+/* --- Small screens --- */
+/* Define mobile styles */
+@media only screen {
+}
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+    .header-wrapper.headroom--top {
+        background-color: transparent;
+    }
+
+    .header-wrapper.headroom--not-top {
+        background-color: transparent;
+    }
+
+    .headroom {
+        -webkit-transition: all .25s ease-in-out;
+        -moz-transition: all .25s ease-in-out;
+        -o-transition: all .25s ease-in-out;
+        transition: all .25s ease-in-out;
+    }
+
+    .headroom--pinned {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    .headroom--unpinned {
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+        margin-top: -2em;
+    }
+
+    .header--fixed {
+        position: fixed;
+        z-index: 10000;
+        right: 0;
+        left: 0;
+        top: 0;
+    }
+
+    .header#header {
+        padding: 0;
+    }
+
+    .link-anchor {
+        top: -75px;
+    }
+
+    .mn-toggle {
+        background-color: rgba(0, 0, 0, 1) !important;
+        color: #ffffff !important;
+        text-align: right;
+        padding-right: 2em !important;
+        padding-left: .625em !important;
+        text-transform: uppercase;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+        border-bottom: 1px solid #000000;
+    }
+
+        .mn-toggle:hover, .mn-toggle:focus {
+            color: #8dc63f !important;
+        }
+
+        .mn-toggle .icon-logo-nwt-icon {
+            font-size: 4em;
+            margin-top: -.3em;
+            margin-bottom: -.3em;
+            float: left;
+        }
+
+        .mn-toggle .icon-logo-nwt-name {
+            font-size: 7em;
+            margin-top: -.39em;
+            margin-bottom: -.4em;
+            margin-left: .05em;
+            float: left;
+        }
+
+        .mn-toggle.menu-icon > span.menu::after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 0;
+            top: 0;
+            right: .625em;
+            box-shadow: 0 0px 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
+            width: 1em;
+            margin-top: 1.3rem;
+        }
+
+        .mn-toggle.menu-icon:hover > span.menu::after, .mn-toggle.menu-icon:focus > span.menu::after {
+            box-shadow: 0 0px 0 1px #8dc63f, 0 7px 0 1px #8dc63f, 0 14px 0 1px #8dc63f !important;
+        }
+
+    .main-nav .content.active {
+        max-height: 300px;
+        overflow-y: scroll;
+        background-color: rgba(0, 0, 0, 1) !important;
+        box-shadow: 0 0 20px #000000 !important;
+    }
+
+    .main-nav .link-group, .main-nav .link-group > ul, .main-nav .link-group > ul > li, .main-nav .link-group > ul > li > a {
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+
+    .main-nav .link-group {
+        padding: 1em 0em;
+    }
+
+        .main-nav .link-group > ul {
+            list-style-type: none;
+            margin: 0;
+        }
+
+            .main-nav .link-group > ul > .overview-link > a {
+                width: 100%;
+                font-size: 1em;
+                text-transform: uppercase;
+                font-weight: 400;
+                color: #ffffff;
+                opacity: .6;
+            }
+
+            .main-nav .link-group > ul > li {
+            }
+
+                .main-nav .link-group > ul > li > a {
+                    color: #ffffff;
+                    font-weight: 300;
+                    font-size: .8em;
+                    letter-spacing: .05em;
+                    opacity: .6;
+                }
+
+                    .main-nav .link-group > ul > li > a:hover {
+                        padding: 0 .5em;
+                        background-color: rgba(255,255,255,.2);
+                        opacity: 1;
+                    }
+
+                    .main-nav .link-group > ul > li > a > span {
+                        color: #8dc63f;
+                        font-style: italic;
+                    }
+
+                    .main-nav .link-group > ul > li > a:hover > span {
+                        color: rgba(255,255,255,.7);
+                    }
+
+    .link-group.ten .overview-link > a:hover {
+        background-color: transparent !important;
+        padding: 0 !important;
+        opacity: .6 !important;
+    }
+
+    .small-welcome-logout {
+        font-size: .8em;
+        font-weight: 300;
+        opacity: .6 !important;
+    }
+
+        .small-welcome-logout:hover {
+            padding: 0 .5em;
+            background-color: rgba(255,255,255,.2);
+            opacity: 1 !important;
+        }
+
+        .small-welcome-logout > a {
+            font-size: 1em !important;
+            float: none !important;
+            clear: none !important;
+            opacity: 1 !important;
+        }
+
+            .small-welcome-logout > a:hover {
+                padding: 0 !important;
+                text-decoration: underline !important;
+                background-color: transparent !important;
+                color: #8dc63f !important;
+            }
+
+    .small-social {
+        margin-top: .5em;
+    }
+
+        .small-social > a {
+            width: 14.28% !important;
+            float: left !important;
+            clear: none !important;
+            text-align: center;
+            font-size: 1em;
+            padding-top: .5em !important;
+            padding-bottom: .5em !important;
+            background-color: rgba(255,255,255,.2) !important;
+            color: rgba(255,255,255,.6) !important;
+            font-size: 1.1em !important;
+        }
+
+            .small-social > a:hover {
+                background-color: #8dc63f !important;
+                color: #ffffff !important;
+            }
+
+            .small-social > a > span {
+                font-style: normal !important;
+            }
+
+    .home .main-nav .link-group.zero,
+    .front-loader .main-nav .link-group.one,
+    .rear-loader .main-nav .link-group.two,
+    .automated-side-loader .main-nav .link-group.three,
+    .satellite-bodies .main-nav .link-group.four,
+    .cng-loaders .main-nav .link-group.five,
+    .eshowroom .main-nav .link-group.six,
+    .kpac-compactors .main-nav .link-group.seven,
+    .parts-services .main-nav .link-group.eight,
+    .about-us .main-nav .link-group.nine,
+    .careers .main-nav .link-group.ten,
+    .news-resources .main-nav .link-group.eleven,
+    .contact-us .main-nav .link-group.twelve,
+    .international .main-nav .link-group.thirteen,
+    .dealer .main-nav .link-group.fourteen {
+        background-color: rgba(255,255,255,.06) !important;
+    }
+
+        .home .main-nav .link-group.zero > ul > li > a {
+            padding: 0 .5em;
+            background-color: #8dc63f !important;
+            opacity: 1 !important;
+        }
+
+            .home .main-nav .link-group.zero > ul > li > a:hover {
+                background-color: rgba(255,255,255,.2) !important;
+            }
+
+    .rear-loader.overview .main-nav .link-group.two > ul > li:nth-child(1) > a {
+        padding: 0 .5em;
+        background-color: #8dc63f !important;
+        opacity: 1 !important;
+    }
+
+        .rear-loader.overview .main-nav .link-group.two > ul > li:nth-child(1) > a:hover {
+            background-color: rgba(255,255,255,.2) !important;
+        }
+
+    .king-cobra .main-nav .link-group.two > ul > li:nth-child(2) > a {
+        padding: 0 .5em;
+        background-color: #8dc63f !important;
+        opacity: 1 !important;
+    }
+
+        .king-cobra .main-nav .link-group.two > ul > li:nth-child(2) > a:hover {
+            background-color: rgba(255,255,255,.2) !important;
+        }
+
+    .cobra-magnum .main-nav .link-group.two > ul > li:nth-child(3) > a {
+        padding: 0 .5em;
+        background-color: #8dc63f !important;
+        opacity: 1 !important;
+    }
+
+        .cobra-magnum .main-nav .link-group.two > ul > li:nth-child(3) > a:hover {
+            background-color: rgba(255,255,255,.2) !important;
+        }
+
+    .cobra .main-nav .link-group.two > ul > li:nth-child(4) > a {
+        padding: 0 .5em;
+        background-color: #8dc63f !important;
+        opacity: 1 !important;
+    }
+
+        .cobra .main-nav .link-group.two > ul > li:nth-child(4) > a:hover {
+            background-color: rgba(255,255,255,.2) !important;
+        }
+
+    .viper .main-nav .link-group.two > ul > li:nth-child(5) > a {
+        padding: 0 .5em;
+        background-color: #8dc63f !important;
+        opacity: 1 !important;
+    }
+
+        .viper .main-nav .link-group.two > ul > li:nth-child(5) > a:hover {
+            background-color: rgba(255,255,255,.2) !important;
+        }
+
+    .diamondback .main-nav .link-group.two > ul > li:nth-child(6) > a {
+        padding: 0 .5em;
+        background-color: #8dc63f !important;
+        opacity: 1 !important;
+    }
+
+        .diamondback .main-nav .link-group.two > ul > li:nth-child(6) > a:hover {
+            background-color: rgba(255,255,255,.2) !important;
+        }
+
+    .content-wrapper {
+        margin-top: 3.688em;
+        min-height: 480px;
+        padding-top: 2em;
+    }
+
+    .slider-wrapper {
+        display: none;
+    }
+
+    .home-callout-wrapper > section {
+        margin-bottom: 2em;
+    }
+
+        .home-callout-wrapper > section:last-child {
+            margin-bottom: 0;
+        }
+
+    .home-callout-wrapper .callout {
+        background-size: 100% auto !important;
+        width: 300px;
+        margin: 0 auto;
+        height: 300px !important;
+        min-height: 300px;
+        max-height: 300px;
+    }
+
+    .two-column-wrapper .left-col {
+        padding-right: 0.625em;
+    }
+
+    .two-column-wrapper .right-col {
+        padding-left: 0.625em;
+    }
+
+    .two-column-wrapper > div:last-child {
+        margin-top: 1em;
+    }
+
+    #articleEventList .button {
+        width: 100%;
+        margin-top: -1.25rem;
+    }
+
+    .bottom-callouts > section {
+        margin-bottom: 2em;
+    }
+
+        .bottom-callouts > section:last-child {
+            margin-bottom: 0;
+        }
+
+        .bottom-callouts > section > div {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+    .bottom-callouts .callout h5 {
+        width: 152px;
+    }
+
+    .footer-top section:nth-child(1) {
+        border-right: none;
+    }
+
+        .footer-top section:nth-child(1) > div {
+            margin-bottom: 1em;
+        }
+
+            .footer-top section:nth-child(1) > div:nth-child(2n+1) {
+                clear: both;
+            }
+
+    .footer-top section:nth-child(2) {
+        border-top: 1px solid rgba(0, 0, 0, .3);
+        padding-top: 1em !important;
+    }
+
+        .footer-top section:nth-child(2) > div {
+            margin-top: 0;
+        }
+
+    .footer-bottom p {
+        margin-bottom: 0;
+        font-size: .7em !important;
+        letter-spacing: .07em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .scranton-mfg-products .product-table td:last-child {
+        display: none;
+    }
+
+    .authorized-dealer .content-wrapper {
+        background: url(../login/images/bkgd-world.jpg) no-repeat top -110px center;
+        box-shadow: inset 0px 110px 110px rgba(0,0,0,.1);
+    }
+
+    .authorized-dealer .two-column-wrapper, .authorized-dealer .two-column-wrapper > div:last-child {
+        margin-top: 0 !important;
+    }
+
+    .dealer-welcome {
+        padding: 0 0 2rem 0;
+    }
+
+    .text-authorized {
+        padding-left: .8rem;
+        font-size: .6rem;
+        letter-spacing: 1.1rem;
+    }
+
+    .text-dealer {
+        padding-left: .8rem;
+        font-size: 2.4rem;
+        letter-spacing: 1.1rem;
+        margin-bottom: 4rem;
+    }
+
+    .dealer-name {
+        font-size: 1rem;
+        letter-spacing: .5rem;
+        text-shadow: 0 0 20px #000;
+        position: relative;
+        padding: 1.5rem 0;
+        margin-bottom: 0;
+    }
+
+        .dealer-name:before, .dealer-name:after {
+            width: 6rem;
+            height: 2px;
+            position: absolute;
+            background-color: #ffffff;
+            color: #ffffff;
+            content: " ";
+        }
+
+        .dealer-name:before {
+            left: 50%;
+            top: 0;
+            margin-left: -3rem;
+        }
+
+        .dealer-name:after {
+            right: 50%;
+            bottom: 0;
+            margin-right: -3rem;
+        }
+
+    .promo-main, .promo-sec, .promo-exclude {
+        font-size: .8rem;
+    }
+
+    .promo-available-to {
+    }
+
+        .promo-available-to > span {
+            padding: 1rem;
+            text-align: center;
+            line-height: 1;
+            font-size: .8rem;
+        }
+
+        .promo-available-to a.button {
+            float: left;
+            width: 100%;
+        }
+
+    .join-us:before, .wasteexpo-return-to-news:before, .event-page .two-column-wrapper:after {
+        left: inherit;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .wrapper-expo-truck {
+        float: left;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .wasteexpo-slider > .slider-wrapper {
+        display: block !important;
+    }
+
+    .event-page .slider-wrapper > .row {
+        padding: 1rem;
+    }
+
+    .wasteexpo-header {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+        .wasteexpo-header > p {
+            margin: 0;
+        }
+
+    .event-page .image-slider .truck-slide.truck-mammoth, .event-page .image-slider .truck-slide.truck-king-cobra, .event-page .image-slider .truck-slide.truck-sidewinder, .event-page .image-slider .truck-slide.truck-roto-pac {
+        background-size: 1400px auto;
+    }
+}
+
+/* --- Medium screens --- */
+/* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) {
+}
+
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .logo {
+        float: left;
+    }
+
+        .logo h1 {
+            line-height: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        .logo h1 > a:after {
+            top: 15px;
+            right: -6px;
+        }
+
+    .header#header {
+        margin: 0 auto;
+        width: 600px;
+        padding: 1em 0;
+        background: url(../images/bkgd-header-map.png) no-repeat center top transparent;
+        background-size: cover;
+    }
+
+    .link-anchor {
+        top: -130px;
+    }
+
+    .sec-nav {
+        float: left;
+        bottom: -.2em;
+        position: relative;
+    }
+
+        .sec-nav > ul {
+            margin: 0;
+        }
+
+            .sec-nav > ul > li {
+                margin: 0;
+                font-size: .75em;
+            }
+
+                .sec-nav > ul > li:nth-child(1) {
+                    margin-left: 0;
+                }
+
+                .sec-nav > ul > li:last-child, .sec-nav > ul > .six, .sec-nav > ul > .seven {
+                    margin-right: 0;
+                }
+
+                .sec-nav > ul > li > a {
+                    border-left: 1px solid transparent;
+                    border-right: 1px solid #cccccc;
+                    padding: 0 .5em;
+                }
+
+                .sec-nav > ul > li:last-child > a, .sec-nav > ul > .six > a, .sec-nav > ul > .seven > a {
+                    border-right-color: transparent;
+                }
+
+            .sec-nav > ul > .seven {
+                padding-left: .5em;
+            }
+
+                .sec-nav > ul > .seven > a {
+                    padding: 0;
+                }
+
+        .sec-nav .seven * {
+            display: inline;
+        }
+
+    .flag-nav {
+    }
+
+    .social-nav {
+        float: left;
+        margin-top: 10px;
+    }
+
+        .social-nav > ul {
+            margin: 0 0 0 .1em;
+        }
+
+            .social-nav > ul > li {
+                margin: 0 .5em 0 0;
+                font-size: .9em;
+            }
+
+                .social-nav > ul > li:last-child {
+                    margin-right: 0;
+                }
+
+    .bottom-row {
+        margin-top: 0em;
+    }
+
+    .main-nav > ul {
+        font-size: .8em;
+        font-weight: 200;
+        letter-spacing: .03em;
+        border-bottom: 1px solid #ffffff;
+        margin-left: 1em;
+    }
+
+        .main-nav > ul:nth-child(1) {
+            float: left;
+            padding-bottom: .3em;
+            margin-bottom: .3em;
+            margin-top: -.3em;
+            margin-left: 1em;
+        }
+
+        .main-nav > ul:nth-child(2) {
+            float: left;
+            border: none;
+            margin-right: 0;
+        }
+
+        .main-nav > ul > li.eight > .sub-drop {
+            right: inherit;
+            left: inherit;
+        }
+
+            .main-nav > ul > li.eight > .sub-drop > li > a {
+                text-align: left;
+            }
+
+    .sub-drop {
+        wdith: 160px;
+    }
+
+        .sub-drop > li > a {
+            font-size: .8em;
+        }
+
+    .content-wrapper {
+        padding-top: 8em;
+    }
+
+    .centered-content {
+        width: 100% !important;
+    }
+
+    .home-callout-wrapper .callout {
+        background-size: 100% auto !important;
+        min-height: 189px;
+        max-height: 189px;
+        max-width: 189px;
+        margin: 0 auto;
+    }
+
+        .home-callout-wrapper .callout > h4 {
+            font-size: .8em;
+        }
+
+    .callout#rearLoaders > h4 > span:nth-child(3) {
+        color: #8dc63f;
+        font-size: 2.8em;
+        top: 17px;
+    }
+
+    .callout#rotopac > h4 > span:nth-child(3) {
+        color: #8dc63f;
+        font-size: 2.59em;
+        top: 26px;
+    }
+
+    .callout#rotopac > h4 > span:nth-child(5) {
+        color: #ffffff;
+        font-size: 1.1em;
+        top: 23px;
+    }
+
+    .callout#nwtDealer > h4 > span:nth-child(3) {
+        color: #8dc63f;
+        font-size: 2.3em;
+        top: 7px;
+    }
+
+    .two-column-wrapper .left-col {
+        padding-right: 1em;
+    }
+
+    .two-column-wrapper .right-col {
+        padding-left: 1em;
+    }
+
+    #articleEventList .button {
+        width: 100%;
+        margin-top: 0rem;
+    }
+
+    .bottom-callouts .callout {
+        background-repeat: no-repeat !important;
+        background-position: left center !important;
+        background-size: 200% auto !important;
+    }
+
+        .bottom-callouts .callout > h5 {
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+    .footer-top section:nth-child(2) {
+        padding-top: 1em !important;
+        margin-top: 1em !important;
+        border-top: 1px solid rgba(0, 0, 0, .3);
+    }
+
+        .footer-top section:nth-child(2) > div {
+            margin-top: 0;
+        }
+
+    .scranton-mfg-products .product-table td:last-child {
+        display: none;
+    }
+}
+
+/* min-width 641px and max-width 767px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 47.938em) {
+}
+
+/* min-width 768px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 48.000em) and (max-width: 64em) {
+    .home-callout-wrapper .callout {
+        background-size: 100% auto !important;
+        min-height: 235px;
+        max-height: 235px;
+        max-width: 235px;
+        margin: 0 auto;
+    }
+
+        .home-callout-wrapper .callout > h4 {
+            font-size: .9em;
+        }
+
+    .callout#rearLoaders > h4 > span:nth-child(3) {
+        color: #8dc63f;
+        font-size: 2.8em;
+        top: 17px;
+    }
+
+    .callout#rotopac > h4 > span:nth-child(3) {
+        color: #8dc63f;
+        font-size: 2.59em;
+        top: 26px;
+    }
+
+    .callout#rotopac > h4 > span:nth-child(5) {
+        color: #ffffff;
+        font-size: 1.1em;
+        top: 23px;
+    }
+
+    .callout#nwtDealer > h4 > span:nth-child(3) {
+        color: #8dc63f;
+        font-size: 2.3em;
+        top: 7px;
+    }
+}
+
+/* min-width 946px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 59.125em) and (max-width: 64em) {
+    .main-nav > ul {
+        font-size: .8em;
+        font-weight: 200;
+        letter-spacing: .03em;
+        border-bottom: 1px solid #ffffff;
+        margin-left: 1em;
+    }
+
+        .main-nav > ul:nth-child(1) {
+            float: left;
+            padding-bottom: .3em;
+            margin-bottom: .3em;
+            margin-top: -.3em;
+            margin-left: 1em;
+        }
+
+        .main-nav > ul:nth-child(2) {
+            float: left;
+            border: none;
+            margin-right: 0;
+        }
+
+        .main-nav > ul > li.eight > .sub-drop {
+            right: inherit;
+            left: inherit;
+        }
+
+            .main-nav > ul > li.eight > .sub-drop > li > a {
+                text-align: left;
+            }
+
+    .home-callout-wrapper .callout {
+        background-size: 100% auto !important;
+        min-height: 300px;
+        max-height: 300px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+        .home-callout-wrapper .callout > h4 {
+            font-size: 1em;
+        }
+}
+
+@media only screen and (max-width: 1024px) {
+    .waste-industry-terminology [data-magellan-expedition] {
+        padding: 0;
+    }
+
+        .waste-industry-terminology [data-magellan-expedition] + div {
+            padding: 0;
+        }
+
+        .waste-industry-terminology [data-magellan-expedition] ul {
+            padding: 0 0 0rem 0;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,.4);
+            margin-bottom: 1rem;
+        }
+
+            .waste-industry-terminology [data-magellan-expedition] ul li {
+                text-align: right;
+                display: inline-block;
+            }
+}
+
+/* --- Large screens --- */
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {
+}
+
+/* min-width 1025px and max-width 1260px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 78.750em) {
+    .main-nav > ul > li > a {
+        font-size: .8em;
+        font-weight: 300;
+    }
+
+    .main-nav > ul:nth-child(1) > li {
+        margin-right: 0;
+    }
+
+    .main-nav > ul:nth-child(2) > li {
+        margin-left: 0;
+    }
+
+    .sub-drop {
+        wdith: 160px;
+    }
+
+        .sub-drop > li > a {
+            font-size: .8em;
+        }
+
+    .centered-content {
+        width: 85% !important;
+    }
+
+    .home-callout-wrapper .callout {
+        background-size: 100% auto !important;
+        min-height: 260px;
+        max-height: 260px;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+        .home-callout-wrapper .callout > h4 {
+            font-size: 1em;
+        }
+}
+
+/* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+}
+
+/* --- XLarge screens --- */
+/* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 90.063em) {
+}
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+}
+
+/* --- XXLarge screens --- */
+/* min-width 1921px, xxlarge screens */
+@media only screen and (min-width: 120.063em) {
+}

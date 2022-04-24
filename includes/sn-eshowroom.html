@@ -1,0 +1,55 @@
+                                <div class="large-12 medium-12 columns">
+                                    
+                                    <div id="sort">
+                                    	<h5>Sort Refuse Trucks:</h5>
+                                        <div class="custom-overview">
+                                            <form action="default.asp" method="post">
+                                                <p>
+                                                    <span>By style:</span>
+                                                    <select name="sortStyle" id="sortStyle">
+                                                        <option value="None" selected="selected">Select Style&nbsp;</option>
+                                                        <% do until rsStyles.eof %>
+                                                        <option value="<%=rsStyles("nwStyle")%>"><%=rsStyles("nwStyle")%>&nbsp;</option>
+                                                        <% rsStyles.movenext
+                                                            loop
+                                                        %>
+                                                    </select>
+                                                </p>
+                                                <p>
+                                                    <span>By model:</span>
+                                                    <select name="sortModel" id="sortModel">
+                                                        <option value="None" selected="selected">Select Model&nbsp;</option>
+                                                        <% do until rsModels.eof %>
+                                                        <option value="<%=rsModels("nwModelID")%>"><%=rsModels("nwModel")%>&nbsp;</option>
+                                                        <% rsModels.movenext
+                                                            loop
+                                                        %>
+                                                    </select>
+                                                </p>
+                                                <p>
+                                                    <span>By chassis:</span>
+                                                    <select name="sortChassis" id="sortChassis">
+                                                        <option value="None" selected="selected">Select Chassis&nbsp;</option>
+                                                        <% do until rsChassis.eof %>
+                                                        <option value="<%=rsChassis("chassisMake")%>"><%=rsChassis("chassisMake")%>&nbsp;</option>
+                                                        <% rsChassis.movenext
+                                                            loop
+                                                        %>
+                                                    </select>
+                                                </p>
+                                                <p>
+                                                    <span>By capacity:</span>
+                                                    <select name="sortCapacity" id="sortCapacity">
+                                                        <option value="None" selected="selected">Select Capacity&nbsp;</option>
+                                                        <% do until rsCapacity.eof %>
+                                                        <option value="<%=rsCapacity("nwCapacity")%>"><%=rsCapacity("nwCapacity")%>&nbsp;</option>
+                                                        <% rsCapacity.movenext
+                                                            loop
+                                                        %>
+                                                    </select>
+                                                </p>
+                                                <input class="button expand small submit" type="submit" name="submitBtn" id="submitBtn" value="Submit">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>

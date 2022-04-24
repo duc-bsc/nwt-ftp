@@ -1,0 +1,62 @@
+<script src="//use.typekit.net/jnc0fam.js"></script>
+<script>try { Typekit.load(); } catch (e) { }</script>
+
+<!-- Font Awesome CDN -->
+<script src="https://use.fontawesome.com/2f895abd4b.js"></script>
+<script>
+	window.jQuery || document.write('<script src="/Scripts/jquery-2.1.4.js">\x3C/script>');
+	(function (exports, d) {
+		function domReady(fn, context) {
+
+			function onReady(event) {
+				d.removeEventListener("DOMContentLoaded", onReady);
+				fn.call(context || exports, event);
+			}
+
+			function onReadyIe(event) {
+				if (d.readyState === "complete") {
+					d.detachEvent("onreadystatechange", onReadyIe);
+					fn.call(context || exports, event);
+				}
+			}
+
+			d.addEventListener && d.addEventListener("DOMContentLoaded", onReady) ||
+				d.attachEvent && d.attachEvent("onreadystatechange", onReadyIe);
+		}
+
+		exports.domReady = domReady;
+	})(window, document);
+	function defer(method) {
+		if (window.jQuery) {
+			method();
+		} else {
+			setTimeout(function () { defer(method) }, 50);
+		}
+	}
+	domReady(function (event) {
+		defer(function () {
+			// Handle side Nav active page highlighting
+			var lastV;
+			$(".sn-careers ul li").each(function (index, element) {
+				$.each(element.classList, function (i, v) {
+					if ($("body").hasClass(v.substring(3))) {
+						lastV = v;
+					}
+				});
+			});
+			if (typeof lastV != "undefined") {
+				if (lastV.length) {
+					$('.' + lastV).addClass("active");
+				}
+			}
+		});
+	});
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TLDFDSJ');</script>
+<!-- End Google Tag Manager -->

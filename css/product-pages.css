@@ -1,0 +1,1008 @@
+
+/*---------------------------------------------------------------*/
+/* Product Page Styles */
+/*---------------------------------------------------------------*/
+
+/* --- DOM Styles --- */
+.product-page .content-wrapper {background: url(../images/bkgd-product-environment.jpg) no-repeat top center scroll; background-size: 1680px 849px;}
+.product-page .two-column-wrapper {margin-top: 0 !important; margin-bottom: 0 !important;}
+.product-page .two-column-wrapper h4 {font-size: 1.4em; font-weight: 200; letter-spacing: .03em; margin: 0 0 .6rem 0; color: #ffffff;}
+
+
+/* --- Main Image --- */
+.product-banner {float: left; width: 100%; position: relative; margin-top: -5em;}
+.product-banner h2 {font-size: 3em; text-transform: uppercase; text-align: center; letter-spacing: .1em; font-weight: 400; margin: 0; padding: 1em 0 1.7em 0;}
+.product-banner > div:nth-child(1) {z-index: 700;}
+.product-banner > div:nth-child(2) {margin-top: -178px; z-index: 701;}
+.product-banner .banner-text {position: absolute; right: 0; top: 50%; z-index: 601; max-width: 27em; margin-top: -18.1rem;}
+.product-banner .banner-text h1 {margin: 0 .625rem -5rem 0; line-height: 0; font-size: 24em; position: relative; z-index: 602; text-align: right;}
+.product-banner .banner-text h1 > span:after {content: "\2122"; font-size: 1rem; position: absolute;}
+.product-banner .banner-text blockquote {padding: 0 .625rem; margin: 0; border: none; position: relative; text-align: right; z-index: 603;}
+.product-banner .banner-text p {color: #ffffff; font-size: 1.2em; line-height: 1.5; font-style: italic; font-weight: 400; margin-bottom: .5rem;}
+.product-banner .banner-text p > .icon-left-quote {font-size: 4.5rem; position: absolute; top: -17px; left: -17px; font-style: italic;}
+.product-banner .banner-text cite {color: #ffffff; font-size: .9rem; font-weight: 300; letter-spacing: .05em;}
+.product-banner .truck-buttons, .product-banner .main-image-hover, .product-banner .main-image-hover > .truck-image {position: relative; width: 100%;}
+.product-banner .truck-buttons {z-index: 600;}
+.product-banner .main-image-hover > .truck-image {z-index: 500;}
+.product-banner .button-wrapper {position: absolute; z-index: 501; background-color: #8dc63f; border: 1px solid #8dc63f; height: 27px; width: 27px; text-align: center; border-radius: 100px; box-shadow: 0 0 0 3px #ffffff, 0px 3px 24px 3px rgba(0,0,0,.5); font-size: .8rem;}
+.product-banner .button-wrapper > a {color: #ffffff; padding: .5rem; line-height: 2.1; margin-left: -2px;}
+.product-banner .button-wrapper:hover {background-color: #000000; border-color: #000000;}
+
+.feature-modal h2 {text-transform: uppercase; font-family: "futura-pt-condensed",sans-serif; font-style: normal; font-weight: 300; font-size: 2rem;}
+.feature-modal img {margin-bottom: 1rem;}
+
+
+/* --- Product Content --- */
+/* Copy */
+.product-copy {}
+.product-copy h2 {font-size: 1.8em; color: #ffffff; text-transform: uppercase; margin-bottom: 1.25rem; line-height: 1.3;}
+.product-copy .truck-features {float: left; clear: both; width: 100%; display: none;}
+
+/* Downloads */
+.product-downloads {float: left; width: 100%;}
+.product-downloads > div {padding: 0;}
+
+/* Spec Pop up */
+.spec-modal {height: 700px; overflow-y: scroll;}
+.spec-modal > div {margin-bottom: 2.5rem;}
+.spec-modal h6 {text-transform: uppercase; letter-spacing: .1rem; font-size: 1.2rem; margin: 0;}
+.spec-modal .tabs dd {background-color: rgba(255,255,255,.2); border-right: 3px solid rgba(0,0,0,.6);}
+.spec-modal .tabs dd:focus, .spec-modal .tabs .tab-title:focus, .spec-modal .tabs dd > a:focus, .spec-modal .tabs .tab-title > a:focus, .spec-modal .tabs-content > .content table tr:focus, .spec-modal .tabs-content > .content table th:focus, .spec-modal .tabs-content > .content table td:focus {outline: none;}
+.spec-modal .tabs dd > a, .spec-modal .tabs .tab-title > a {font-size: .7rem; font-family: "myriad-pro",sans-serif; font-style: normal; font-weight: 400; padding: .625rem; color: rgba(255,255,255,.3); background-color: rgba(255,255,255,0); letter-spacing: .05rem;}
+.spec-modal .tabs dd > a:hover, .spec-modal .tabs .tab-title > a:hover, .spec-modal .tabs dd.active a:hover, .spec-modal .tabs .tab-title.active a:hover {background-color: rgba(255,255,255,.8); color: #000000;}
+.spec-modal .tabs dd.active a, .spec-modal .tabs .tab-title.active a {background-color: rgba(0,0,0,.6); color: #ffffff;}
+.spec-modal .tabs-content {margin-bottom: 0;}
+.spec-modal .tabs-content > .content {padding: 0; margin: 0;}
+.spec-modal .tabs-content > .content table {border: none; background-color: rgba(255,255,255,.2); font-weight: 200; margin-bottom: 0;}
+.spec-modal .tabs-content > .content table th {background-color: rgba(0,0,0,.6); text-transform: uppercase; color: #ffffff; font-size: .8em; letter-spacing: .2em; font-weight: 200; padding: .625rem;}
+.spec-modal .tabs-content > .content table td {color: #ffffff; font-size: .8em; letter-spacing: .05em; padding: .625rem;}
+.spec-modal .tabs-content > .content table tr {}
+.spec-modal .tabs-content > .content table tr.even, .spec-modal .tabs-content > .content table tr.alt, .spec-modal .tabs-content > .content table tr:nth-of-type(even) {background-color: rgba(0,0,0,.3);}
+
+.spec-modal .accordion {margin-bottom: 0; background-color: rgba(255,255,255,.2);}
+.spec-modal .accordion .accordion-navigation, .spec-modal .accordion dd {border-bottom: 3px solid rgba(0,0,0,.6);}
+.spec-modal .accordion .accordion-navigation > a, .spec-modal .accordion dd > a {font-size: .7rem; font-family: "myriad-pro",sans-serif; font-style: normal; font-weight: 400; padding: .625rem; color: rgba(255,255,255,.3); background-color: rgba(255,255,255,0); letter-spacing: .05rem;}
+.spec-modal .accordion .accordion-navigation > a:hover, .spec-modal .accordion dd > a:hover, .spec-modal .accordion .accordion-navigation.active > a:hover, .spec-modal .accordion dd.active > a:hover {background-color: rgba(255,255,255,.8); color: #000000;}
+.spec-modal .accordion .accordion-navigation.active > a, .spec-modal .accordion dd.active > a {background-color: rgba(0,0,0,.6); color: #ffffff;}
+.spec-modal .accordion .accordion-navigation > .content.active, .spec-modal .accordion dd > .content.active {padding: 0; background: transparent;}
+.spec-modal .accordion-navigation {margin-bottom: 0;}
+.spec-modal .accordion-navigation > .content {padding: 0; margin: 0;}
+.spec-modal .accordion-navigation > .content table {border: none; background-color: transparent; font-weight: 200; margin-bottom: 0;}
+.spec-modal .accordion-navigation > .content table th {background-color: rgba(0,0,0,.6); text-transform: uppercase; color: #ffffff; font-size: .8em; letter-spacing: .2em; font-weight: 200; padding: .625rem;}
+.spec-modal .accordion-navigation > .content table td {color: #ffffff; font-size: .8em; letter-spacing: .05em; padding: .625rem;}
+.spec-modal .accordion-navigation > .content table tr {}
+.spec-modal .accordion-navigation > .content table tr.even, .spec-modal .accordion-navigation > .content table tr.alt, .spec-modal .accordion-navigation > .content table tr:nth-of-type(even) {background-color: rgba(0,0,0,.3);}
+
+/* Gallery */
+.product-gallery .clearing-thumbs li, .product-gallery [data-clearing] li {margin-right: 0; padding-left: 0; padding-bottom: .625em;}
+.product-gallery h4 {text-transform: uppercase; font-family: "futura-pt-condensed",sans-serif; font-style: normal; font-weight: 500; margin: 0; padding-top: 14px; line-height: 1;}
+.product-gallery > div:first-child {padding-left: 0;}
+[class*="column"]+[class*="column"]:last-child {float: left;}
+
+
+/* Equipment */
+.product-equipment {float: left; width: 100%;}
+.product-equipment > div:first-child {padding-left: 0;}
+.product-equipment > div:last-child {padding-right: 0;}
+.product-equipment p > em {opacity: .4;}
+
+/* Contact Us */
+.contact-us {float: left; width: 100%; padding-top: 1rem;}
+
+/* Product Video Large (Hero)*/
+.video-wrapper {margin-top: 4rem;}
+.video-wrapper h4 {font-size: 2rem; font-weight: 200; letter-spacing: .03em; margin: 0 0 2rem 0; color: #ffffff; text-align: center; line-height: 1;}
+.video-wrapper h4 .subheader {font-size: 1.4rem; font-weight: 300; color: #ffffff;}
+.video-wrapper .video-footer {border-top: 1px solid rgba(255,255,255,.5); text-align: center; padding-top: 1rem; margin-top: 2rem;}
+
+/* Comparison Pane */
+.product-comparison {float: left; width: 100%; padding: 1rem 0;}
+.product-comparison h4 {font-size: 1.4em; font-weight: 200; letter-spacing: .03em; margin: 0 0 .6rem 0; color: #ffffff;}
+.product-comparison ul {margin: 0; list-style-type: none; text-align: right; font-size: 1.1rem;}
+.product-comparison ul > li {font-weight: 400; margin-bottom: 3px;}
+.product-comparison ul > li:last-child {margin-bottom: 0;}
+.product-comparison ul > li .icon-solid-square {font-size: .7em; margin-left: .5rem;}
+.product-comparison > div:nth-child(2) > section {padding-top: 1rem; padding-bottom: 1rem;}
+.product-comparison > div:nth-child(2) > section:hover {background-color: rgba(255,255,255,.1);}
+.product-comparison > div:nth-child(2) > section:last-child {float: left;}
+.product-comparison > div:nth-child(2) > section:nth-child(1):hover {background: transparent !important;}
+.product-comparison > div:nth-child(2) > section:nth-child(1) > ul {margin-top: 1.913rem;}
+.product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li {color: rgba(255,255,255,.8);}
+.product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li:hover {color: #ffffff;}
+.product-comparison > div:nth-child(3) {padding: 1rem .625rem; margin: 0;}
+.product-comparison > div:nth-child(3) > p {margin-bottom: 0;}
+.product-comparison .bar-graph > h3 {margin: 0 0 1rem 0; font-size: .8rem; text-align: center; text-transform: uppercase; font-weight: 300; letter-spacing: .1em; color: rgba(255,255,255,.8);}
+.product-comparison .bar-graph:hover > h3, .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.product-comparison .bar-graph > ul > li > span {color: rgba(255,255,255,.4); text-align: left;}
+.product-comparison .bar-graph > ul > li > .info-bar {height: 28px; background-color: rgba(255,255,255,.6); width: 100%; opacity: 1;}
+.product-comparison .bar-graph > ul > li > .info-bar > .inner-bar {height: 28px; width: 90%; background-color: rgba(255,255,255,.4); line-height: 28px; text-align: left;}
+.product-comparison .bar-graph > ul > li > .info-bar > .inner-bar > .bar-content {margin-left: .5rem; font-size: .7rem; vertical-align: bottom; color: #000000; letter-spacing: 0; position: absolute; padding-right: .5rem; font-weight: 400;}
+.product-comparison .bar-graph > ul > li:hover > .info-bar {background-color: rgba(255,255,255,.8); opacity: 1;}
+.product-comparison .bar-graph > ul > li:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+/* .product-comparison .bar-graph > ul > li:hover > .info-bar > .inner-bar > .bar-content {background-color: #ffffff;} */
+
+.product-comparison .red-text {vertical-align: super;}
+.product-comparison .fine-print {font-size: 1.1rem; text-align: right; letter-spacing: .05em; color: rgba(255,255,255,1);}
+.product-comparison .fine-print .red-text {vertical-align: text-bottom;}
+
+.graph-top, .graph-bottom, .graph-copy {float: left; width: 100%; clear: both; padding: 0; margin: 0;}
+.graph-top > div:nth-child(1) > p, .graph-bottom > div:nth-child(1) > p {margin: 0;}
+.graph-top h3 {text-align: center; text-transform: uppercase; letter-spacing: .1em; margin: 0;}
+.graph-top .spacer {float: left; width: 100%; border-top: 1px solid rgba(255,255,255,.4); border-right: 1px solid rgba(255,255,255,.4); border-left: 1px solid rgba(255,255,255,.4); padding-bottom: .5rem; margin-bottom: .5rem;}
+.graph-top > div {padding: 0;}
+.graph-bottom {background-color: #8dc63f; padding: 0;}
+.graph-bottom > div:nth-child(2) {background-color: rgba(0,0,0,.2);}
+.graph-bottom p {margin: 0; text-align: center; padding: .5rem 2rem; line-height: 1.2;}
+.graph-copy {margin-top: 1rem;}
+.graph-copy > div {padding: 0;}
+.graph-copy p {margin-bottom: 0; font-size: 1.3rem;}
+
+
+/* --- Product Navigation --- */
+.product-nav {float: left; width: 100%; padding: 2rem 0; margin-top: -2rem; margin-bottom: 3rem;}
+.product-nav ul {margin: 0; overflow: visible;}
+.product-nav ul > li {text-align: center; position: relative;}
+.product-nav ul > li figure {margin: 0; padding: .5rem; border-right: 2px solid rgba(255,255,255,.4);}
+.product-nav ul > li figure img {opacity: 1;}
+.product-nav ul > li:hover {margin-bottom: -5.25rem !important;}
+.product-nav ul > li:hover h5 {border-color: #ffffff; color: #ffffff;}
+.product-nav ul > li:hover figure {background-color: rgba(255,255,255,.1);}
+.product-nav ul > li:hover figure img {opacity: 1;}
+.product-nav ul > li:hover .spacer {border-color: #ffffff;}
+.product-nav ul > li:last-child figure {border-right: none;}
+.product-nav ul > li > a > h5 {font-size: 1.5rem; color: rgba(255,255,255,.4); margin: 0 0 .5rem 0; border-bottom: 2px solid rgba(255,255,255,.4); padding-bottom: .5rem; font-weight: 300;}
+.product-nav .spacer {clear: both; float: left; width: 100%; margin-top: .5rem; border-bottom: 2px solid rgba(255,255,255,.4);}
+.product-nav .spacer + p {display: none; position: relative; width: 100%; margin: .5rem 0 0 0; padding: 0rem .5rem .5rem .5rem; font-size: .813rem; font-weight: 300; color: #ffffff; float: left; clear: both;}
+.product-nav ul > li:hover .spacer + p {display: block;}
+
+
+
+/* --------- // Refuse Trucks // --------- */
+.refuse-trucks .product-nav ul > li > a > h5 {font-size: 1rem !important;}
+.refuse-trucks .sn-front-loader ul > li, .refuse-trucks .sn-automated-side-loader ul > li, .refuse-trucks .sn-satellite-bodies ul > li {width: 25% !important;}
+.refuse-trucks .sn-front-loader ul > li:first-child, .refuse-trucks .sn-automated-side-loader ul > li:first-child {margin-left: 25% !important; margin-right: 0 !important;}
+.refuse-trucks .sn-front-loader ul > li:last-child, .refuse-trucks .sn-automated-side-loader ul > li:last-child {margin-right: 25% !important; margin-left: 0 !important;}
+.refuse-trucks .sn-satellite-bodies ul > li:first-child {margin-left: 37.5% !important;}
+.refuse-trucks .sn-satellite-bodies ul > li:last-child {margin-right: 37.5% !important;}
+.refuse-trucks .sn-rear-loader ul > li {width: 16.666% !important; margin-right: 0 !important; margin-left: 0 !important;}
+
+
+
+
+/* --------- // Rear Loaders // --------- */
+.rear-loader {}
+.rear-loader.overview .product-nav ul > li > a > h5 {font-size: 1rem !important;}
+.rear-loader .product-nav ul > li {width: 16.666%; margin: 0;}
+
+/* --- Comparison Pane --- */
+/* Changes to the Hopper Capacity comparison pane */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.one > .info-bar {width: 100%;} /* King Cobra Overall length */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.one > .info-bar > .inner-bar {width: 100%;} /* King Cobra Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.two > .info-bar {width: 100%;} /* Cobra Magnum Overall length */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.two > .info-bar > .inner-bar {width: 100%;} /* Cobra Magnum Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.three > .info-bar {width: 89.5%;} /* Cobra Overall length */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.three > .info-bar > .inner-bar {width: 100%;} /* Cobra Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.four > .info-bar {width:76.5%;} /* Viper Overall length */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.four > .info-bar > .inner-bar {width: 66.7%;} /* Viper Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.five > .info-bar {width: 28.2%;} /* Diamondback Overall length */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.five > .info-bar > .inner-bar {width: 100%;} /* Diamondback Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.six > .info-bar {width: 95%;} /* Cobra HC Overall length */
+.rear-loader .product-comparison .bar-graph > ul#hopperCapacity > li.six > .info-bar > .inner-bar {width: 100%;} /* Cobra HC Fluctuation Meter length */
+
+/* Changes to the Body Capacity comparison pane */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.one > .info-bar {width: 100%;} /* King Cobra Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.one > .info-bar > .inner-bar {width: 70%;} /* King Cobra Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.two > .info-bar {width: 100%;} /* Cobra Magnum Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.two > .info-bar > .inner-bar {width: 70%;} /* Cobra Magnum Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.three > .info-bar {width: 70.1%;} /* Cobra Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.three > .info-bar > .inner-bar {width: 87%;} /* Cobra Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.four > .info-bar {width: 36.1%;} /* Viper Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.four > .info-bar > .inner-bar {width: 80%;} /* Viper Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.five > .info-bar {width: 25%;} /* Diamondback Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.five > .info-bar > .inner-bar {width: 75%;} /* Diamondback Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.six > .info-bar {width: 90%;} /* Cobra HC Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyCapacity > li.six > .info-bar > .inner-bar {width: 78%;} /* CobraHC Fluctuation Meter length */
+
+
+/* Changes to the Second Cycle Time comparison pane */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.one > .info-bar {width: 93.3%;} /* King Cobra Overall length */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.one > .info-bar > .inner-bar {width: 89.3%;} /* King Cobra Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.two > .info-bar {width: 80.3%;} /* Cobra Magnum Overall length */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.two > .info-bar > .inner-bar {width: 69.3%;} /* Cobra Magnum Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.three > .info-bar {width: 88%;} /* Cobra Overall length */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.three > .info-bar > .inner-bar {width: 90.7%;} /* Cobra Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.four > .info-bar {width: 100%;} /* Viper Overall length */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.four > .info-bar > .inner-bar {width: 90.3%;} /* Viper Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.five > .info-bar {width: 60%;} /* Diamondback Overall length */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.five > .info-bar > .inner-bar {width: 77.8%;} /* Diamondback Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.six > .info-bar {width: 80%;} /* Cobra HC Overall length */
+.rear-loader .product-comparison .bar-graph > ul#secondCycleTime > li.six > .info-bar > .inner-bar {width: 70%;} /* Cobra HC Fluctuation Meter length */
+
+/* Changes to the Body Weight comparison pane */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.one > .info-bar {width: 100%;} /* King Cobra Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.one > .info-bar > .inner-bar {width: 88.5%;} /* King Cobra Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.two > .info-bar {width: 86.5%;} /* Cobra Magnum Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.two > .info-bar > .inner-bar {width: 89.8%;} /* Cobra Magnum Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.three > .info-bar {width: 69.5%;} /* Cobra Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.three > .info-bar > .inner-bar {width: 76.2%;} /* Cobra Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.four > .info-bar {width: 63.5%;} /* Viper Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.four > .info-bar > .inner-bar {width: 76.2%;} /* Viper Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.five > .info-bar {width: 32.8%;} /* Diamondback Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.five > .info-bar > .inner-bar {width: 92.1%;} /* Diamondback Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.six > .info-bar {width: 80%;} /* Cobra hc Overall length */
+.rear-loader .product-comparison .bar-graph > ul#bodyWeight > li.six > .info-bar > .inner-bar {width: 100%;} /* Cobra hc Fluctuation Meter length */
+
+/* Changes to the Compaction Rate comparison pane */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.one > .info-bar {width: 100%;} /* King Cobra Overall length */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.one > .info-bar > .inner-bar {width: 83.3%;} /* King Cobra Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.two > .info-bar {width: 100%;} /* Cobra Magnum Overall length */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.two > .info-bar > .inner-bar {width: 83.3%;} /* Cobra Magnum Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.three > .info-bar {width: 75%;} /* Cobra Overall length */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.three > .info-bar > .inner-bar {width: 88.9%;} /* Cobra Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.four > .info-bar {width: 70.8%;} /* Viper Overall length */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.four > .info-bar > .inner-bar {width: 88.2%;} /* Viper Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.five > .info-bar {width: 83.3%;} /* Diamondback Overall length */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.five > .info-bar > .inner-bar {width: 80%;} /* Diamondback Fluctuation Meter length */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.six > .info-bar {width: 83.3%;} /* Cobra HC Overall length */
+.rear-loader .product-comparison .bar-graph > ul#compactionRates > li.six > .info-bar > .inner-bar {width: 100%;} /* Cobra HC Fluctuation Meter length */
+
+
+/* --- King Cobra --- */
+.king-cobra .product-banner .button-wrapper.reveal-one {top: 47%; left: 58%;}
+.king-cobra .product-banner .button-wrapper.reveal-two {top: 40%; left: 21%;}
+.king-cobra .product-banner .button-wrapper.reveal-three {top: 54%; left: 4%;}
+.king-cobra .product-banner .banner-text h1 > span:after {top: 51%; margin-left: -9px;}
+
+.king-cobra .product-nav ul > li.one > a > h5 {color: #8dc63f; border-color: #8dc63f;}
+.king-cobra .product-nav ul > li.one figure {background-color: rgba(141, 198, 63, 0.2);}
+.king-cobra .product-nav ul > li.one figure img {opacity: 1 !important;}
+.king-cobra .product-nav ul > li.one .spacer {border-color: #8dc63f;}
+.king-cobra .product-nav ul > li.one .spacer + p {color: #8dc63f;}
+.king-cobra .product-nav ul > li.one:hover > a > h5 {color: rgba(255,255,255,1); border-color: rgba(255,255,255,1);}
+.king-cobra .product-nav ul > li.one:hover figure {background-color: rgba(255,255,255,.1);}
+.king-cobra .product-nav ul > li.one:hover figure img {opacity: 1 !important;}
+.king-cobra .product-nav ul > li.one:hover .spacer {border-color: rgba(255,255,255,1);}
+.king-cobra .product-nav ul > li.one:hover .spacer + p {color: #ffffff;}
+
+.king-cobra .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.one {color: #8dc63f;}
+.king-cobra .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.one:hover {color: #ffffff;}
+.king-cobra .product-comparison .bar-graph:hover > h3, .king-cobra .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.king-cobra .product-comparison .bar-graph > ul > li.one > span {color: #8dc63f;}
+.king-cobra .product-comparison .bar-graph > ul > li.one > .info-bar {background-color: rgba(141,198,63,.8); opacity: 1;}
+.king-cobra .product-comparison .bar-graph > ul > li.one > .info-bar > .inner-bar {background-color: rgba(141,198,63,1);}
+.king-cobra .product-comparison .bar-graph > ul > li.one:hover > .info-bar {background-color: rgba(255,255,255,.8);}
+.king-cobra .product-comparison .bar-graph > ul > li.one:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+.king-cobra .product-comparison .bar-graph > ul > li.one:hover > .info-bar > .inner-bar > span {color: rgba(0, 0, 0, 1);}
+
+
+/* --- Cobra Magnum --- */
+.cobra-magnum .product-banner .button-wrapper.reveal-one {top: 42%; left: 5%;}
+.cobra-magnum .product-banner .button-wrapper.reveal-two {top: 45%; left: 13%;}
+.cobra-magnum .product-banner .button-wrapper.reveal-three {top: 50%; left: 45%;}
+.cobra-magnum .product-banner .banner-text h1 > span:after {top: 35%; margin-left: -87px; content: "\00AE";}
+
+.cobra-magnum .cobra-magnum-gallery {display: none;}
+.cobra-magnum-gallery p {margin-bottom: 0;}
+.cobra-magnum-gallery p small {font-size: 70%;}
+
+.cobra-magnum .product-nav ul > li.two > a > h5 {color: #8dc63f; border-color: #8dc63f;}
+.cobra-magnum .product-nav ul > li.two figure {background-color: rgba(141, 198, 63, 0.2);}
+.cobra-magnum .product-nav ul > li.two figure img {opacity: 1 !important;}
+.cobra-magnum .product-nav ul > li.two .spacer {border-color: #8dc63f;}
+.cobra-magnum .product-nav ul > li.two .spacer + p {color: #8dc63f;}
+.cobra-magnum .product-nav ul > li.two:hover > a > h5 {color: rgba(255,255,255,1); border-color: rgba(255,255,255,1);}
+.cobra-magnum .product-nav ul > li.two:hover figure {background-color: rgba(255,255,255,.1);}
+.cobra-magnum .product-nav ul > li.two:hover figure img {opacity: 1 !important;}
+.cobra-magnum .product-nav ul > li.two:hover .spacer {border-color: rgba(255,255,255,1);}
+.cobra-magnum .product-nav ul > li.two:hover .spacer + p {color: #ffffff;}
+
+.cobra-magnum .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.two {color: #8dc63f;}
+.cobra-magnum .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.two:hover {color: #ffffff;}
+.cobra-magnum .product-comparison .bar-graph:hover > h3, .cobra-magnum .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.cobra-magnum .product-comparison .bar-graph > ul > li.two > span {color: #8dc63f;}
+.cobra-magnum .product-comparison .bar-graph > ul > li.two > .info-bar {background-color: rgba(141,198,63,.8); opacity: 1;}
+.cobra-magnum .product-comparison .bar-graph > ul > li.two > .info-bar > .inner-bar {background-color: rgba(141,198,63,1);}
+.cobra-magnum .product-comparison .bar-graph > ul > li.two:hover > .info-bar {background-color: rgba(255,255,255,.8);}
+.cobra-magnum .product-comparison .bar-graph > ul > li.two:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+.cobra-magnum .product-comparison .bar-graph > ul > li.two:hover > .info-bar > .inner-bar > span {color: rgba(0, 0, 0, 1);}
+
+
+/* --- Cobra --- */
+.cobra .product-banner .button-wrapper.reveal-one {top: 47%; left: 8%;}
+.cobra .product-banner .button-wrapper.reveal-two {top: 40%; left: 45%;}
+.cobra .product-banner .button-wrapper.reveal-three {top: 50%; left: 61%;}
+.cobra .product-banner .banner-text h1 > span:after {top: 41%; margin-left: -5px;}
+
+.cobra .product-nav ul > li.three > a > h5 {color: #8dc63f; border-color: #8dc63f;}
+.cobra .product-nav ul > li.three figure {background-color: rgba(141, 198, 63, 0.2);}
+.cobra .product-nav ul > li.three figure img {opacity: 1 !important;}
+.cobra .product-nav ul > li.three .spacer {border-color: #8dc63f;}
+.cobra .product-nav ul > li.three .spacer + p {color: #8dc63f;}
+.cobra .product-nav ul > li.three:hover > a > h5 {color: rgba(255,255,255,1); border-color: rgba(255,255,255,1);}
+.cobra .product-nav ul > li.three:hover figure {background-color: rgba(255,255,255,.1);}
+.cobra .product-nav ul > li.three:hover figure img {opacity: 1 !important;}
+.cobra .product-nav ul > li.three:hover .spacer {border-color: rgba(255,255,255,1);}
+.cobra .product-nav ul > li.three:hover .spacer + p {color: #ffffff;}
+
+.cobra .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.three {color: #8dc63f;}
+.cobra .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.three:hover {color: #ffffff;}
+.cobra .product-comparison .bar-graph:hover > h3, .cobra .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.cobra .product-comparison .bar-graph > ul > li.three > span {color: #8dc63f;}
+.cobra .product-comparison .bar-graph > ul > li.three > .info-bar {background-color: rgba(141,198,63,.8); opacity: 1;}
+.cobra .product-comparison .bar-graph > ul > li.three > .info-bar > .inner-bar {background-color: rgba(141,198,63,1);}
+.cobra .product-comparison .bar-graph > ul > li.three:hover > .info-bar {background-color: rgba(255,255,255,.8);}
+.cobra .product-comparison .bar-graph > ul > li.three:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+.cobra .product-comparison .bar-graph > ul > li.three:hover > .info-bar > .inner-bar > span {color: rgba(0, 0, 0, 1);}
+
+/* -- Cobra HC -- */
+.cobra-hc .product-banner h2 {letter-spacing:0;}
+.cobra-hc .product-banner .button-wrapper.reveal-one {top: 47%; left: 8%;}
+.cobra-hc .product-banner .button-wrapper.reveal-two {top: 40%; left: 45%;}
+.cobra-hc .product-banner .button-wrapper.reveal-three {top: 50%; left: 61%;}
+.cobra-hc .product-banner .banner-text h1 > span:after {top: 41%; margin-left: -5px;}
+.cobra-hc .product-nav ul > li.six > a > h5 {color: #8dc63f; border-color: #8dc63f;}
+.cobra-hc .product-nav ul > li.six figure {background-color: rgba(141, 198, 63, 0.2);}
+.cobra-hc .product-nav ul > li.six figure img {opacity: 1 !important;}
+.cobra-hc .product-nav ul > li.six .spacer {border-color: #8dc63f;}
+.cobra-hc .product-nav ul > li.six .spacer + p {color: #8dc63f;}
+.cobra-hc .product-nav ul > li.six:hover > a > h5 {color: rgba(255,255,255,1);border-color: rgba(255,255,255,1);}
+.cobra-hc .product-nav ul > li.six:hover figure {background-color: rgba(255,255,255,.1);}
+.cobra-hc .product-nav ul > li.six:hover figure img {opacity: 1 !important;}
+.cobra-hc .product-nav ul > li.six:hover .spacer {border-color: rgba(255,255,255,1);}
+.cobra-hc .product-nav ul > li.six:hover .spacer + p {color: #ffffff;}
+.cobra-hc .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.six {color: #8dc63f;}
+.cobra-hc .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.six:hover {color: #ffffff;}
+.cobra-hc .product-comparison .bar-graph:hover > h3, .cobra-hc .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.cobra-hc .product-comparison .bar-graph > ul > li.six > span {color: #8dc63f;}
+.cobra-hc .product-comparison .bar-graph > ul > li.six > .info-bar {background-color: rgba(141,198,63,.8);opacity: 1;}
+.cobra-hc .product-comparison .bar-graph > ul > li.six > .info-bar > .inner-bar {background-color: rgba(141,198,63,1);}
+.cobra-hc .product-comparison .bar-graph > ul > li.six:hover > .info-bar {background-color: rgba(255,255,255,.8);}
+.cobra-hc .product-comparison .bar-graph > ul > li.six:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+.cobra-hc .product-comparison .bar-graph > ul > li.six:hover > .info-bar > .inner-bar > span {color: rgba(0, 0, 0, 1);}
+
+/* --- Viper --- */
+.viper .product-banner .button-wrapper.reveal-one {top: 51%; left: 39%;}
+.viper .product-banner .button-wrapper.reveal-two {top: 51%; left: 12%;}
+.viper .product-banner .button-wrapper.reveal-three {top: 27%; left: 32%;}
+.viper .product-banner .banner-text h1 > span:after {top: 40%; margin-left: 5px;}
+
+.viper .product-nav ul > li.four > a > h5 {color: #8dc63f; border-color: #8dc63f;}
+.viper .product-nav ul > li.four figure {background-color: rgba(141, 198, 63, 0.2);}
+.viper .product-nav ul > li.four figure img {opacity: 1 !important;}
+.viper .product-nav ul > li.four .spacer {border-color: #8dc63f;}
+.viper .product-nav ul > li.four .spacer + p {color: #8dc63f;}
+.viper .product-nav ul > li.four:hover > a > h5 {color: rgba(255,255,255,1); border-color: rgba(255,255,255,1);}
+.viper .product-nav ul > li.four:hover figure {background-color: rgba(255,255,255,.1);}
+.viper .product-nav ul > li.four:hover figure img {opacity: 1 !important;}
+.viper .product-nav ul > li.four:hover .spacer {border-color: rgba(255,255,255,1);}
+.viper .product-nav ul > li.four:hover .spacer + p {color: #ffffff;}
+
+.viper .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.four {color: #8dc63f;}
+.viper .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.four:hover {color: #ffffff;}
+.viper .product-comparison .bar-graph:hover > h3, .viper .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.viper .product-comparison .bar-graph > ul > li.four > span {color: #8dc63f;}
+.viper .product-comparison .bar-graph > ul > li.four > .info-bar {background-color: rgba(141,198,63,.8); opacity: 1;}
+.viper .product-comparison .bar-graph > ul > li.four > .info-bar > .inner-bar {background-color: rgba(141,198,63,1);}
+.viper .product-comparison .bar-graph > ul > li.four:hover > .info-bar {background-color: rgba(255,255,255,.8);}
+.viper .product-comparison .bar-graph > ul > li.four:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+.viper .product-comparison .bar-graph > ul > li.four:hover > .info-bar > .inner-bar > span {color: rgba(0, 0, 0, 1);}
+
+/* --- Diamondback --- */
+.diamondback .product-banner .button-wrapper.reveal-one {top: 52%; left: 50%;}
+.diamondback .product-banner .button-wrapper.reveal-two {top: 64%; left: 53%;}
+.diamondback .product-banner .button-wrapper.reveal-three {top: 43%; left: 9%;}
+.diamondback .product-banner .banner-text h1 > span:after {top: 50.5%; margin-left: -79px;}
+
+.diamondback .product-nav ul > li.five > a > h5 {color: #8dc63f; border-color: #8dc63f;}
+.diamondback .product-nav ul > li.five figure {background-color: rgba(141, 198, 63, 0.2);}
+.diamondback .product-nav ul > li.five figure img {opacity: 1 !important;}
+.diamondback .product-nav ul > li.five .spacer {border-color: #8dc63f;}
+.diamondback .product-nav ul > li.five .spacer + p {color: #8dc63f;}
+.diamondback .product-nav ul > li.five:hover > a > h5 {color: rgba(255,255,255,1); border-color: rgba(255,255,255,1);}
+.diamondback .product-nav ul > li.five:hover figure {background-color: rgba(255,255,255,.1);}
+.diamondback .product-nav ul > li.five:hover figure img {opacity: 1 !important;}
+.diamondback .product-nav ul > li.five:hover .spacer {border-color: rgba(255,255,255,1);}
+.diamondback .product-nav ul > li.five:hover .spacer + p {color: #ffffff;}
+
+.diamondback .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.five {color: #8dc63f;}
+.diamondback .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.five:hover {color: #ffffff;}
+.diamondback .product-comparison .bar-graph:hover > h3, .diamondback .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.diamondback .product-comparison .bar-graph > ul > li.five > span {color: #8dc63f;}
+.diamondback .product-comparison .bar-graph > ul > li.five > .info-bar {background-color: rgba(141,198,63,.8); opacity: 1;}
+.diamondback .product-comparison .bar-graph > ul > li.five > .info-bar > .inner-bar {background-color: rgba(141,198,63,1);}
+.diamondback .product-comparison .bar-graph > ul > li.five:hover > .info-bar {background-color: rgba(255,255,255,.8);}
+.diamondback .product-comparison .bar-graph > ul > li.five:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+.diamondback .product-comparison .bar-graph > ul > li.five:hover > .info-bar > .inner-bar > span {color: rgba(0, 0, 0, 1);}
+
+
+
+/* --------- // Front Loaders // --------- */
+.front-loader {}
+.front-loader.overview .product-nav ul > li {width: 50%; margin: 0;}
+.front-loader.overview .product-nav ul > li:first-child {margin-left: 0;}
+.front-loader.overview .product-nav ul > li:last-child {margin-right: 0;}
+.front-loader.product-page .product-nav ul > li {width: 25%; margin: 0;}
+.front-loader.product-page .product-nav ul > li:first-child {margin-left: 25%;}
+.front-loader.product-page .product-nav ul > li:last-child {margin-right: 25%;}
+
+/* --- Comparison Pane --- */
+/* Changes to the Hopper Capacity comparison pane */
+.front-loader .product-comparison .bar-graph > ul#hopperCapacity > li.one > .info-bar {width: 100%;} /* Mammoth Overall length */
+.front-loader .product-comparison .bar-graph > ul#hopperCapacity > li.one > .info-bar > .inner-bar {width: 100%;} /* Mammoth Fluctuation Meter length */
+.front-loader .product-comparison .bar-graph > ul#hopperCapacity > li.two > .info-bar {width: 100%;} /* Mammoth Western Series Overall length */
+.front-loader .product-comparison .bar-graph > ul#hopperCapacity > li.two > .info-bar > .inner-bar {width: 100%;} /* Mammoth Western Series Fluctuation Meter length */
+
+/* Changes to the Body Capacity comparison pane */
+.front-loader .product-comparison .bar-graph > ul#bodyCapacity > li.one > .info-bar {width: 100%;} /* Mammoth Overall length */
+.front-loader .product-comparison .bar-graph > ul#bodyCapacity > li.one > .info-bar > .inner-bar {width: 85%;} /* Mammoth Fluctuation Meter length */
+.front-loader .product-comparison .bar-graph > ul#bodyCapacity > li.two > .info-bar {width: 100%;} /* Mammoth Western Series Overall length */
+.front-loader .product-comparison .bar-graph > ul#bodyCapacity > li.two > .info-bar > .inner-bar {width: 85%;} /* Mammoth Western Series Fluctuation Meter length */
+
+/* Changes to the Second Cycle Time comparison pane */
+.front-loader .product-comparison .bar-graph > ul#secondCycleTime > li.one > .info-bar {width: 100%;} /* Mammoth Overall length */
+.front-loader .product-comparison .bar-graph > ul#secondCycleTime > li.one > .info-bar > .inner-bar {width: 100%;} /* Mammoth Fluctuation Meter length */
+.front-loader .product-comparison .bar-graph > ul#secondCycleTime > li.two > .info-bar {width: 84%;} /* Mammoth Western Series Overall length */
+.front-loader .product-comparison .bar-graph > ul#secondCycleTime > li.two > .info-bar > .inner-bar {width: 100%;} /* Mammoth Western Series Fluctuation Meter length */
+
+/* Changes to the Body Weight comparison pane */
+.front-loader .product-comparison .bar-graph > ul#bodyWeight > li.one > .info-bar {width: 100%;} /* Mammoth Overall length */
+.front-loader .product-comparison .bar-graph > ul#bodyWeight > li.one > .info-bar > .inner-bar {width: 94.8%;} /* Mammoth Fluctuation Meter length */
+.front-loader .product-comparison .bar-graph > ul#bodyWeight > li.two > .info-bar {width: 90.5%;} /* Mammoth Western Series Overall length */
+.front-loader .product-comparison .bar-graph > ul#bodyWeight > li.two > .info-bar > .inner-bar {width: 94.6%;} /* Mammoth Western Series Fluctuation Meter length */
+
+/* Changes to the Compaction Rate comparison pane */
+.front-loader .product-comparison .bar-graph > ul#compactionRates > li.one > .info-bar {width: 100%;} /* Mammoth Overall length */
+.front-loader .product-comparison .bar-graph > ul#compactionRates > li.one > .info-bar > .inner-bar {width: 87.5%;} /* Mammoth Fluctuation Meter length */
+.front-loader .product-comparison .bar-graph > ul#compactionRates > li.two > .info-bar {width: 100%;} /* Mammoth Western Series Overall length */
+.front-loader .product-comparison .bar-graph > ul#compactionRates > li.two > .info-bar > .inner-bar {width: 87.5%;} /* Mammoth Western Series Fluctuation Meter length */
+
+
+/* --- Mammoth --- */
+.mammoth .product-banner .button-wrapper.reveal-one {top: 31%; left: 14%;}
+.mammoth .product-banner .button-wrapper.reveal-two {top: 39%; left: 45%;}
+.mammoth .product-banner .button-wrapper.reveal-three {top: 59%; left: 34%;}
+.mammoth .product-banner .banner-text {margin-top: -15.1rem;}
+.mammoth .product-banner .banner-text h1 {margin: 0 .625rem -8rem 0;}
+.mammoth .product-banner .banner-text h1 > span:after {top: 44%; margin-left: 0;}
+
+.mammoth .product-nav ul > li.one > a > h5 {color: #8dc63f; border-color: #8dc63f;}
+.mammoth .product-nav ul > li.one figure {background-color: rgba(141, 198, 63, 0.2);}
+.mammoth .product-nav ul > li.one figure img {opacity: 1 !important;}
+.mammoth .product-nav ul > li.one .spacer {border-color: #8dc63f;}
+.mammoth .product-nav ul > li.one .spacer + p {color: #8dc63f;}
+.mammoth .product-nav ul > li.one:hover > a > h5 {color: rgba(255,255,255,1); border-color: rgba(255,255,255,1);}
+.mammoth .product-nav ul > li.one:hover figure {background-color: rgba(255,255,255,.1);}
+.mammoth .product-nav ul > li.one:hover figure img {opacity: 1 !important;}
+.mammoth .product-nav ul > li.one:hover .spacer {border-color: rgba(255,255,255,1);}
+.mammoth .product-nav ul > li.one:hover .spacer + p {color: #ffffff;}
+
+.mammoth .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.one {color: #8dc63f;}
+.mammoth .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.one:hover {color: #ffffff;}
+.mammoth .product-comparison .bar-graph:hover > h3, .mammoth .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.mammoth .product-comparison .bar-graph > ul > li.one > span {color: #8dc63f;}
+.mammoth .product-comparison .bar-graph > ul > li.one > .info-bar {background-color: rgba(141,198,63,.8); opacity: 1;}
+.mammoth .product-comparison .bar-graph > ul > li.one > .info-bar > .inner-bar {background-color: rgba(141,198,63,1);}
+.mammoth .product-comparison .bar-graph > ul > li.one:hover > .info-bar {background-color: rgba(255,255,255,.8);}
+.mammoth .product-comparison .bar-graph > ul > li.one:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+.mammoth .product-comparison .bar-graph > ul > li.one:hover > .info-bar > .inner-bar > span {color: rgba(0, 0, 0, 1);}
+
+
+/* --- Mammoth Western Series --- */
+.mammoth-western-series .product-banner .button-wrapper.reveal-one {top: 29%; left: 20%;}
+.mammoth-western-series .product-banner .button-wrapper.reveal-two {top: 51%; left: 40%;}
+.mammoth-western-series .product-banner .button-wrapper.reveal-three {top: 42%; left: 53%;}
+.mammoth-western-series .product-banner .banner-text {margin-top: -15.1rem; max-width: 25em;}
+.mammoth-western-series .product-banner .banner-text h1 {margin: 0 .625rem -8rem 0;}
+.mammoth-western-series .product-banner .banner-text h1 > span:after {top: 39.1%; margin-left: -42px;}
+
+.mammoth-ws-gallery {display: none;}
+.mammoth-western-series .mammoth-ws-gallery {display: block;}
+.mammoth-ws-gallery p {margin-bottom: 0;}
+.mammoth-ws-gallery p small {font-size: 70%;}
+
+.mammoth-western-series .product-nav ul > li.two > a > h5 {color: #8dc63f; border-color: #8dc63f;}
+.mammoth-western-series .product-nav ul > li.two figure {background-color: rgba(141, 198, 63, 0.2);}
+.mammoth-western-series .product-nav ul > li.two figure img {opacity: 1 !important;}
+.mammoth-western-series .product-nav ul > li.two .spacer {border-color: #8dc63f;}
+.mammoth-western-series .product-nav ul > li.two .spacer + p {color: #8dc63f;}
+.mammoth-western-series .product-nav ul > li.two:hover > a > h5 {color: rgba(255,255,255,1); border-color: rgba(255,255,255,1);}
+.mammoth-western-series .product-nav ul > li.two:hover figure {background-color: rgba(255,255,255,.1);}
+.mammoth-western-series .product-nav ul > li.two:hover figure img {opacity: 1 !important;}
+.mammoth-western-series .product-nav ul > li.two:hover .spacer {border-color: rgba(255,255,255,1);}
+.mammoth-western-series .product-nav ul > li.two:hover .spacer + p {color: #ffffff;}
+
+.mammoth-western-series .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.two {color: #8dc63f;}
+.mammoth-western-series .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.two:hover {color: #ffffff;}
+.mammoth-western-series .product-comparison .bar-graph:hover > h3, .mammoth-western-series .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.mammoth-western-series .product-comparison .bar-graph > ul > li.two > span {color: #8dc63f;}
+.mammoth-western-series .product-comparison .bar-graph > ul > li.two > .info-bar {background-color: rgba(141,198,63,.8); opacity: 1;}
+.mammoth-western-series .product-comparison .bar-graph > ul > li.two > .info-bar > .inner-bar {background-color: rgba(141,198,63,1);}
+.mammoth-western-series .product-comparison .bar-graph > ul > li.two:hover > .info-bar {background-color: rgba(255,255,255,.8);}
+.mammoth-western-series .product-comparison .bar-graph > ul > li.two:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+.mammoth-western-series .product-comparison .bar-graph > ul > li.two:hover > .info-bar > .inner-bar > span {color: rgba(0, 0, 0, 1);}
+
+
+/* --------- // Automated Side Loaders // --------- */
+.automated-side-loader {}
+.automated-side-loader.overview .product-nav ul > li {width: 50%; margin: 0;}
+.automated-side-loader.overview .product-nav ul > li:first-child {margin-left: 0;}
+.automated-side-loader.overview .product-nav ul > li:last-child {margin-right: 0;}
+.automated-side-loader.product-page .product-nav ul > li {width: 25%; margin: 0;}
+.automated-side-loader.product-page .product-nav ul > li:first-child {margin-left: 25%;}
+.automated-side-loader.product-page .product-nav ul > li:last-child {margin-right: 25%;}
+
+
+/* --- Featured Clients Page --- */
+.featured-client-page .content-wrapper {background: url(../images/bkgd-ft-client.png) no-repeat top center scroll; background-size: 1680px 849px; padding-top: 20em;}
+.featured-client-page .main-image-hover {padding-top: 3em;}
+.featured-client-page .ft-cust-info {}
+.featured-client-page .ft-cust-info h1 {color: white; font-weight: lighter; line-height: 1.2em; text-transform: uppercase; text-align: center; text-shadow: 0px 0px 15px rgba(0,0,0,.75);}
+.featured-client-page .ft-cust-info h1 span {font-weight: bold; display: block; clear: both;}
+.featured-client-page blockquote {padding: 0 .625rem; margin: 70px 40px; border: none; position: relative; text-align: left; z-index: 603; }
+.featured-client-page blockquote p {color: #ffffff; font-size: 1.2em; line-height: 1.5; font-style: italic; font-weight: 400; margin-bottom: .5rem; text-shadow: 0px 0px 15px rgba(0,0,0,1);}
+.featured-client-page blockquote p > .icon-left-quote {font-size: 3.5rem; margin-left: -32px; font-style: italic;}
+.featured-client-page .padding-bottom {margin-bottom: 4rem !important;}
+
+/* --- Comparison Pane --- */
+/* Changes to the Hopper Capacity comparison pane */
+.automated-side-loader .product-comparison .bar-graph > ul#hopperCapacity > li.one > .info-bar {width: 100%;} /* Sidewinder XTR Overall length */
+.automated-side-loader .product-comparison .bar-graph > ul#hopperCapacity > li.one > .info-bar > .inner-bar {width: 100%;} /* Sidewinder XTR Fluctuation Meter length */
+.automated-side-loader .product-comparison .bar-graph > ul#hopperCapacity > li.three > .info-bar {width: 95.7%;} /* ROTO PAC Overall length */
+.automated-side-loader .product-comparison .bar-graph > ul#hopperCapacity > li.three > .info-bar > .inner-bar {width: 100%;} /* ROTO PAC Fluctuation Meter length */
+
+/* Changes to the Body Capacity comparison pane */
+.automated-side-loader .product-comparison .bar-graph > ul#bodyCapacity > li.one > .info-bar {width: 100%;} /* Sidewinder XTR Overall length */
+.automated-side-loader .product-comparison .bar-graph > ul#bodyCapacity > li.one > .info-bar > .inner-bar {width: 64.5%;} /* Sidewinder XTR Fluctuation Meter length */
+.automated-side-loader .product-comparison .bar-graph > ul#bodyCapacity > li.three > .info-bar {width: 87.1%;} /* ROTO PAC Overall length */
+.automated-side-loader .product-comparison .bar-graph > ul#bodyCapacity > li.three > .info-bar > .inner-bar {width: 55.6%;} /* ROTO PAC Fluctuation Meter length */
+
+/* Changes to the Second Cycle Time comparison pane */
+.automated-side-loader .product-comparison .bar-graph > ul#secondCycleTime > li.one > .info-bar {width: 80%;} /* Sidewinder XTR Overall length */
+.automated-side-loader .product-comparison .bar-graph > ul#secondCycleTime > li.one > .info-bar > .inner-bar {width: 100%;} /* Sidewinder XTR Fluctuation Meter length */
+.automated-side-loader .product-comparison .bar-graph > ul#secondCycleTime > li.three > .info-bar {width: 80%;} /* ROTO PAC Overall length */
+.automated-side-loader .product-comparison .bar-graph > ul#secondCycleTime > li.three > .info-bar > .inner-bar {width: 100%;} /* ROTO PAC Fluctuation Meter length */
+
+/* Changes to the Body Weight comparison pane */
+.automated-side-loader .product-comparison .bar-graph > ul#bodyWeight > li.one > .info-bar {width: 100%;} /* Sidewinder XTR Overall length */
+.automated-side-loader .product-comparison .bar-graph > ul#bodyWeight > li.one > .info-bar > .inner-bar {width: 87.7%;} /* Sidewinder XTR Fluctuation Meter length */
+.automated-side-loader .product-comparison .bar-graph > ul#bodyWeight > li.three > .info-bar {width: 100%;} /* ROTO PAC Overall length */
+.automated-side-loader .product-comparison .bar-graph > ul#bodyWeight > li.three > .info-bar > .inner-bar {width: 100%;} /* ROTO PAC Fluctuation Meter length */
+
+/* Changes to the Compaction Rate comparison pane */
+.automated-side-loader .product-comparison .bar-graph > ul#compactionRates > li.one > .info-bar {width: 80%;} /* Sidewinder XTR Overall length */
+.automated-side-loader .product-comparison .bar-graph > ul#compactionRates > li.one > .info-bar > .inner-bar {width: 100%;} /* Sidewinder XTR Fluctuation Meter length */
+.automated-side-loader .product-comparison .bar-graph > ul#compactionRates > li.three > .info-bar {width: 100%;} /* ROTO PAC Overall length */
+.automated-side-loader .product-comparison .bar-graph > ul#compactionRates > li.three > .info-bar > .inner-bar {width: 100%;} /* ROTO PAC Fluctuation Meter length */
+
+
+/* --- Sidewinder XTR --- */
+.sidewinder-xtr .product-banner .button-wrapper.reveal-one {top: 33%; left: 39%;}
+.sidewinder-xtr .product-banner .button-wrapper.reveal-two {top: 34%; left: 13%;}
+.sidewinder-xtr .product-banner .button-wrapper.reveal-three {top: 50%;
+left: 22%;}
+.sidewinder-xtr .product-banner .banner-text h1 > span:after {top: 43.1%;}
+
+.sidewinder-xtr .product-nav ul > li.one > a > h5 {color: #8dc63f; border-color: #8dc63f;}
+.sidewinder-xtr .product-nav ul > li.one figure {background-color: rgba(141, 198, 63, 0.2);}
+.sidewinder-xtr .product-nav ul > li.one figure img {opacity: 1 !important;}
+.sidewinder-xtr .product-nav ul > li.one .spacer {border-color: #8dc63f;}
+.sidewinder-xtr .product-nav ul > li.one .spacer + p {color: #8dc63f;}
+.sidewinder-xtr .product-nav ul > li.one:hover > a > h5 {color: rgba(255,255,255,1); border-color: rgba(255,255,255,1);}
+.sidewinder-xtr .product-nav ul > li.one:hover figure {background-color: rgba(255,255,255,.1);}
+.sidewinder-xtr .product-nav ul > li.one:hover figure img {opacity: 1 !important;}
+.sidewinder-xtr .product-nav ul > li.one:hover .spacer {border-color: rgba(255,255,255,1);}
+.sidewinder-xtr .product-nav ul > li.one:hover .spacer + p {color: #ffffff;}
+
+.sidewinder-xtr .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.one {color: #8dc63f;}
+.sidewinder-xtr .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.one:hover {color: #ffffff;}
+.sidewinder-xtr .product-comparison .bar-graph:hover > h3, .sidewinder-xtr .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.sidewinder-xtr .product-comparison .bar-graph > ul > li.one > span {color: #8dc63f;}
+.sidewinder-xtr .product-comparison .bar-graph > ul > li.one > .info-bar {background-color: rgba(141,198,63,.8); opacity: 1;}
+.sidewinder-xtr .product-comparison .bar-graph > ul > li.one > .info-bar > .inner-bar {background-color: rgba(141,198,63,1);}
+.sidewinder-xtr .product-comparison .bar-graph > ul > li.one:hover > .info-bar {background-color: rgba(255,255,255,.8);}
+.sidewinder-xtr .product-comparison .bar-graph > ul > li.one:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+.sidewinder-xtr .product-comparison .bar-graph > ul > li.one:hover > .info-bar > .inner-bar > span {color: rgba(0, 0, 0, 1);}
+
+.premium-features {float: left; padding-top: 4rem; width: 100%; border-top: 2px solid rgba(255,255,255,.4); margin-top: 4rem; padding-bottom: 4rem; width: 100%; border-bottom: 2px solid rgba(255,255,255,.4);}
+.premium-features h2 {font-size: 1.8em; color: #ffffff; text-transform: uppercase; margin-bottom: 0; line-height: 1.3; letter-spacing: .5rem; text-align: center;}
+.premium-features h2 > span {}
+.premium-features h4 {font-size: 1.4em; font-weight: 200; letter-spacing: .03em; margin: 0 0 .6rem 0; color: #ffffff;}
+.premium-features h5 {font-size: 1.1em; font-weight: 400; letter-spacing: .03em; margin: 0 0 .6rem 0; color: #ffffff;}
+.premium-features > div {margin-bottom: 4rem;}
+.premium-features > div:nth-child(2) > .left-col > div {margin-top: -181px;}
+.premium-features > div:nth-child(3) > .right-col > div {margin-top: -57px; float: none !important; clear: inherit !important; width: auto !important;}
+.premium-features > div:nth-child(4) > .left-col > div {margin-top: -70px;}
+.premium-features > div:last-child {margin-bottom: 0;}
+.premium-features > div:nth-child(3) > .left-col > .feature-main {margin-bottom: 0;}
+.premium-features .bullet-points > div:nth-child(3n+1) {clear: both;}
+.premium-features .bullet-points > div:nth-child(3n+1) > section {margin-left: -.625rem;}
+.premium-features .bullet-points > div:nth-child(3n+3) > section {margin-right: -.625rem;}
+.premium-features .bullet-points > div > section {background-color: rgba(255,255,255,.3); margin: 0 0 1.25rem 0; padding: 1.25rem; min-height: 230px; text-align: center;}
+.premium-features .bullet-points > div > section > p:last-child {margin-bottom: 0;}
+.premium-features > div > section {position: relative;}
+.premium-features > div > section > div {position: absolute; top: 50%;}
+.premium-features > div > section > div > :last-child {margin-bottom: 0;}
+.premium-features .left-col, .premium-features .right-col {width: 50%; float: left;}
+.premium-features .left-col {padding-right: 0; border-right: 1.5rem solid transparent;}
+.premium-features .left-col > div {text-align: right;}
+.premium-features .right-col {padding-left: 1.5rem;}
+.premium-features .right-col > div {text-align: left;}
+.premium-features figure {margin: 0;}
+.premium-features .feature-main {margin-bottom: 1.25rem;}
+.premium-features figure > figcaption {width: 50%; float: left;}
+.premium-features figure > figcaption:nth-child(2n+1) {clear: both; padding-right: .625rem;}
+.premium-features figure > figcaption:nth-child(2n+2) {padding-left: .625rem;}
+.premium-features figure > figcaption:nth-child(n+3) {margin-top: 1.25rem;}
+.premium-features figure > figcaption p:last-child {margin-bottom: 0;}
+
+
+/* --- Sidewinder ZXT --- */
+/* N/A */
+
+
+/* --- ROTO PAC --- */
+.roto-pac .product-banner .button-wrapper.reveal-one {top: 44%; left: 44%;}
+.roto-pac .product-banner .button-wrapper.reveal-two {top: 40%; left: 25%;}
+.roto-pac .product-banner .button-wrapper.reveal-three {top: 44%; left: 9%;}
+.roto-pac .product-banner .banner-text h1 > span:nth-of-type(2):after { top: 42.5%; content: "\00AE"; }
+.roto-pac .product-banner .banner-text h1 > span:nth-of-type(3):after { content: ""; }
+.roto-pac .product-banner .banner-text h1 > span.logo-roto-pac-patent-pending
+{
+    font-size: 0.6rem;
+    top: 58%;
+    right: 5px;
+    display: block;
+    position: absolute
+}
+
+/*
+.roto-pac .product-banner .banner-text {margin-top: -6rem; max-width: 25em;}
+.roto-pac .product-banner .banner-text h1 {font-size: 5em !important; font-weight: 600; letter-spacing: -.5rem; margin-bottom: 1.5rem !important; line-height: 1;}
+.roto-pac .product-banner .banner-text h1 > span:after {top: 14%; margin-left: 12px; font-weight: 300; font-style: normal !important;}
+*/
+.roto-pac .product-nav ul > li.three > a > h5 {color: #8dc63f; border-color: #8dc63f;}
+.roto-pac .product-nav ul > li.three figure {background-color: rgba(141, 198, 63, 0.2);}
+.roto-pac .product-nav ul > li.three figure img {opacity: 1 !important;}
+.roto-pac .product-nav ul > li.three .spacer {border-color: #8dc63f;}
+.roto-pac .product-nav ul > li.three .spacer + p {color: #8dc63f;}
+.roto-pac .product-nav ul > li.three:hover > a > h5 {color: rgba(255,255,255,1); border-color: rgba(255,255,255,1);}
+.roto-pac .product-nav ul > li.three:hover figure {background-color: rgba(255,255,255,.1);}
+.roto-pac .product-nav ul > li.three:hover figure img {opacity: 1 !important;}
+.roto-pac .product-nav ul > li.three:hover .spacer {border-color: rgba(255,255,255,1);}
+.roto-pac .product-nav ul > li.three:hover .spacer + p {color: #ffffff;}
+
+.roto-pac .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.three {color: #8dc63f;}
+.roto-pac .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.three:hover {color: #ffffff;}
+.roto-pac .product-comparison .bar-graph:hover > h3, .roto-pac .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.roto-pac .product-comparison .bar-graph > ul > li.three > span {color: #8dc63f;}
+.roto-pac .product-comparison .bar-graph > ul > li.three > .info-bar {background-color: rgba(141,198,63,.8); opacity: 1;}
+.roto-pac .product-comparison .bar-graph > ul > li.three > .info-bar > .inner-bar {background-color: rgba(141,198,63,1);}
+.roto-pac .product-comparison .bar-graph > ul > li.three:hover > .info-bar {background-color: rgba(255,255,255,.8);}
+.roto-pac .product-comparison .bar-graph > ul > li.three:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+.roto-pac .product-comparison .bar-graph > ul > li.three:hover > .info-bar > .inner-bar > span {color: rgba(0, 0, 0, 1);}
+
+
+/* --------- // Satellite Bodies // --------- */
+.satellite-bodies {}
+.satellite-bodies.overview .product-nav ul > li {width: 100%; margin: 0;}
+.satellite-bodies.overview .product-nav ul > li:first-child {margin-left: 0;}
+.satellite-bodies.overview .product-nav ul > li:last-child {margin-right: 0;}
+.satellite-bodies.product-page .product-nav ul > li {width: 20%; margin: 0;}
+.satellite-bodies.product-page .product-nav ul > li:first-child {margin-left: 40%;}
+.satellite-bodies.product-page .product-nav ul > li:last-child {margin-right: 40%;}
+
+/* --- Comparison Pane --- */
+/* Changes to the Hopper Capacity comparison pane */
+.satellite-bodies .product-comparison .bar-graph > ul#hopperCapacity > li.one > .info-bar {width: 100%;} /* Mamba Overall length */
+.satellite-bodies .product-comparison .bar-graph > ul#hopperCapacity > li.one > .info-bar > .inner-bar {width: 100%;} /* Mamba Fluctuation Meter length */
+
+/* Changes to the Body Capacity comparison pane */
+.satellite-bodies .product-comparison .bar-graph > ul#bodyCapacity > li.one > .info-bar {width: 100%;} /* Mamba Overall length */
+.satellite-bodies .product-comparison .bar-graph > ul#bodyCapacity > li.one > .info-bar > .inner-bar {width: 60%;} /* Mamba Fluctuation Meter length */
+
+/* Changes to the Second Cycle Time comparison pane */
+.satellite-bodies .product-comparison .bar-graph > ul#secondCycleTime > li.one > .info-bar {width: 100%;} /* Mamba Overall length */
+.satellite-bodies .product-comparison .bar-graph > ul#secondCycleTime > li.one > .info-bar > .inner-bar {width: 100%;} /* Mamba Fluctuation Meter length */
+
+/* Changes to the Body Weight comparison pane */
+.satellite-bodies .product-comparison .bar-graph > ul#bodyWeight > li.one > .info-bar {width: 100%;} /* Mamba Overall length */
+.satellite-bodies .product-comparison .bar-graph > ul#bodyWeight > li.one > .info-bar > .inner-bar {width: 75.4%;} /* Mamba Fluctuation Meter length */
+
+/* Changes to the Compaction Rate comparison pane */
+.satellite-bodies .product-comparison .bar-graph > ul#compactionRates > li.one > .info-bar {width: 100%;} /* Mamba Overall length */
+.satellite-bodies .product-comparison .bar-graph > ul#compactionRates > li.one > .info-bar > .inner-bar {width: 75%;} /* Mamba Fluctuation Meter length */
+
+
+/* --- Mamba --- */
+.mamba .product-banner .button-wrapper.reveal-one {top: 34%; left: 43%;}
+.mamba .product-banner .button-wrapper.reveal-two {top: 47%; left: 8%;}
+.mamba .product-banner .button-wrapper.reveal-three {top: 57%; left: 45%;
+}
+.mamba .product-banner .banner-text h1 > span:after {top: 41.5%; margin-left: -5px;}
+
+.mamba .product-nav ul > li.one > a > h5 {color: #8dc63f; border-color: #8dc63f;}
+.mamba .product-nav ul > li.one figure {background-color: rgba(141, 198, 63, 0.2);}
+.mamba .product-nav ul > li.one figure img {opacity: 1 !important;}
+.mamba .product-nav ul > li.one .spacer {border-color: #8dc63f;}
+.mamba .product-nav ul > li.one .spacer + p {color: #8dc63f;}
+.mamba .product-nav ul > li.one:hover > a > h5 {color: rgba(255,255,255,1); border-color: rgba(255,255,255,1);}
+.mamba .product-nav ul > li.one:hover figure {background-color: rgba(255,255,255,.1);}
+.mamba .product-nav ul > li.one:hover figure img {opacity: 1 !important;}
+.mamba .product-nav ul > li.one:hover .spacer {border-color: rgba(255,255,255,1);}
+.mamba .product-nav ul > li.one:hover .spacer + p {color: #ffffff;}
+
+.mamba .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.one {color: #8dc63f;}
+.mamba .product-comparison > div:nth-child(2) > section:nth-child(1) > ul > li.one:hover {color: #ffffff;}
+.mamba .product-comparison .bar-graph:hover > h3, .mamba .product-comparison .bar-graph:hover > ul > li > span {color: #ffffff;}
+.mamba .product-comparison .bar-graph > ul > li.one > span {color: #8dc63f;}
+.mamba .product-comparison .bar-graph > ul > li.one > .info-bar {background-color: rgba(141,198,63,.8); opacity: 1;}
+.mamba .product-comparison .bar-graph > ul > li.one > .info-bar > .inner-bar {background-color: rgba(141,198,63,1);}
+.mamba .product-comparison .bar-graph > ul > li.one:hover > .info-bar {background-color: rgba(255,255,255,.8);}
+.mamba .product-comparison .bar-graph > ul > li.one:hover > .info-bar > .inner-bar {background-color: #ffffff;}
+.mamba .product-comparison .bar-graph > ul > li.one:hover > .info-bar > .inner-bar > span {color: rgba(0, 0, 0, 1);}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------*/
+/* Media Queries */
+/*---------------------------------------------------------------*/
+
+/* --- Small screens --- */
+/* Define mobile styles */
+@media only screen {
+	.cobra-magnum .product-banner .banner-text h1 > span:after {top: 34%; margin-left: -55px;}
+	.diamondback .product-banner .banner-text h1 > span:after {top: 50.5%; margin-left: -49px;}
+	.mammoth-western-series .product-banner .banner-text h1 > span:after {top: 39.1%; margin-left: -42px;}
+}
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+	.product-banner {float: left; width: 100%; position: relative; margin-top: 0em; overflow: hidden;}
+	.product-banner h2 {font-size: 3em; text-transform: uppercase; text-align: center; letter-spacing: .1em; font-weight: 400; margin: 0; padding: 1em 0;}
+	.product-banner > div:nth-child(2) {margin-top: 0;}
+	.product-banner .banner-text {position: relative; right: 0; top: 0; z-index: 601; max-width: 100%; margin-top: -4rem;}
+	.product-banner .banner-text h1 {margin: 00; line-height: 0; font-size: 15em; position: relative; z-index: 602; text-align: center;}
+	.product-banner .banner-text blockquote {padding: 0 .625rem; margin: -4rem 0 0 0; border: none; position: relative; text-align: center; z-index: 603;}
+	.product-banner .banner-text p {color: #ffffff; font-size: 1.1em; line-height: 1.5; font-style: italic; font-weight: 400; margin-bottom: .8rem;}
+	.product-banner .banner-text cite {color: #ffffff; font-size: .9rem; font-weight: 300; letter-spacing: .05em;}
+	.product-banner .truck-buttons, .product-banner .main-image-hover, .product-banner .main-image-hover > .truck-image {position: relative; width: 100%;}
+	.product-banner .main-image-hover, .product-banner .button-wrapper {display: none;}
+	.featured-client-page .main-image-hover {display: block;}
+
+	.mammoth .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-fl-mammoth-031418.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 300px;}
+	.mammoth-western-series .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-fl-mammoth-ws-031918.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 300px;}
+	.king-cobra .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-rl-king-cobra.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 300px;}
+	.cobra-magnum .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-rl-cobra-magnum.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 300px;}
+	.cobra .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-rl-cobra.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 300px;}
+	.viper .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-rl-viper.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 300px;}
+	.diamondback .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-rl-diamondback.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 300px;}
+	.sidewinder-xtr .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-asl-sidewinder-xtr.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 300px;}
+	.roto-pac .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-asl-roto-pac.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 300px;}
+	.mamba .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-sb-mamba.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 300px;}
+
+	.product-copy .truck-features {display: block !important;}
+	.product-copy .truck-features > section {padding-left: 0; padding-right: 0;}
+
+	.product-downloads > div {padding: 0;}
+
+	.bar-graph {margin-bottom: 4rem;}
+
+	.product-nav {margin-bottom: 1rem;}
+	.product-nav ul > li {width: 100% !important; clear: both; margin-bottom: 2rem !important; margin-left: 0 !important; margin-right: 0 !important;}
+	.product-nav ul > li:hover {margin-bottom: 2rem !important;}
+	.product-nav ul > li figure {border-right: none;}
+	.product-nav ul > li .spacer + p {display: none !important;}
+
+	.roto-pac .product-banner .banner-text {margin-top: 0; max-width: 100% !important; margin-bottom: -4rem !important;}
+	.roto-pac .product-banner .banner-text blockquote {margin: -1rem 0 -4rem 0 !important;}
+	.roto-pac .product-banner .truck-buttons {margin-top: 2rem !important; height: 380px; margin-left: 13%;}
+	.roto-pac .product-banner > div:nth-child(2) {margin-top: -5rem;}
+	.mammoth .product-banner .banner-text {margin-top: -5.1rem;}
+	.mammoth .product-banner .banner-text h1 {margin: 0 .625rem -6rem 0;}
+	.mammoth .product-banner .truck-buttons {margin-top: 1rem;}
+	.mammoth .product-banner > div:nth-child(2) {margin-top: -4rem;}
+	.mammoth-western-series .product-banner .banner-text {margin-top: 0.9rem; max-width: 100%;}
+	.mammoth-western-series .product-banner .banner-text h1 {margin: 0 .625rem -5rem 0;}
+	.mammoth-western-series .product-banner .banner-text p > .icon-left-quote {left: -13px;}
+
+	.premium-features .bullet-points > div > section {min-height: inherit;}
+
+	.premium-features .left-col, .premium-features .right-col {float: left !important; clear: both !important; width: 100% !important; padding: 0 .625rem; border: none;}
+	.premium-features .left-col > div, .premium-features .right-col > div {position: relative; top: inherit; margin-top: 0 !important; text-align: left !important; margin-bottom: 1.25rem;}
+}
+
+
+
+/* --- Medium screens --- */
+/* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) { }
+
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	.product-comparison .fine-print {padding: .625rem; text-align: left;}
+
+	.product-gallery h4 {padding-top: 5px;}
+
+	.product-comparison .bar-graph {margin-bottom: 2rem;}
+}
+
+/* min-width 641px and max-width 767px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 47.938em) {
+	.product-page .content-wrapper {background: url(../images/bkgd-product-environment.jpg) no-repeat center 3% scroll; background-size: 200% auto;}
+
+	.product-banner {float: left; width: 100%; position: relative; margin-top: 0em; overflow: hidden;}
+	.product-banner h2 {font-size: 3em; text-transform: uppercase; text-align: center; letter-spacing: .1em; font-weight: 400; margin: 0; padding: 1em 0;}
+	.product-banner > div:nth-child(2) {margin-top: -5.5rem;}
+	.product-banner .banner-text {position: relative; right: 0; top: 0; z-index: 601; max-width: 100%; margin-top: -4rem; margin-bottom: -2rem;}
+	.product-banner .banner-text h1 {margin: 00; line-height: 0; font-size: 15em; position: relative; z-index: 602; text-align: center;}
+	.product-banner .banner-text blockquote {padding: 0 .625rem; margin: -4rem 0 0 0; border: none; position: relative; text-align: center; z-index: 603;}
+	.product-banner .banner-text p {color: #ffffff; font-size: 1.1em; line-height: 1.5; font-style: italic; font-weight: 400; margin-bottom: .8rem;}
+	.product-banner .banner-text cite {color: #ffffff; font-size: .9rem; font-weight: 300; letter-spacing: .05em;}
+	.product-banner .truck-buttons, .product-banner .main-image-hover, .product-banner .main-image-hover > .truck-image {position: relative; width: 100%;}
+	.product-banner .main-image-hover, .product-banner .button-wrapper {display: none;}
+	.featured-client-page .main-image-hover {display: block;}
+
+	.mammoth .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-fl-mammoth-031418.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 400px;}
+	.mammoth-western-series .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-fl-mammoth-ws-031918.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 400px;}
+	.king-cobra .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-rl-king-cobra.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 400px;}
+	.cobra-magnum .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-rl-cobra-magnum.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 400px;}
+	.cobra .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-rl-cobra.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 400px;}
+	.viper .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-rl-viper.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 400px;}
+	.diamondback .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-rl-diamondback.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 400px;}
+	.sidewinder-xtr .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-asl-sidewinder-xtr.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 400px;}
+	.roto-pac .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-asl-roto-pac.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 400px;}
+	.mamba .product-banner .truck-buttons {background: url(http://refusetrucks.scrantonmfg.com/images/prod-sb-mamba.png) no-repeat 0 0 transparent; background-size: cover; width: 100%; margin-left: 8%; margin-top: 4rem; height: 430px;}
+
+	.product-page .two-column-wrapper > div {float: left; width: 100%; padding-left: .625rem; padding-right: .625rem;}
+
+	.product-copy .truck-features {display: block !important;}
+	.product-copy .truck-features > section {margin: 0; padding: 0;}
+
+	.product-downloads > div {padding: 0;}
+
+	.product-nav ul > li {width: 20%; margin-bottom: 0 !important;}
+	.product-nav ul > li:hover {margin-bottom: 0px !important;}
+	.product-nav ul > li figure {border-right: none;}
+	.product-nav ul > li > a > h5 {font-size: 1rem;}
+	.product-nav ul > li .spacer + p {display: none !important;}
+
+	.roto-pac .product-banner .banner-text {margin-top: 0; max-width: 100% !important; margin-bottom: -4rem !important;}
+	.roto-pac .product-banner .banner-text blockquote {margin: -1rem 0 -4rem 0 !important;}
+	.roto-pac .product-banner .truck-buttons {margin-top: 2rem !important; height: 380px;}
+	.roto-pac .product-banner > div:nth-child(2) {margin-top: -5rem;}
+	.mammoth .product-banner .banner-text {margin-top: -5.1rem;}
+	.mammoth .product-banner .banner-text h1 {margin: 0 .625rem -6rem 0;}
+	.mammoth .product-banner .truck-buttons {margin-top: 1rem; height: 380px;}
+	.mammoth .product-banner > div:nth-child(2) {margin-top: -5rem;}
+	.mammoth-western-series .product-banner .banner-text {margin-top: -5.1rem; max-width: 100%;}
+	.mammoth-western-series .product-banner .banner-text h1 {margin: 0 .625rem -5rem 0;}
+	.mammoth-western-series .product-banner .banner-text p > .icon-left-quote {left: -13px;}
+	.mammoth-western-series .product-banner .truck-buttons {margin-top: 1rem; width: 380px; margin-left: 25%;}
+}
+
+/* min-width 768px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 48.000em) and (max-width: 64em) {
+	.product-page .content-wrapper {background: url(../images/bkgd-product-environment.jpg) no-repeat center 3% scroll; background-size: 200% auto;}
+
+	.product-page .two-column-wrapper {margin-bottom: 2rem;}
+
+	.product-banner {float: left; width: 100%; position: relative; margin-top: 0; overflow: hidden;}
+	.product-banner h2 {font-size: 3em; text-transform: uppercase; text-align: center; letter-spacing: .1em; font-weight: 400; margin: 0; padding: 1em 0 1.7em 0;}
+	.product-banner > div:nth-child(2) {margin-top: -7rem;}
+	.product-banner .banner-text {position: relative; right: 0; top: 0; z-index: 601; max-width: 100%; margin-top: -4rem; margin-bottom: -3rem;}
+	.product-banner .banner-text h1 {margin: 00; line-height: 0; font-size: 15em; position: relative; z-index: 602; text-align: center;}
+	.product-banner .banner-text blockquote {padding: 0 .625rem; margin: -4rem 0 0 0; border: none; position: relative; text-align: center; z-index: 603;}
+	.product-banner .banner-text p {color: #ffffff; font-size: 1.1em; line-height: 1.5; font-style: italic; font-weight: 400; margin: 0 auto .8rem auto; max-width: 600px; position: relative;}
+	.product-banner .banner-text p > .icon-left-quote {left: -28px;}
+	.product-banner .banner-text cite {color: #ffffff; font-size: .9rem; font-weight: 300; letter-spacing: .05em;}
+	.product-banner .truck-buttons, .product-banner .main-image-hover, .product-banner .main-image-hover > .truck-image {position: relative; width: 100%;}
+	.product-banner .truck-buttons {z-index: 600; right: -17%;}
+	.product-banner .main-image-hover > .truck-image {z-index: 500;}
+	.product-banner .button-wrapper {position: absolute; z-index: 501; background-color: #8dc63f; border: 1px solid #8dc63f; height: 27px; width: 27px; text-align: center; border-radius: 100px; box-shadow: 0 0 0 3px #ffffff, 0 0 10px 3px #000000; font-size: .8rem;}
+	.product-banner .button-wrapper > a {color: #ffffff; padding: .5rem; line-height: 2.1; margin-left: -2px;}
+	.product-banner .button-wrapper:hover {background-color: #000000; border-color: #000000;}
+
+	.product-downloads .button-group > li {width: 100%; clear: both;}
+	.product-downloads .button-group > li:nth-child(2) {margin-left: 0; margin-right: 0;}
+	.product-downloads .button-group > li > a {margin-bottom: 2px; width: 100%; border: none;}
+
+	.product-nav ul > li > a > h5 {font-size: 1rem;}
+	.product-nav ul > li .spacer + p {display: none !important;}
+
+	.roto-pac .product-banner .banner-text {margin-top: 0; max-width: 100% !important;}
+	.roto-pac .product-banner .banner-text blockquote {margin: -1rem 0 -4rem 0 !important;}
+	.mammoth .product-banner .banner-text {margin-top: -5.1rem;}
+	.mammoth .product-banner .banner-text h1 {margin: 0 .625rem -6rem 0;}
+	.mammoth-western-series .product-banner .banner-text {margin-top: -5.1rem; max-width: 100%;}
+	.mammoth-western-series .product-banner .banner-text h1 {margin: 0 .625rem -5rem 0;}
+	.mammoth-western-series .product-banner .banner-text p > .icon-left-quote {left: -31px;}
+
+
+	.premium-features {border: none; margin: 4rem 0 0 0; padding: 0 .625rem !important;}
+	.premium-features h2 {margin-bottom: 0; text-align: left; letter-spacing: .06rem;}
+	.premium-features > div {margin-bottom: 4rem;}
+	.premium-features > div > .left-col, .premium-features > div > .right-col {text-align: left;}
+	.premium-features > div:nth-child(3) > .left-col {margin-left: 50%; padding-right: 0; padding-left: 0; border-right: none; border-left: 1.5rem solid transparent;}
+	.premium-features > div:nth-child(3) > .right-col {margin-left: -100%; padding-right: 1.5rem; padding-left: 0;}
+
+	.featured-client-page .content-wrapper {background: url(../images/bkgd-ft-client.png) no-repeat center 3% scroll; background-size: 200% auto;}
+}
+
+/* min-width 946px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 59.125em) and (max-width: 64em) {
+}
+
+/* max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (max-width: 64em) {
+	.premium-features .bullet-points > div:nth-child(3n+1) > section {margin-left: 0;}
+	.premium-features .bullet-points > div:nth-child(3n+3) > section {margin-right: 0;}
+    .roto-pac .product-banner .banner-text h1 > span.logo-roto-pac-patent-pending{ left: calc(50% + 60px); right:unset; }
+
+  .featured-client-page .content-wrapper {background: url(../images/bkgd-ft-client.png) no-repeat center 3% scroll; background-size: 200% auto; padding-top: 12em;}
+  .featured-client-page .main-image-hover {max-width: 700px; margin: 0 auto; padding-top: 0;}
+  .featured-client-page blockquote {margin: 0px 40px 70px;}
+}
+
+
+
+/* --- Large screens --- */
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) { }
+
+/* min-width 1025px and max-width 1260px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 78.750em) {
+	.product-banner {margin-top: -4rem;}
+	.product-banner > div:nth-child(1) {width: 990px; margin: 0 auto; float: none; position: relative; z-index: 700;}
+	.product-banner > div:nth-child(2) {margin-top: -138px; position: relative; z-index: 701;}
+	.product-banner .truck-buttons {max-width: 990px;}
+	.product-banner .banner-text {width: 21em; margin-top: 3rem; top: 0;}
+	.product-banner .banner-text h1 {font-size: 15em; margin-bottom: -3.7rem;}
+	.product-banner .banner-text blockquote {font-size: .9rem;}
+	.product-banner .banner-text p > .icon-left-quote {font-size: 4.5rem; position: absolute; top: -17px; left: -17px; font-style: italic;}
+
+	.roto-pac .product-banner .banner-text {width: 21em; margin-top: 5rem !important; top: 0;}
+	.mammoth .product-banner .banner-text {margin-top: 0rem; max-width: 20rem;}
+	.mammoth .product-banner .banner-text h1 {margin: 0 .625rem -6rem 0;}
+	.mammoth-western-series .product-banner .banner-text {margin-top: 1.9rem;}
+	.mammoth-western-series .product-banner .banner-text h1 {margin: 0 .625rem -5rem 0;}
+	.mammoth-western-series .product-banner .banner-text h1 > span:after {margin-left: -28px;}
+	.mammoth-western-series .product-banner .banner-text p > .icon-left-quote {left: 3px;}
+}
+
+/* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { }
+
+
+/* min-width 1260px, large screens */
+@media only screen and (min-width: 78.813em) {
+	.cobra-magnum .product-banner .banner-text h1 > span:after {top: 35%; margin-left: -87px;}
+	.diamondback .product-banner .banner-text h1 > span:after {top: 50.5%; margin-left: -79px;}
+	.mammoth-western-series .product-banner .banner-text h1 > span:after {top: 38.5%; margin-left: -42px;}
+}
+
+
+
+/* --- XLarge screens --- */
+/* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 90.063em) { }
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { }
+
+
+
+/* --- XXLarge screens --- */
+/* min-width 1921px, xxlarge screens */
+@media only screen and (min-width: 120.063em) { }
+
+.product-names li {
+    height: 28px;
+}
