@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f1c39ab5951b4f968b32ead7415f61c7" Name="Diagram1" ZoomLevel="74" >
+        <EntityTypeShape EntityType="NewWayModel.UserProfile" Width="1.5" PointX="2.5" PointY="0.625" FillColor="64, 64, 64" />
+        <EntityTypeShape EntityType="NewWayModel.Territory" Width="2.125" PointX="4.375" PointY="0.625" />
+        <EntityTypeShape EntityType="NewWayModel.NewWayDealer" Width="1.5" PointX="4.375" PointY="2.75" />
+        <AssociationConnector Association="NewWayModel.TerritoryNewWayDealer" />
+        <EntityTypeShape EntityType="NewWayModel.NewWayEShowroom" Width="2.125" PointX="7.125" PointY="2.75" FillColor="255, 128, 0" />
+        <AssociationConnector Association="NewWayModel.NewWayEShowroomNewWayDealer" />
+        <EntityTypeShape EntityType="NewWayModel.NewWayEShowType" Width="1.75" PointX="7.25" PointY="0.625" FillColor="255, 128, 0" />
+        <AssociationConnector Association="NewWayModel.NewWayEShowroomNewWayEShowType" />
+        <EntityTypeShape EntityType="NewWayModel.NewWayModel" Width="1.875" PointX="9.625" PointY="0.625" />
+        <EntityTypeShape EntityType="NewWayModel.NewWayStyle" Width="1.75" PointX="11.875" PointY="0.625" />
+        <AssociationConnector Association="NewWayModel.NewWayModelNewWayStyle" />
+        <AssociationConnector Association="NewWayModel.NewWayEShowroomNewWayModel" />
+        <EntityTypeShape EntityType="NewWayModel.NewWayCapacity" Width="1.75" PointX="11.875" PointY="2.5" />
+        <AssociationConnector Association="NewWayModel.NewWayCapacityNewWayModel" />
+        <EntityTypeShape EntityType="NewWayModel.NewWayChassisMake" Width="1.875" PointX="9.75" PointY="4.5" />
+        <AssociationConnector Association="NewWayModel.NewWayEShowroomNewWayChassisMake" />
+        <EntityTypeShape EntityType="NewWayModel.NewWaySaleStatus" Width="1.875" PointX="9.75" PointY="6.625" />
+        <AssociationConnector Association="NewWayModel.NewWaySaleStatusNewWayEShowroom" />
+        <EntityTypeShape EntityType="NewWayModel.NewWayEShowPhotos" Width="2.5" PointX="4.375" PointY="6.25" FillColor="255, 128, 0" />
+        <AssociationConnector Association="NewWayModel.NewWayEShowPhotosNewWayEShowroom" />
+        <AssociationConnector Association="NewWayModel.NewWayCapacityNewWayEShowroom" />
+        <EntityTypeShape EntityType="NewWayModel.ServiceSupportType" Width="2" PointX="17" PointY="3.5" FillColor="Purple" />
+        <EntityTypeShape EntityType="NewWayModel.ServiceSupportManual" Width="2.125" PointX="17" PointY="0.625" FillColor="Purple" />
+        <EntityTypeShape EntityType="NewWayModel.ServiceSupportTruck" Width="2.125" PointX="14.5" PointY="0.625" FillColor="Purple" />
+        <AssociationConnector Association="NewWayModel.ServiceSupportTypeServiceSupportManual" />
+        <AssociationConnector Association="NewWayModel.NewWayModelServiceSupportTruck" />
+        <AssociationConnector Association="NewWayModel.ServiceSupportTruckServiceSupportManual" />
+        <EntityTypeShape EntityType="NewWayModel.signupSubscribers" Width="2.125" PointX="14.5" PointY="3.375" FillColor="Aqua" />
+        <EntityTypeShape EntityType="NewWayModel.WebsiteInquiry" Width="2.25" PointX="11.875" PointY="4.5" FillColor="Yellow" />
+        <EntityTypeShape EntityType="NewWayModel.InquiryType" Width="1.5" PointX="14.625" PointY="7.25" FillColor="Yellow" />
+        <AssociationConnector Association="NewWayModel.InquiryTypeWebsiteInquiry" />
+        <EntityTypeShape EntityType="NewWayModel.TruckWarranty" Width="1.5" PointX="2.375" PointY="5" />
+        <EntityTypeShape EntityType="NewWayModel.RSVPInquiry" Width="1.5" PointX="17" PointY="5.375" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
