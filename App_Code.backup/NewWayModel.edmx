@@ -1,0 +1,1359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NewWayModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="NewWayModelStoreContainer">
+    <EntitySet Name="UserProfiles" EntityType="NewWayModel.Store.UserProfiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Territories" EntityType="NewWayModel.Store.Territories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewWayDealers" EntityType="NewWayModel.Store.NewWayDealers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewWayEShowrooms" EntityType="NewWayModel.Store.NewWayEShowrooms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewWayEShowTypes" EntityType="NewWayModel.Store.NewWayEShowTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewWayModels" EntityType="NewWayModel.Store.NewWayModels" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewWayStyles" EntityType="NewWayModel.Store.NewWayStyles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewWayCapacities" EntityType="NewWayModel.Store.NewWayCapacities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewWayChassisMakes" EntityType="NewWayModel.Store.NewWayChassisMakes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewWaySaleStatus" EntityType="NewWayModel.Store.NewWaySaleStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewWayEShowPhotos" EntityType="NewWayModel.Store.NewWayEShowPhotos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceSupportTypes" EntityType="NewWayModel.Store.ServiceSupportTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceSupportManuals" EntityType="NewWayModel.Store.ServiceSupportManuals" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceSupportTrucks" EntityType="NewWayModel.Store.ServiceSupportTrucks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="signupSubscribers" EntityType="NewWayModel.Store.signupSubscribers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WebsiteInquiries" EntityType="NewWayModel.Store.WebsiteInquiries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InquiryTypes" EntityType="NewWayModel.Store.InquiryTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TruckWarranties" EntityType="NewWayModel.Store.TruckWarranties" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RSVPInquiries" EntityType="NewWayModel.Store.RSVPInquiries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceSupportTruckServiceSupportManual" EntityType="NewWayModel.Store.ServiceSupportTruckServiceSupportManual" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="TerritoryNewWayDealer" Association="NewWayModel.Store.TerritoryNewWayDealer">
+      <End Role="Territory" EntitySet="Territories" />
+      <End Role="NewWayDealer" EntitySet="NewWayDealers" />
+    </AssociationSet>
+    <AssociationSet Name="NewWayEShowroomNewWayDealer" Association="NewWayModel.Store.NewWayEShowroomNewWayDealer">
+      <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+      <End Role="NewWayDealer" EntitySet="NewWayDealers" />
+    </AssociationSet>
+    <AssociationSet Name="NewWayEShowroomNewWayEShowType" Association="NewWayModel.Store.NewWayEShowroomNewWayEShowType">
+      <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+      <End Role="NewWayEShowType" EntitySet="NewWayEShowTypes" />
+    </AssociationSet>
+    <AssociationSet Name="NewWayModelNewWayStyle" Association="NewWayModel.Store.NewWayModelNewWayStyle">
+      <End Role="NewWayModel" EntitySet="NewWayModels" />
+      <End Role="NewWayStyle" EntitySet="NewWayStyles" />
+    </AssociationSet>
+    <AssociationSet Name="NewWayEShowroomNewWayModel" Association="NewWayModel.Store.NewWayEShowroomNewWayModel">
+      <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+      <End Role="NewWayModel" EntitySet="NewWayModels" />
+    </AssociationSet>
+    <AssociationSet Name="NewWayCapacityNewWayModel" Association="NewWayModel.Store.NewWayCapacityNewWayModel">
+      <End Role="NewWayCapacity" EntitySet="NewWayCapacities" />
+      <End Role="NewWayModel" EntitySet="NewWayModels" />
+    </AssociationSet>
+    <AssociationSet Name="NewWayEShowroomNewWayChassisMake" Association="NewWayModel.Store.NewWayEShowroomNewWayChassisMake">
+      <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+      <End Role="NewWayChassisMake" EntitySet="NewWayChassisMakes" />
+    </AssociationSet>
+    <AssociationSet Name="NewWaySaleStatusNewWayEShowroom" Association="NewWayModel.Store.NewWaySaleStatusNewWayEShowroom">
+      <End Role="NewWaySaleStatus" EntitySet="NewWaySaleStatus" />
+      <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+    </AssociationSet>
+    <AssociationSet Name="NewWayEShowPhotosNewWayEShowroom" Association="NewWayModel.Store.NewWayEShowPhotosNewWayEShowroom">
+      <End Role="NewWayEShowPhotos" EntitySet="NewWayEShowPhotos" />
+      <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+    </AssociationSet>
+    <AssociationSet Name="NewWayCapacityNewWayEShowroom" Association="NewWayModel.Store.NewWayCapacityNewWayEShowroom">
+      <End Role="NewWayCapacity" EntitySet="NewWayCapacities" />
+      <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+    </AssociationSet>
+    <AssociationSet Name="ServiceSupportTypeServiceSupportManual" Association="NewWayModel.Store.ServiceSupportTypeServiceSupportManual">
+      <End Role="ServiceSupportType" EntitySet="ServiceSupportTypes" />
+      <End Role="ServiceSupportManual" EntitySet="ServiceSupportManuals" />
+    </AssociationSet>
+    <AssociationSet Name="NewWayModelServiceSupportTruck" Association="NewWayModel.Store.NewWayModelServiceSupportTruck">
+      <End Role="NewWayModel" EntitySet="NewWayModels" />
+      <End Role="ServiceSupportTruck" EntitySet="ServiceSupportTrucks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceSupportTruckServiceSupportManual_ServiceSupportTruck" Association="NewWayModel.Store.FK_ServiceSupportTruckServiceSupportManual_ServiceSupportTruck">
+      <End Role="ServiceSupportTruck" EntitySet="ServiceSupportTrucks" />
+      <End Role="ServiceSupportTruckServiceSupportManual" EntitySet="ServiceSupportTruckServiceSupportManual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceSupportTruckServiceSupportManual_ServiceSupportManual" Association="NewWayModel.Store.FK_ServiceSupportTruckServiceSupportManual_ServiceSupportManual">
+      <End Role="ServiceSupportManual" EntitySet="ServiceSupportManuals" />
+      <End Role="ServiceSupportTruckServiceSupportManual" EntitySet="ServiceSupportTruckServiceSupportManual" />
+    </AssociationSet>
+    <AssociationSet Name="InquiryTypeWebsiteInquiry" Association="NewWayModel.Store.InquiryTypeWebsiteInquiry">
+      <End Role="InquiryType" EntitySet="InquiryTypes" />
+      <End Role="WebsiteInquiry" EntitySet="WebsiteInquiries" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UserProfiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="company" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="city" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="state" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="zipCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="country" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="phone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="website" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="userId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NewWayDealerId" Type="int" Nullable="true" />
+    <Property Name="titleRole" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Territories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="state" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="abbreviation" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewWayDealers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BusinessName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="City" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TerritoryId" Type="int" Nullable="false" />
+    <Property Name="Zipcode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Phone" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Fax" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="WebAddress" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UserProfileId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewWayEShowrooms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NewWayDealerId" Type="int" Nullable="false" />
+    <Property Name="ShowTypeId" Type="int" Nullable="false" />
+    <Property Name="WorkOrder" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ModelId" Type="int" Nullable="false" />
+    <Property Name="Hours" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="ChassisMakeId" Type="int" Nullable="false" />
+    <Property Name="Transmission" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GVM" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GVWR" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Mileage" Type="int" Nullable="true" />
+    <Property Name="Comments" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SaleStatusId" Type="int" Nullable="false" />
+    <Property Name="DateSubmitted" Type="datetime" Nullable="true" />
+    <Property Name="DateSold" Type="datetime" Nullable="true" />
+    <Property Name="DeclineNotes" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CapacityId" Type="int" Nullable="false" />
+    <Property Name="NewListing" Type="tinyint" Nullable="true" />
+    <Property Name="DateEmailNotificationSent" Type="datetime" Nullable="true" />
+    <Property Name="EmailNotificationSent" Type="tinyint" Nullable="true" />
+    <Property Name="Engine" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="NewWayEShowTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShowType" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewWayModels">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Model" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StyleId" Type="int" Nullable="false" />
+    <Property Name="TruckImage" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SpecSheetPath" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="YouTubeLink" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="NewWayStyles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Style" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewWayCapacities">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Capacity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NewWayModelId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewWayChassisMakes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChassisMake" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewWaySaleStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewWayEShowPhotos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EShowroomId" Type="int" Nullable="false" />
+    <Property Name="PhotoPath" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ThumbPath" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Caption" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="isPrimaryPhoto" Type="bit" Nullable="true" />
+    <Property Name="PDFPath" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ServiceSupportTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupportType" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceSupportManuals">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Filename" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FileDescription" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ServiceSupportTypeId" Type="int" Nullable="false" />
+    <Property Name="VideoLink" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="publicAccess" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ServiceSupportTrucks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BuildDate" Type="datetime" Nullable="true" />
+    <Property Name="SerialNumberText" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DealerTruck" Type="bit" Nullable="true" />
+    <Property Name="NewWayModelId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="signupSubscribers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="subscribe" Type="tinyint" Nullable="true" />
+    <Property Name="firstname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="state" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="company" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="phone" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="country" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="nwtInterest" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="comments" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="signupDate" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="WebsiteInquiries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dateSubmitted" Type="datetime" Nullable="false" />
+    <Property Name="followUpCompleted" Type="datetime" Nullable="true" />
+    <Property Name="firstName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="lastName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="phone" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="company" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="jobTitle" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="address" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="city" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="state" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="country" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="zip" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="testimonial" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="testimonialPhoto" Type="tinyint" Nullable="true" />
+    <Property Name="comments" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="newWayInterest" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="kPacInterest" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="infoCustomApparel" Type="tinyint" Nullable="true" />
+    <Property Name="cobraFlyer" Type="tinyint" Nullable="true" />
+    <Property Name="cobraMagnumFlyer" Type="tinyint" Nullable="true" />
+    <Property Name="kingCobraFlyer" Type="tinyint" Nullable="true" />
+    <Property Name="diamonbackFlyer" Type="tinyint" Nullable="true" />
+    <Property Name="viperFlyer" Type="tinyint" Nullable="true" />
+    <Property Name="mambaFlyer" Type="tinyint" Nullable="true" />
+    <Property Name="mammothFlyer" Type="tinyint" Nullable="true" />
+    <Property Name="westernSeriesMammothFlyer" Type="tinyint" Nullable="true" />
+    <Property Name="sidewinderFlyer" Type="tinyint" Nullable="true" />
+    <Property Name="rotoPacFlyer" Type="tinyint" Nullable="true" />
+    <Property Name="InquiryTypeId" Type="int" Nullable="false" />
+    <Property Name="eShowroomTruckInterest" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="archived" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="interestArea" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="qtyDesired" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="InquiryTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TruckWarranties">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateSubmitted" Type="datetime" Nullable="false" />
+    <Property Name="NewWayDealerId" Type="int" Nullable="false" />
+    <Property Name="WarrantyJson" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="WarrantyPdf" Type="varbinary(max)" Nullable="true" />
+    <Property Name="CustomerName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ChassisVIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingDealer" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="RSVPInquiries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="lastName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="company" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="attending" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="hotelAccommodations" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="phone" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="country" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="state" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="comments" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="dateSubmitted" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceSupportTruckServiceSupportManual">
+    <Key>
+      <PropertyRef Name="ServiceSupportTrucks_Id" />
+      <PropertyRef Name="ServiceSupportManuals_Id" />
+    </Key>
+    <Property Name="ServiceSupportTrucks_Id" Type="int" Nullable="false" />
+    <Property Name="ServiceSupportManuals_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="TerritoryNewWayDealer">
+    <End Role="Territory" Type="NewWayModel.Store.Territories" Multiplicity="1" />
+    <End Role="NewWayDealer" Type="NewWayModel.Store.NewWayDealers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Territory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewWayDealer">
+        <PropertyRef Name="TerritoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NewWayEShowroomNewWayDealer">
+    <End Role="NewWayEShowroom" Type="NewWayModel.Store.NewWayEShowrooms" Multiplicity="*" />
+    <End Role="NewWayDealer" Type="NewWayModel.Store.NewWayDealers" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="NewWayDealer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewWayEShowroom">
+        <PropertyRef Name="NewWayDealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NewWayEShowroomNewWayEShowType">
+    <End Role="NewWayEShowroom" Type="NewWayModel.Store.NewWayEShowrooms" Multiplicity="*" />
+    <End Role="NewWayEShowType" Type="NewWayModel.Store.NewWayEShowTypes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="NewWayEShowType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewWayEShowroom">
+        <PropertyRef Name="ShowTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NewWayModelNewWayStyle">
+    <End Role="NewWayModel" Type="NewWayModel.Store.NewWayModels" Multiplicity="*" />
+    <End Role="NewWayStyle" Type="NewWayModel.Store.NewWayStyles" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="NewWayStyle">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewWayModel">
+        <PropertyRef Name="StyleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NewWayEShowroomNewWayModel">
+    <End Role="NewWayEShowroom" Type="NewWayModel.Store.NewWayEShowrooms" Multiplicity="*" />
+    <End Role="NewWayModel" Type="NewWayModel.Store.NewWayModels" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="NewWayModel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewWayEShowroom">
+        <PropertyRef Name="ModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NewWayCapacityNewWayModel">
+    <End Role="NewWayCapacity" Type="NewWayModel.Store.NewWayCapacities" Multiplicity="*" />
+    <End Role="NewWayModel" Type="NewWayModel.Store.NewWayModels" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="NewWayModel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewWayCapacity">
+        <PropertyRef Name="NewWayModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NewWayEShowroomNewWayChassisMake">
+    <End Role="NewWayEShowroom" Type="NewWayModel.Store.NewWayEShowrooms" Multiplicity="*" />
+    <End Role="NewWayChassisMake" Type="NewWayModel.Store.NewWayChassisMakes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="NewWayChassisMake">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewWayEShowroom">
+        <PropertyRef Name="ChassisMakeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NewWaySaleStatusNewWayEShowroom">
+    <End Role="NewWaySaleStatus" Type="NewWayModel.Store.NewWaySaleStatus" Multiplicity="1" />
+    <End Role="NewWayEShowroom" Type="NewWayModel.Store.NewWayEShowrooms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NewWaySaleStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewWayEShowroom">
+        <PropertyRef Name="SaleStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NewWayEShowPhotosNewWayEShowroom">
+    <End Role="NewWayEShowPhotos" Type="NewWayModel.Store.NewWayEShowPhotos" Multiplicity="*" />
+    <End Role="NewWayEShowroom" Type="NewWayModel.Store.NewWayEShowrooms" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <ReferentialConstraint>
+      <Principal Role="NewWayEShowroom">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewWayEShowPhotos">
+        <PropertyRef Name="EShowroomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NewWayCapacityNewWayEShowroom">
+    <End Role="NewWayCapacity" Type="NewWayModel.Store.NewWayCapacities" Multiplicity="1" />
+    <End Role="NewWayEShowroom" Type="NewWayModel.Store.NewWayEShowrooms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NewWayCapacity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewWayEShowroom">
+        <PropertyRef Name="CapacityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ServiceSupportTypeServiceSupportManual">
+    <End Role="ServiceSupportType" Type="NewWayModel.Store.ServiceSupportTypes" Multiplicity="1" />
+    <End Role="ServiceSupportManual" Type="NewWayModel.Store.ServiceSupportManuals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceSupportType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceSupportManual">
+        <PropertyRef Name="ServiceSupportTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NewWayModelServiceSupportTruck">
+    <End Role="NewWayModel" Type="NewWayModel.Store.NewWayModels" Multiplicity="1" />
+    <End Role="ServiceSupportTruck" Type="NewWayModel.Store.ServiceSupportTrucks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NewWayModel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceSupportTruck">
+        <PropertyRef Name="NewWayModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InquiryTypeWebsiteInquiry">
+    <End Role="InquiryType" Type="NewWayModel.Store.InquiryTypes" Multiplicity="1" />
+    <End Role="WebsiteInquiry" Type="NewWayModel.Store.WebsiteInquiries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InquiryType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WebsiteInquiry">
+        <PropertyRef Name="InquiryTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceSupportTruckServiceSupportManual_ServiceSupportTruck">
+    <End Role="ServiceSupportTruck" Type="NewWayModel.Store.ServiceSupportTrucks" Multiplicity="1" />
+    <End Role="ServiceSupportTruckServiceSupportManual" Type="NewWayModel.Store.ServiceSupportTruckServiceSupportManual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceSupportTruck">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceSupportTruckServiceSupportManual">
+        <PropertyRef Name="ServiceSupportTrucks_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceSupportTruckServiceSupportManual_ServiceSupportManual">
+    <End Role="ServiceSupportTruckServiceSupportManual" Type="NewWayModel.Store.ServiceSupportTruckServiceSupportManual" Multiplicity="*" />
+    <End Role="ServiceSupportManual" Type="NewWayModel.Store.ServiceSupportManuals" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceSupportManual">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceSupportTruckServiceSupportManual">
+        <PropertyRef Name="ServiceSupportManuals_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="NewWayModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="NewWayModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UserProfiles" EntityType="NewWayModel.UserProfile" />
+          <EntitySet Name="Territories" EntityType="NewWayModel.Territory" />
+          <EntitySet Name="NewWayDealers" EntityType="NewWayModel.NewWayDealer" />
+          <AssociationSet Name="TerritoryNewWayDealer" Association="NewWayModel.TerritoryNewWayDealer">
+            <End Role="Territory" EntitySet="Territories" />
+            <End Role="NewWayDealer" EntitySet="NewWayDealers" />
+          </AssociationSet>
+          <EntitySet Name="NewWayEShowrooms" EntityType="NewWayModel.NewWayEShowroom" />
+          <AssociationSet Name="NewWayEShowroomNewWayDealer" Association="NewWayModel.NewWayEShowroomNewWayDealer">
+            <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+            <End Role="NewWayDealer" EntitySet="NewWayDealers" />
+          </AssociationSet>
+          <EntitySet Name="NewWayEShowTypes" EntityType="NewWayModel.NewWayEShowType" />
+          <AssociationSet Name="NewWayEShowroomNewWayEShowType" Association="NewWayModel.NewWayEShowroomNewWayEShowType">
+            <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+            <End Role="NewWayEShowType" EntitySet="NewWayEShowTypes" />
+          </AssociationSet>
+          <EntitySet Name="NewWayModels" EntityType="NewWayModel.NewWayModel" />
+          <EntitySet Name="NewWayStyles" EntityType="NewWayModel.NewWayStyle" />
+          <AssociationSet Name="NewWayModelNewWayStyle" Association="NewWayModel.NewWayModelNewWayStyle">
+            <End Role="NewWayModel" EntitySet="NewWayModels" />
+            <End Role="NewWayStyle" EntitySet="NewWayStyles" />
+          </AssociationSet>
+          <AssociationSet Name="NewWayEShowroomNewWayModel" Association="NewWayModel.NewWayEShowroomNewWayModel">
+            <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+            <End Role="NewWayModel" EntitySet="NewWayModels" />
+          </AssociationSet>
+          <EntitySet Name="NewWayCapacities" EntityType="NewWayModel.NewWayCapacity" />
+          <AssociationSet Name="NewWayCapacityNewWayModel" Association="NewWayModel.NewWayCapacityNewWayModel">
+            <End Role="NewWayCapacity" EntitySet="NewWayCapacities" />
+            <End Role="NewWayModel" EntitySet="NewWayModels" />
+          </AssociationSet>
+          <EntitySet Name="NewWayChassisMakes" EntityType="NewWayModel.NewWayChassisMake" />
+          <AssociationSet Name="NewWayEShowroomNewWayChassisMake" Association="NewWayModel.NewWayEShowroomNewWayChassisMake">
+            <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+            <End Role="NewWayChassisMake" EntitySet="NewWayChassisMakes" />
+          </AssociationSet>
+          <EntitySet Name="NewWaySaleStatus" EntityType="NewWayModel.NewWaySaleStatus" />
+          <AssociationSet Name="NewWaySaleStatusNewWayEShowroom" Association="NewWayModel.NewWaySaleStatusNewWayEShowroom">
+            <End Role="NewWaySaleStatus" EntitySet="NewWaySaleStatus" />
+            <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+          </AssociationSet>
+          <EntitySet Name="NewWayEShowPhotos" EntityType="NewWayModel.NewWayEShowPhotos" />
+          <AssociationSet Name="NewWayEShowPhotosNewWayEShowroom" Association="NewWayModel.NewWayEShowPhotosNewWayEShowroom">
+            <End Role="NewWayEShowPhotos" EntitySet="NewWayEShowPhotos" />
+            <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+          </AssociationSet>
+          <AssociationSet Name="NewWayCapacityNewWayEShowroom" Association="NewWayModel.NewWayCapacityNewWayEShowroom">
+            <End Role="NewWayCapacity" EntitySet="NewWayCapacities" />
+            <End Role="NewWayEShowroom" EntitySet="NewWayEShowrooms" />
+          </AssociationSet>
+          <EntitySet Name="ServiceSupportTypes" EntityType="NewWayModel.ServiceSupportType" />
+          <EntitySet Name="ServiceSupportManuals" EntityType="NewWayModel.ServiceSupportManual" />
+          <EntitySet Name="ServiceSupportTrucks" EntityType="NewWayModel.ServiceSupportTruck" />
+          <AssociationSet Name="ServiceSupportTypeServiceSupportManual" Association="NewWayModel.ServiceSupportTypeServiceSupportManual">
+            <End Role="ServiceSupportType" EntitySet="ServiceSupportTypes" />
+            <End Role="ServiceSupportManual" EntitySet="ServiceSupportManuals" />
+          </AssociationSet>
+          <AssociationSet Name="NewWayModelServiceSupportTruck" Association="NewWayModel.NewWayModelServiceSupportTruck">
+            <End Role="NewWayModel" EntitySet="NewWayModels" />
+            <End Role="ServiceSupportTruck" EntitySet="ServiceSupportTrucks" />
+          </AssociationSet>
+          <AssociationSet Name="ServiceSupportTruckServiceSupportManual" Association="NewWayModel.ServiceSupportTruckServiceSupportManual">
+            <End Role="ServiceSupportTruck" EntitySet="ServiceSupportTrucks" />
+            <End Role="ServiceSupportManual" EntitySet="ServiceSupportManuals" />
+          </AssociationSet>
+          <EntitySet Name="signupSubscribers" EntityType="NewWayModel.signupSubscribers" />
+          <EntitySet Name="WebsiteInquiries" EntityType="NewWayModel.WebsiteInquiry" />
+          <EntitySet Name="InquiryTypes" EntityType="NewWayModel.InquiryType" />
+          <AssociationSet Name="InquiryTypeWebsiteInquiry" Association="NewWayModel.InquiryTypeWebsiteInquiry">
+            <End Role="InquiryType" EntitySet="InquiryTypes" />
+            <End Role="WebsiteInquiry" EntitySet="WebsiteInquiries" />
+          </AssociationSet>
+          <EntitySet Name="TruckWarranties" EntityType="NewWayModel.TruckWarranty" />
+          <EntitySet Name="RSVPInquiries" EntityType="NewWayModel.RSVPInquiry" />
+        </EntityContainer>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstName" Type="String" Nullable="false" />
+          <Property Name="lastName" Type="String" Nullable="false" />
+          <Property Name="company" Type="String" Nullable="false" />
+          <Property Name="address" Type="String" Nullable="false" />
+          <Property Name="city" Type="String" Nullable="false" />
+          <Property Name="state" Type="String" Nullable="false" />
+          <Property Name="zipCode" Type="String" Nullable="false" />
+          <Property Name="country" Type="String" Nullable="false" />
+          <Property Name="phone" Type="String" Nullable="false" />
+          <Property Name="website" Type="String" Nullable="true" />
+          <Property Name="userId" Type="String" Nullable="false" />
+          <Property Name="NewWayDealerId" Type="Int32" Nullable="true" />
+          <Property Name="titleRole" Type="String" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Territory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="state" Type="String" Nullable="false" />
+          <Property Name="abbreviation" Type="String" Nullable="false" />
+          <NavigationProperty Name="NewWayDealers" Relationship="NewWayModel.TerritoryNewWayDealer" FromRole="Territory" ToRole="NewWayDealer" />
+        </EntityType>
+        <EntityType Name="NewWayDealer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BusinessName" Type="String" Nullable="true" />
+          <Property Name="Address" Type="String" Nullable="true" />
+          <Property Name="City" Type="String" Nullable="true" />
+          <NavigationProperty Name="Territory" Relationship="NewWayModel.TerritoryNewWayDealer" FromRole="NewWayDealer" ToRole="Territory" />
+          <Property Name="TerritoryId" Type="Int32" Nullable="false" />
+          <Property Name="Zipcode" Type="String" Nullable="true" />
+          <Property Name="Phone" Type="String" Nullable="true" />
+          <Property Name="Fax" Type="String" Nullable="true" />
+          <Property Name="WebAddress" Type="String" Nullable="true" />
+          <Property Name="UserProfileId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="NewWayEShowrooms" Relationship="NewWayModel.NewWayEShowroomNewWayDealer" FromRole="NewWayDealer" ToRole="NewWayEShowroom" />
+        </EntityType>
+        <Association Name="TerritoryNewWayDealer">
+          <End Type="NewWayModel.Territory" Role="Territory" Multiplicity="1" />
+          <End Type="NewWayModel.NewWayDealer" Role="NewWayDealer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Territory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewWayDealer">
+              <PropertyRef Name="TerritoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NewWayEShowroom">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="NewWayDealer" Relationship="NewWayModel.NewWayEShowroomNewWayDealer" FromRole="NewWayEShowroom" ToRole="NewWayDealer" />
+          <Property Name="NewWayDealerId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="NewWayEShowType" Relationship="NewWayModel.NewWayEShowroomNewWayEShowType" FromRole="NewWayEShowroom" ToRole="NewWayEShowType" />
+          <Property Name="ShowTypeId" Type="Int32" Nullable="false" />
+          <Property Name="WorkOrder" Type="String" Nullable="true" />
+          <NavigationProperty Name="NewWayModel" Relationship="NewWayModel.NewWayEShowroomNewWayModel" FromRole="NewWayEShowroom" ToRole="NewWayModel" />
+          <Property Name="ModelId" Type="Int32" Nullable="false" />
+          <Property Name="Hours" Type="String" Nullable="true" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="NewWayChassisMake" Relationship="NewWayModel.NewWayEShowroomNewWayChassisMake" FromRole="NewWayEShowroom" ToRole="NewWayChassisMake" />
+          <Property Name="ChassisMakeId" Type="Int32" Nullable="false" />
+          <Property Name="Transmission" Type="String" Nullable="true" />
+          <Property Name="GVM" Type="String" Nullable="true" />
+          <Property Name="GVWR" Type="String" Nullable="true" />
+          <Property Name="Mileage" Type="Int32" Nullable="true" />
+          <Property Name="Comments" Type="String" Nullable="true" />
+          <NavigationProperty Name="NewWaySaleStatus" Relationship="NewWayModel.NewWaySaleStatusNewWayEShowroom" FromRole="NewWayEShowroom" ToRole="NewWaySaleStatus" />
+          <Property Name="SaleStatusId" Type="Int32" annotation:StoreGeneratedPattern="None" Nullable="false" />
+          <Property Name="DateSubmitted" Type="DateTime" Nullable="true" />
+          <Property Name="DateSold" Type="DateTime" Nullable="true" />
+          <Property Name="DeclineNotes" Type="String" Nullable="true" />
+          <NavigationProperty Name="NewWayEShowPhotos" Relationship="NewWayModel.NewWayEShowPhotosNewWayEShowroom" FromRole="NewWayEShowroom" ToRole="NewWayEShowPhotos" />
+          <NavigationProperty Name="NewWayCapacity" Relationship="NewWayModel.NewWayCapacityNewWayEShowroom" FromRole="NewWayEShowroom" ToRole="NewWayCapacity" />
+          <Property Name="CapacityId" Type="Int32" Nullable="false" />
+          <Property Name="NewListing" Type="Byte" Nullable="true" />
+          <Property Name="DateEmailNotificationSent" Type="DateTime" Nullable="true" />
+          <Property Name="EmailNotificationSent" Type="Byte" Nullable="true" />
+          <Property Name="Engine" Type="String" Nullable="true" />
+        </EntityType>
+        <Association Name="NewWayEShowroomNewWayDealer">
+          <End Type="NewWayModel.NewWayEShowroom" Role="NewWayEShowroom" Multiplicity="*" />
+          <End Type="NewWayModel.NewWayDealer" Role="NewWayDealer" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="NewWayDealer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewWayEShowroom">
+              <PropertyRef Name="NewWayDealerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NewWayEShowType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowType" Type="String" Nullable="false" />
+          <NavigationProperty Name="NewWayEShowrooms" Relationship="NewWayModel.NewWayEShowroomNewWayEShowType" FromRole="NewWayEShowType" ToRole="NewWayEShowroom" />
+        </EntityType>
+        <Association Name="NewWayEShowroomNewWayEShowType">
+          <End Type="NewWayModel.NewWayEShowroom" Role="NewWayEShowroom" Multiplicity="*" />
+          <End Type="NewWayModel.NewWayEShowType" Role="NewWayEShowType" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="NewWayEShowType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewWayEShowroom">
+              <PropertyRef Name="ShowTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NewWayModel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Model" Type="String" Nullable="false" />
+          <NavigationProperty Name="NewWayStyle" Relationship="NewWayModel.NewWayModelNewWayStyle" FromRole="NewWayModel" ToRole="NewWayStyle" />
+          <Property Name="StyleId" Type="Int32" Nullable="false" />
+          <Property Name="TruckImage" Type="String" Nullable="true" />
+          <NavigationProperty Name="NewWayEShowrooms" Relationship="NewWayModel.NewWayEShowroomNewWayModel" FromRole="NewWayModel" ToRole="NewWayEShowroom" />
+          <NavigationProperty Name="NewWayCapacities" Relationship="NewWayModel.NewWayCapacityNewWayModel" FromRole="NewWayModel" ToRole="NewWayCapacity" />
+          <Property Name="SpecSheetPath" Type="String" Nullable="true" />
+          <NavigationProperty Name="ServiceSupportTrucks" Relationship="NewWayModel.NewWayModelServiceSupportTruck" FromRole="NewWayModel" ToRole="ServiceSupportTruck" />
+          <Property Name="YouTubeLink" Type="String" Nullable="true" />
+        </EntityType>
+        <EntityType Name="NewWayStyle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Style" Type="String" Nullable="false" />
+          <NavigationProperty Name="NewWayModels" Relationship="NewWayModel.NewWayModelNewWayStyle" FromRole="NewWayStyle" ToRole="NewWayModel" />
+        </EntityType>
+        <Association Name="NewWayModelNewWayStyle">
+          <End Type="NewWayModel.NewWayModel" Role="NewWayModel" Multiplicity="*" />
+          <End Type="NewWayModel.NewWayStyle" Role="NewWayStyle" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="NewWayStyle">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewWayModel">
+              <PropertyRef Name="StyleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NewWayEShowroomNewWayModel">
+          <End Type="NewWayModel.NewWayEShowroom" Role="NewWayEShowroom" Multiplicity="*" />
+          <End Type="NewWayModel.NewWayModel" Role="NewWayModel" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="NewWayModel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewWayEShowroom">
+              <PropertyRef Name="ModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NewWayCapacity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Capacity" Type="String" Nullable="false" />
+          <NavigationProperty Name="NewWayModel" Relationship="NewWayModel.NewWayCapacityNewWayModel" FromRole="NewWayCapacity" ToRole="NewWayModel" />
+          <Property Name="NewWayModelId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="NewWayCapacityNewWayModel">
+          <End Type="NewWayModel.NewWayCapacity" Role="NewWayCapacity" Multiplicity="*" />
+          <End Type="NewWayModel.NewWayModel" Role="NewWayModel" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="NewWayModel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewWayCapacity">
+              <PropertyRef Name="NewWayModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NewWayChassisMake">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChassisMake" Type="String" Nullable="false" />
+          <NavigationProperty Name="NewWayEShowrooms" Relationship="NewWayModel.NewWayEShowroomNewWayChassisMake" FromRole="NewWayChassisMake" ToRole="NewWayEShowroom" />
+        </EntityType>
+        <Association Name="NewWayEShowroomNewWayChassisMake">
+          <End Type="NewWayModel.NewWayEShowroom" Role="NewWayEShowroom" Multiplicity="*" />
+          <End Type="NewWayModel.NewWayChassisMake" Role="NewWayChassisMake" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="NewWayChassisMake">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewWayEShowroom">
+              <PropertyRef Name="ChassisMakeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NewWaySaleStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="String" Nullable="false" />
+          <NavigationProperty Name="NewWayEShowrooms" Relationship="NewWayModel.NewWaySaleStatusNewWayEShowroom" FromRole="NewWaySaleStatus" ToRole="NewWayEShowroom" />
+        </EntityType>
+        <Association Name="NewWaySaleStatusNewWayEShowroom">
+          <End Type="NewWayModel.NewWaySaleStatus" Role="NewWaySaleStatus" Multiplicity="1" />
+          <End Type="NewWayModel.NewWayEShowroom" Role="NewWayEShowroom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NewWaySaleStatus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewWayEShowroom">
+              <PropertyRef Name="SaleStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NewWayEShowPhotos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="NewWayEShowroom" Relationship="NewWayModel.NewWayEShowPhotosNewWayEShowroom" FromRole="NewWayEShowPhotos" ToRole="NewWayEShowroom" />
+          <Property Name="EShowroomId" Type="Int32" Nullable="false" />
+          <Property Name="PhotoPath" Type="String" Nullable="true" />
+          <Property Name="ThumbPath" Type="String" Nullable="true" />
+          <Property Name="Caption" Type="String" Nullable="true" />
+          <Property Name="isPrimaryPhoto" Type="Boolean" Nullable="true" />
+          <Property Name="PDFPath" Type="String" Nullable="true" />
+        </EntityType>
+        <Association Name="NewWayEShowPhotosNewWayEShowroom">
+          <End Type="NewWayModel.NewWayEShowPhotos" Role="NewWayEShowPhotos" Multiplicity="*" >
+          </End>
+          <End Type="NewWayModel.NewWayEShowroom" Role="NewWayEShowroom" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <ReferentialConstraint>
+            <Principal Role="NewWayEShowroom">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewWayEShowPhotos">
+              <PropertyRef Name="EShowroomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NewWayCapacityNewWayEShowroom">
+          <End Type="NewWayModel.NewWayCapacity" Role="NewWayCapacity" Multiplicity="1" />
+          <End Type="NewWayModel.NewWayEShowroom" Role="NewWayEShowroom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NewWayCapacity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewWayEShowroom">
+              <PropertyRef Name="CapacityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ServiceSupportType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SupportType" Type="String" Nullable="false" />
+          <NavigationProperty Name="ServiceSupportManuals" Relationship="NewWayModel.ServiceSupportTypeServiceSupportManual" FromRole="ServiceSupportType" ToRole="ServiceSupportManual" />
+        </EntityType>
+        <EntityType Name="ServiceSupportManual">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Filename" Type="String" Nullable="false" />
+          <Property Name="FileDescription" Type="String" Nullable="true" />
+          <NavigationProperty Name="ServiceSupportType" Relationship="NewWayModel.ServiceSupportTypeServiceSupportManual" FromRole="ServiceSupportManual" ToRole="ServiceSupportType" />
+          <Property Name="ServiceSupportTypeId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ServiceSupportTrucks" Relationship="NewWayModel.ServiceSupportTruckServiceSupportManual" FromRole="ServiceSupportManual" ToRole="ServiceSupportTruck" />
+          <Property Name="VideoLink" Type="String" Nullable="true" />
+          <Property Name="publicAccess" Type="Boolean" Nullable="true" />
+        </EntityType>
+        <EntityType Name="ServiceSupportTruck">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BuildDate" Type="DateTime" Nullable="true" />
+          <Property Name="SerialNumberText" Type="String" Nullable="true" />
+          <Property Name="VIN" Type="String" Nullable="true" />
+          <Property Name="DealerTruck" Type="Boolean" Nullable="true" />
+          <NavigationProperty Name="NewWayModel" Relationship="NewWayModel.NewWayModelServiceSupportTruck" FromRole="ServiceSupportTruck" ToRole="NewWayModel" />
+          <Property Name="NewWayModelId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ServiceSupportManuals" Relationship="NewWayModel.ServiceSupportTruckServiceSupportManual" FromRole="ServiceSupportTruck" ToRole="ServiceSupportManual" />
+        </EntityType>
+        <Association Name="ServiceSupportTypeServiceSupportManual">
+          <End Type="NewWayModel.ServiceSupportType" Role="ServiceSupportType" Multiplicity="1" />
+          <End Type="NewWayModel.ServiceSupportManual" Role="ServiceSupportManual" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceSupportType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceSupportManual">
+              <PropertyRef Name="ServiceSupportTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NewWayModelServiceSupportTruck">
+          <End Type="NewWayModel.NewWayModel" Role="NewWayModel" Multiplicity="1" />
+          <End Type="NewWayModel.ServiceSupportTruck" Role="ServiceSupportTruck" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NewWayModel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceSupportTruck">
+              <PropertyRef Name="NewWayModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ServiceSupportTruckServiceSupportManual">
+          <End Type="NewWayModel.ServiceSupportTruck" Role="ServiceSupportTruck" Multiplicity="*" />
+          <End Type="NewWayModel.ServiceSupportManual" Role="ServiceSupportManual" Multiplicity="*" />
+        </Association>
+        <EntityType Name="signupSubscribers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" Nullable="false" />
+          <Property Name="subscribe" Type="Byte" Nullable="true" />
+          <Property Name="firstname" Type="String" Nullable="false" />
+          <Property Name="lastname" Type="String" Nullable="false" />
+          <Property Name="state" Type="String" Nullable="true" />
+          <Property Name="company" Type="String" Nullable="true" />
+          <Property Name="phone" Type="String" Nullable="true" />
+          <Property Name="country" Type="String" Nullable="true" />
+          <Property Name="nwtInterest" Type="String" Nullable="false" />
+          <Property Name="comments" Type="String" Nullable="true" />
+          <Property Name="signupDate" Type="DateTime" Nullable="true" />
+        </EntityType>
+        <EntityType Name="WebsiteInquiry">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dateSubmitted" Type="DateTime" Nullable="false" />
+          <Property Name="followUpCompleted" Type="DateTime" Nullable="true" />
+          <Property Name="firstName" Type="String" Nullable="true" />
+          <Property Name="lastName" Type="String" Nullable="true" />
+          <Property Name="email" Type="String" Nullable="true" />
+          <Property Name="phone" Type="String" Nullable="true" />
+          <Property Name="company" Type="String" Nullable="true" />
+          <Property Name="jobTitle" Type="String" Nullable="true" />
+          <Property Name="address" Type="String" Nullable="true" />
+          <Property Name="city" Type="String" Nullable="true" />
+          <Property Name="state" Type="String" Nullable="true" />
+          <Property Name="country" Type="String" Nullable="true" />
+          <Property Name="zip" Type="String" Nullable="true" />
+          <Property Name="testimonial" Type="String" Nullable="true" />
+          <Property Name="testimonialPhoto" Type="Byte" Nullable="true" />
+          <Property Name="comments" Type="String" Nullable="true" />
+          <Property Name="newWayInterest" Type="String" Nullable="true" />
+          <Property Name="kPacInterest" Type="String" Nullable="true" />
+          <Property Name="infoCustomApparel" Type="Byte" Nullable="true" />
+          <Property Name="cobraFlyer" Type="Byte" Nullable="true" />
+          <Property Name="cobraMagnumFlyer" Type="Byte" Nullable="true" />
+          <Property Name="kingCobraFlyer" Type="Byte" Nullable="true" />
+          <Property Name="diamonbackFlyer" Type="Byte" Nullable="true" />
+          <Property Name="viperFlyer" Type="Byte" Nullable="true" />
+          <Property Name="mambaFlyer" Type="Byte" Nullable="true" />
+          <Property Name="mammothFlyer" Type="Byte" Nullable="true" />
+          <Property Name="westernSeriesMammothFlyer" Type="Byte" Nullable="true" />
+          <Property Name="sidewinderFlyer" Type="Byte" Nullable="true" />
+          <Property Name="rotoPacFlyer" Type="Byte" Nullable="true" />
+          <NavigationProperty Name="InquiryType" Relationship="NewWayModel.InquiryTypeWebsiteInquiry" FromRole="WebsiteInquiry" ToRole="InquiryType" />
+          <Property Name="InquiryTypeId" Type="Int32" Nullable="false" />
+          <Property Name="eShowroomTruckInterest" Type="String" Nullable="true" />
+          <Property Name="archived" Type="String" Nullable="true" />
+          <Property Name="interestArea" Type="String" Nullable="true" />
+          <Property Name="qtyDesired" Type="String" Nullable="true" />
+        </EntityType>
+        <EntityType Name="InquiryType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" Nullable="false" />
+          <NavigationProperty Name="WebsiteInquiries" Relationship="NewWayModel.InquiryTypeWebsiteInquiry" FromRole="InquiryType" ToRole="WebsiteInquiry" />
+        </EntityType>
+        <Association Name="InquiryTypeWebsiteInquiry">
+          <End Type="NewWayModel.InquiryType" Role="InquiryType" Multiplicity="1" />
+          <End Type="NewWayModel.WebsiteInquiry" Role="WebsiteInquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InquiryType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WebsiteInquiry">
+              <PropertyRef Name="InquiryTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TruckWarranty">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateSubmitted" Type="DateTime" Nullable="false" />
+          <Property Name="NewWayDealerId" Type="Int32" Nullable="false" />
+          <Property Name="WarrantyJson" Type="String" Nullable="true" />
+          <Property Name="WarrantyPdf" Type="Binary" Nullable="true" />
+          <Property Name="CustomerName" Type="String" Nullable="true" />
+          <Property Name="ChassisVIN" Type="String" Nullable="true" />
+          <Property Name="SellingDealer" Type="String" Nullable="true" />
+        </EntityType>
+        <EntityType Name="RSVPInquiry">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstName" Type="String" Nullable="true" />
+          <Property Name="lastName" Type="String" Nullable="true" />
+          <Property Name="company" Type="String" Nullable="true" />
+          <Property Name="email" Type="String" Nullable="true" />
+          <Property Name="attending" Type="String" Nullable="true" />
+          <Property Name="hotelAccommodations" Type="String" Nullable="true" />
+          <Property Name="phone" Type="String" Nullable="true" />
+          <Property Name="country" Type="String" Nullable="true" />
+          <Property Name="state" Type="String" Nullable="true" />
+          <Property Name="comments" Type="String" Nullable="true" />
+          <Property Name="dateSubmitted" Type="DateTime" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NewWayModelStoreContainer" CdmEntityContainer="NewWayModelContainer">
+    <EntitySetMapping Name="UserProfiles">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.UserProfile)">
+        <MappingFragment StoreEntitySet="UserProfiles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zipCode" ColumnName="zipCode" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="website" ColumnName="website" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="NewWayDealerId" ColumnName="NewWayDealerId" />
+          <ScalarProperty Name="titleRole" ColumnName="titleRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Territories">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.Territory)">
+        <MappingFragment StoreEntitySet="Territories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="abbreviation" ColumnName="abbreviation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewWayDealers">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.NewWayDealer)">
+        <MappingFragment StoreEntitySet="NewWayDealers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="TerritoryId" ColumnName="TerritoryId" />
+          <ScalarProperty Name="Zipcode" ColumnName="Zipcode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="WebAddress" ColumnName="WebAddress" />
+          <ScalarProperty Name="UserProfileId" ColumnName="UserProfileId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewWayEShowrooms">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.NewWayEShowroom)">
+        <MappingFragment StoreEntitySet="NewWayEShowrooms">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NewWayDealerId" ColumnName="NewWayDealerId" />
+          <ScalarProperty Name="ShowTypeId" ColumnName="ShowTypeId" />
+          <ScalarProperty Name="WorkOrder" ColumnName="WorkOrder" />
+          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+          <ScalarProperty Name="Hours" ColumnName="Hours" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="ChassisMakeId" ColumnName="ChassisMakeId" />
+          <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+          <ScalarProperty Name="GVM" ColumnName="GVM" />
+          <ScalarProperty Name="GVWR" ColumnName="GVWR" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="SaleStatusId" ColumnName="SaleStatusId" />
+          <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+          <ScalarProperty Name="DateSold" ColumnName="DateSold" />
+          <ScalarProperty Name="DeclineNotes" ColumnName="DeclineNotes" />
+          <ScalarProperty Name="CapacityId" ColumnName="CapacityId" />
+          <ScalarProperty Name="NewListing" ColumnName="NewListing" />
+          <ScalarProperty Name="DateEmailNotificationSent" ColumnName="DateEmailNotificationSent" />
+          <ScalarProperty Name="EmailNotificationSent" ColumnName="EmailNotificationSent" />
+          <ScalarProperty Name="Engine" ColumnName="Engine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewWayEShowTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.NewWayEShowType)">
+        <MappingFragment StoreEntitySet="NewWayEShowTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShowType" ColumnName="ShowType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewWayModels">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.NewWayModel)">
+        <MappingFragment StoreEntitySet="NewWayModels">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="StyleId" ColumnName="StyleId" />
+          <ScalarProperty Name="TruckImage" ColumnName="TruckImage" />
+          <ScalarProperty Name="SpecSheetPath" ColumnName="SpecSheetPath" />
+          <ScalarProperty Name="YouTubeLink" ColumnName="YouTubeLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewWayStyles">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.NewWayStyle)">
+        <MappingFragment StoreEntitySet="NewWayStyles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewWayCapacities">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.NewWayCapacity)">
+        <MappingFragment StoreEntitySet="NewWayCapacities">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="NewWayModelId" ColumnName="NewWayModelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewWayChassisMakes">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.NewWayChassisMake)">
+        <MappingFragment StoreEntitySet="NewWayChassisMakes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChassisMake" ColumnName="ChassisMake" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewWaySaleStatus">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.NewWaySaleStatus)">
+        <MappingFragment StoreEntitySet="NewWaySaleStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewWayEShowPhotos">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.NewWayEShowPhotos)">
+        <MappingFragment StoreEntitySet="NewWayEShowPhotos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EShowroomId" ColumnName="EShowroomId" />
+          <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+          <ScalarProperty Name="ThumbPath" ColumnName="ThumbPath" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="isPrimaryPhoto" ColumnName="isPrimaryPhoto" />
+          <ScalarProperty Name="PDFPath" ColumnName="PDFPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceSupportTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.ServiceSupportType)">
+        <MappingFragment StoreEntitySet="ServiceSupportTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SupportType" ColumnName="SupportType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceSupportManuals">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.ServiceSupportManual)">
+        <MappingFragment StoreEntitySet="ServiceSupportManuals">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="FileDescription" ColumnName="FileDescription" />
+          <ScalarProperty Name="ServiceSupportTypeId" ColumnName="ServiceSupportTypeId" />
+          <ScalarProperty Name="VideoLink" ColumnName="VideoLink" />
+          <ScalarProperty Name="publicAccess" ColumnName="publicAccess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceSupportTrucks">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.ServiceSupportTruck)">
+        <MappingFragment StoreEntitySet="ServiceSupportTrucks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BuildDate" ColumnName="BuildDate" />
+          <ScalarProperty Name="SerialNumberText" ColumnName="SerialNumberText" />
+          <ScalarProperty Name="VIN" ColumnName="VIN" />
+          <ScalarProperty Name="DealerTruck" ColumnName="DealerTruck" />
+          <ScalarProperty Name="NewWayModelId" ColumnName="NewWayModelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="signupSubscribers">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.signupSubscribers)">
+        <MappingFragment StoreEntitySet="signupSubscribers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="subscribe" ColumnName="subscribe" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="nwtInterest" ColumnName="nwtInterest" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="signupDate" ColumnName="signupDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebsiteInquiries">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.WebsiteInquiry)">
+        <MappingFragment StoreEntitySet="WebsiteInquiries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="dateSubmitted" ColumnName="dateSubmitted" />
+          <ScalarProperty Name="followUpCompleted" ColumnName="followUpCompleted" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="jobTitle" ColumnName="jobTitle" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="testimonial" ColumnName="testimonial" />
+          <ScalarProperty Name="testimonialPhoto" ColumnName="testimonialPhoto" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="newWayInterest" ColumnName="newWayInterest" />
+          <ScalarProperty Name="kPacInterest" ColumnName="kPacInterest" />
+          <ScalarProperty Name="infoCustomApparel" ColumnName="infoCustomApparel" />
+          <ScalarProperty Name="cobraFlyer" ColumnName="cobraFlyer" />
+          <ScalarProperty Name="cobraMagnumFlyer" ColumnName="cobraMagnumFlyer" />
+          <ScalarProperty Name="kingCobraFlyer" ColumnName="kingCobraFlyer" />
+          <ScalarProperty Name="diamonbackFlyer" ColumnName="diamonbackFlyer" />
+          <ScalarProperty Name="viperFlyer" ColumnName="viperFlyer" />
+          <ScalarProperty Name="mambaFlyer" ColumnName="mambaFlyer" />
+          <ScalarProperty Name="mammothFlyer" ColumnName="mammothFlyer" />
+          <ScalarProperty Name="westernSeriesMammothFlyer" ColumnName="westernSeriesMammothFlyer" />
+          <ScalarProperty Name="sidewinderFlyer" ColumnName="sidewinderFlyer" />
+          <ScalarProperty Name="rotoPacFlyer" ColumnName="rotoPacFlyer" />
+          <ScalarProperty Name="InquiryTypeId" ColumnName="InquiryTypeId" />
+          <ScalarProperty Name="eShowroomTruckInterest" ColumnName="eShowroomTruckInterest" />
+          <ScalarProperty Name="archived" ColumnName="archived" />
+          <ScalarProperty Name="interestArea" ColumnName="interestArea" />
+          <ScalarProperty Name="qtyDesired" ColumnName="qtyDesired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InquiryTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.InquiryType)">
+        <MappingFragment StoreEntitySet="InquiryTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TruckWarranties">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.TruckWarranty)">
+        <MappingFragment StoreEntitySet="TruckWarranties">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+          <ScalarProperty Name="NewWayDealerId" ColumnName="NewWayDealerId" />
+          <ScalarProperty Name="WarrantyJson" ColumnName="WarrantyJson" />
+          <ScalarProperty Name="WarrantyPdf" ColumnName="WarrantyPdf" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="ChassisVIN" ColumnName="ChassisVIN" />
+          <ScalarProperty Name="SellingDealer" ColumnName="SellingDealer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RSVPInquiries">
+      <EntityTypeMapping TypeName="IsTypeOf(NewWayModel.RSVPInquiry)">
+        <MappingFragment StoreEntitySet="RSVPInquiries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="attending" ColumnName="attending" />
+          <ScalarProperty Name="hotelAccommodations" ColumnName="hotelAccommodations" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="dateSubmitted" ColumnName="dateSubmitted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ServiceSupportTruckServiceSupportManual" TypeName="NewWayModel.ServiceSupportTruckServiceSupportManual" StoreEntitySet="ServiceSupportTruckServiceSupportManual">
+      <EndProperty Name="ServiceSupportTruck">
+        <ScalarProperty Name="Id" ColumnName="ServiceSupportTrucks_Id" />
+      </EndProperty>
+      <EndProperty Name="ServiceSupportManual">
+        <ScalarProperty Name="Id" ColumnName="ServiceSupportManuals_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

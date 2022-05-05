@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f1c39ab5951b4f968b32ead7415f61c7" Name="Diagram1" ZoomLevel="97" >
+      <Diagram DiagramId="f1c39ab5951b4f968b32ead7415f61c7" Name="Diagram1" ZoomLevel="74" >
         <EntityTypeShape EntityType="NewWayModel.UserProfile" Width="1.5" PointX="2.5" PointY="0.625" FillColor="64, 64, 64" />
         <EntityTypeShape EntityType="NewWayModel.Territory" Width="2.125" PointX="4.375" PointY="0.625" />
         <EntityTypeShape EntityType="NewWayModel.NewWayDealer" Width="1.5" PointX="4.375" PointY="2.75" />
@@ -38,7 +38,6 @@
         <AssociationConnector Association="NewWayModel.InquiryTypeWebsiteInquiry" />
         <EntityTypeShape EntityType="NewWayModel.TruckWarranty" Width="1.5" PointX="2.375" PointY="5" />
         <EntityTypeShape EntityType="NewWayModel.RSVPInquiry" Width="1.5" PointX="17" PointY="5.375" />
-        <EntityTypeShape EntityType="NewWayModel.Downloader" Width="1.5" PointX="10.25" PointY="8.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
